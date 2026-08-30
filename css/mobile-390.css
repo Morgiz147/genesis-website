@@ -1,0 +1,3013 @@
+/* ==========================================================================
+   GENESĪS — MOBILE 390px GRID & LAYOUT OVERRIDES (Node 4015:716)
+   Exact pixel-perfect implementation for 390px mobile viewport
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  /* On touch screens the primary actions keep the same visible glow as the
+     desktop hover state, so the affordance is present without a pointer. */
+  .hero-cta-btn,
+  .scenarios-cta-btn,
+  .app-cta-btn,
+  .tariff-btn,
+  .footer-btn-primary {
+    box-shadow: 0px 24px 48px -12px rgba(82, 204, 204, 0.45);
+  }
+
+  /* --------------------------------------------------------------------------
+     Global Container & Flow
+     -------------------------------------------------------------------------- */
+  :root {
+    --container-max-width: 358px;
+    --desktop-gutter: 16px;
+    --carousel-viewport-width: 358px;
+    --section-divider-height: 120px;
+  }
+
+  body {
+    overflow-x: clip;
+  }
+
+  .skip-link {
+    display: none !important;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 358px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+  }
+
+  main + .footer-cta-section {
+    margin-top: 120px;
+  }
+
+  /* --------------------------------------------------------------------------
+     00. FIXED HEADER (Node 4015:1406) — height: 50px, width: 390px
+     -------------------------------------------------------------------------- */
+  .site-header {
+    height: 50px;
+    width: 100%;
+    background: rgba(12, 13, 14, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color var(--transition-normal);
+    will-change: transform;
+  }
+
+  .site-header.header-hidden {
+    transform: translateY(-100%);
+  }
+
+  .header-inner {
+    max-width: 390px;
+    width: 100%;
+    height: 50px;
+    padding: 0 16px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-logo img {
+    width: 38px;
+    height: 28px;
+  }
+
+  .header-nav {
+    display: none !important;
+  }
+
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+
+  .header-cta {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 127px;
+    height: 34px;
+    box-sizing: border-box;
+    border-radius: 1000px;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.24px;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    text-align: center;
+  }
+
+  .header-btn-light {
+    display: none !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     01. HERO SECTION (Node 4015:717) — height: 1394px (844px top + 550px bottom)
+     -------------------------------------------------------------------------- */
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 1394px;
+    min-height: 1394px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hero-top-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 844px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: visible;
+  }
+
+  .hero-center-box {
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 358px;
+    max-width: 358px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    text-align: center;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero-main-title {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: -0.52px;
+    color: #FFFFFF;
+    text-align: center;
+    width: 260px !important;
+    max-width: 260px !important;
+    margin: 0 auto;
+  }
+
+  .hero-br-1920 {
+    display: none;
+  }
+
+  .hero-main-title .dim {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .hero-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 198px;
+    height: 57px;
+    box-sizing: border-box;
+    border-radius: 1000px;
+    background: #8AE5E5;
+    border: 1px solid #6CD9D9;
+    padding: 18px 32px 20px 32px;
+    box-shadow: 0px 24px 48px -12px rgba(82, 204, 204, 0.36);
+    text-decoration: none;
+  }
+
+  .hero-cta-btn span {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #212326;
+    white-space: nowrap;
+  }
+
+  .hero-cta-btn img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hero-float-left {
+    position: absolute;
+    top: 420px;
+    left: -80px;
+    width: 262.6px;
+    height: 289.9px;
+    transform: rotate(5deg);
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  .hero-float-left img {
+    width: 240px;
+    height: 270px;
+    object-fit: contain;
+  }
+
+  .hero-float-right {
+    position: absolute;
+    top: 440px;
+    right: -72.6px;
+    width: 262.6px;
+    height: 289.9px;
+    transform: rotate(5deg);
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  .hero-float-right img {
+    width: 240px;
+    height: 270px;
+    object-fit: contain;
+  }
+
+  .hero-vector-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 358px;
+    height: 74px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 4;
+  }
+
+  .hero-vector-wrap img {
+    width: 356px;
+    height: 74px;
+    display: block;
+  }
+
+  .hero-vector-tagline {
+    position: absolute;
+    bottom: 22px;
+    left: 0;
+    right: 0;
+    width: 358px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.36px;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .hero-bottom-block {
+    position: absolute;
+    top: 844px;
+    left: 0;
+    right: 0;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hero-def-box {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    width: 310px !important;
+    height: 310px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box;
+    padding: 24px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .hero-def-term {
+    font-family: 'Wremena', serif;
+    font-size: 32px;
+    line-height: 1;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+  }
+
+  .hero-def-origin {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: rgba(255, 255, 255, 0.8);
+    width: 202px;
+  }
+
+  .hero-def-desc {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #FFFFFF;
+    width: 222px;
+  }
+
+  .hero-def-desc .dim {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  /* --------------------------------------------------------------------------
+     02. SCENARIOS SECTION (Node 4015:740) — height: 2102px
+     -------------------------------------------------------------------------- */
+  .scenarios-section {
+    position: relative;
+    width: 100%;
+    height: 2102px;
+    min-height: 2102px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .scenarios-inner {
+    position: relative !important;
+    width: 358px !important;
+    max-width: 100% !important;
+    min-height: 2102px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .scenarios-title-desktop {
+    display: none !important;
+  }
+
+  .scenarios-title-mobile {
+    display: inline !important;
+  }
+
+  .scenarios-left-title {
+    position: static !important;
+    width: 358px !important;
+    max-width: 100% !important;
+    font-family: 'Gilroy', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 30px !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.6px !important;
+    color: #FFFFFF !important;
+    text-align: center !important;
+    margin: 0 0 60px 0 !important;
+    display: block !important;
+  }
+
+  .scenarios-left-title br {
+    display: inline !important;
+  }
+
+  .scenarios-right-title-wrap {
+    display: none !important;
+  }
+
+  .scenarios-cards-column {
+  
+    position: static !important;
+    width: 310px !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 24px !important;
+    margin: 0 auto 60px auto !important;
+    padding: 0 !important;
+  
+  margin-left: auto !important;
+  margin-right: auto !important;
+  align-items: center !important;
+}
+
+  .scenario-card {
+    width: 310px !important;
+    max-width: 100% !important;
+    height: 310px !important;
+    box-sizing: border-box !important;
+    padding: 24px !important;
+    background: #16181A !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    margin: 0 auto !important;
+  }
+
+  .scenario-card-num {
+    font-family: 'Wremena', serif !important;
+    font-size: 14px !important;
+    line-height: 1 !important;
+    color: #6CD9D9 !important;
+    width: 100% !important;
+    text-align: right !important;
+  }
+
+  .scenario-card-text {
+    font-family: 'Gilroy', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.28px !important;
+    color: #CCCCCC !important;
+    margin: 0 !important;
+  }
+
+  .scenarios-right-col {
+    position: static !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .scenarios-right-bottom {
+    position: static !important;
+    width: 310px !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 32px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .scenarios-right-text-1 {
+    font-family: 'Gilroy', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.32px !important;
+    color: #FFFFFF !important;
+    width: 310px !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+
+  .scenarios-right-text-2 {
+    font-family: 'Gilroy', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.28px !important;
+    color: #CCCCCC !important;
+    width: 310px !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+
+  .scenarios-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 198px;
+    height: 57px;
+    box-sizing: border-box;
+    border-radius: 1000px;
+    background: #8AE5E5;
+    border: 1px solid #6CD9D9;
+    padding: 18px 32px 20px 32px;
+    text-decoration: none;
+  }
+
+  .scenarios-cta-btn span {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #212326;
+    white-space: nowrap;
+  }
+
+  .scenarios-cta-btn img {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* --------------------------------------------------------------------------
+     03. VIDEO INTRO (Node 4015:775) — height: 582px
+     -------------------------------------------------------------------------- */
+  .video-section {
+    position: relative;
+    width: 100%;
+    height: 582px;
+    min-height: 582px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .video-preview-card {
+    position: relative;
+    width: 100%;
+    height: 582px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+  }
+
+  .video-preview-card img.video-bg {
+    display: none !important;
+  }
+
+  .video-bg-media {
+    position: absolute !important;
+    top: 192px !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 390px !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    z-index: 1 !important;
+  }
+
+  .video-card-title-wrap {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 358px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+  }
+
+  .video-card-title {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.6px;
+    color: #FFFFFF;
+    text-align: center;
+    width: 320px !important;
+    max-width: 320px !important;
+    margin: 0 auto;
+  }
+
+  .video-play-box {
+    position: absolute !important;
+    top: 332px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 220px !important;
+    height: 110px !important;
+    box-sizing: border-box !important;
+    padding: 16px 20px !important;
+    border-radius: 12px !important;
+    background: rgba(18, 20, 22, 0.85) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(108, 217, 217, 0.35) !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 24px rgba(108, 217, 217, 0.2) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    z-index: 10 !important;
+  }
+
+  .video-play-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .video-play-label {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #FFFFFF;
+  }
+
+  .video-play-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video-play-icon img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .video-play-duration {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  /* --------------------------------------------------------------------------
+     04. SYSTEM SLIDER (Node 4015:791) — height: 1113px
+     -------------------------------------------------------------------------- */
+  .system-slider-section {
+    position: relative;
+    width: 100%;
+    height: 1113px;
+    min-height: 1113px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .system-slider-scroll-track {
+    position: relative;
+    width: 100%;
+    height: 250vh;
+  }
+
+  .system-slider-sticky-stage {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 10;
+    background: #0D0E10;
+  }
+
+  .system-slider-section {
+    position: relative;
+    width: 100%;
+    background: #0D0E10;
+  }
+
+  .system-slider-header {
+    position: absolute;
+    bottom: calc(100% + 24px);
+    left: 0;
+    right: 0;
+    width: 358px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .system-slider-header h2 {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.6px;
+    color: #FFFFFF;
+    text-align: center;
+    width: 358px !important;
+    max-width: 358px !important;
+    margin: 0;
+  }
+
+  .system-slider-header p {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #999999;
+    text-align: center;
+    width: 358px !important;
+    max-width: 358px !important;
+    margin: 0;
+  }
+
+  .system-slider-header p .white {
+    color: #FFFFFF;
+  }
+
+  .system-slider-box {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 358px;
+    height: auto;
+    max-height: calc(100vh - 32px);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .system-slider-image {
+    width: 358px !important;
+    height: min(330px, calc(45vh - 20px)) !important;
+    min-height: 260px !important;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #16181A;
+    position: relative;
+    flex: none;
+  }
+
+  .system-slide-img-layer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .system-slider-content {
+    width: 358px !important;
+    height: min(420px, calc(55vh - 20px)) !important;
+    background: #212326;
+    border-radius: 16px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: none;
+  }
+
+
+  .system-bars-wrap {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .system-bar-item {
+    flex: 1;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1000px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .system-bar-fill {
+    height: 100%;
+    background: #FFFFFF;
+    border-radius: 1000px;
+  }
+
+  .system-slider-pagination {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+  }
+
+  .system-slider-num {
+    font-family: 'Wremena', serif;
+    font-size: 64px;
+    line-height: 1;
+    color: #6CD9D9;
+  }
+
+  .system-slider-total {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #666666;
+  }
+
+  .system-text-stage {
+    width: 100%;
+    position: relative;
+  }
+
+  .system-slide-tag {
+    font-family: 'Wremena', serif;
+    font-size: 14px;
+    line-height: 1;
+    color: #6CD9D9;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .system-slide-title {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: -0.52px;
+    color: #FFFFFF;
+    margin: 0 0 16px 0;
+  }
+
+  .system-slide-desc {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #CCCCCC;
+    margin: 0;
+  }
+
+  /* --------------------------------------------------------------------------
+     05. OBSERVATION (Node 4015:817) — height: 600px
+     -------------------------------------------------------------------------- */
+  .observation-section {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    min-height: 600px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .observation-inner {
+    position: relative;
+    width: 358px;
+    max-width: 358px;
+    height: 600px;
+    min-height: 600px;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+  }
+
+  .observation-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 358px !important;
+    max-width: 358px !important;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.6px;
+    color: #FFFFFF;
+    margin: 0;
+  }
+
+  .observation-left-text {
+    position: absolute;
+    top: 126px;
+    left: 0;
+    width: 358px !important;
+    max-width: 358px !important;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #CCCCCC;
+    margin: 0;
+  }
+
+  .observation-right-text {
+    position: absolute;
+    top: 214px;
+    left: 0;
+    width: 358px !important;
+    max-width: 358px !important;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #CCCCCC;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0;
+  }
+
+  .observation-right-text p {
+    margin: 0;
+  }
+
+  .observation-stat-box {
+    position: absolute;
+    top: 398px;
+    left: 185px;
+    width: 173px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .observation-stat-num-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .observation-stat-73 {
+    font-family: 'Wremena', serif;
+    font-size: 96px;
+    line-height: 1;
+    letter-spacing: -1.92px;
+    color: #FFFFFF;
+  }
+
+  .observation-stat-percent {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1;
+    color: #FFFFFF;
+    margin-top: 10px;
+  }
+
+  .observation-stat-caption {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #CCCCCC;
+    width: 173px !important;
+    max-width: 173px !important;
+    margin: 0;
+  }
+
+
+  /* --------------------------------------------------------------------------
+     06. FEEDBACKS CAROUSEL (Node 4015:832) — height: 703px
+     -------------------------------------------------------------------------- */
+  .feedbacks-section {
+    position: relative;
+    width: 100%;
+    height: 703px;
+    min-height: 703px;
+    padding: 60px 0;
+    box-sizing: border-box;
+    background: #16181A;
+    margin: 0;
+  }
+
+  .feedbacks-header-wrap {
+    width: 358px;
+    margin: 0 auto 33px auto;
+    text-align: center;
+  }
+
+  .feedbacks-header-wrap h2 {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.6px;
+    color: #FFFFFF;
+    text-align: center;
+    width: 358px !important;
+    max-width: 358px !important;
+    margin: 0;
+  }
+
+  .feedbacks-carousel-track-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  .feedbacks-track {
+    display: flex !important;
+    gap: 24px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    margin: 0 !important;
+    width: max-content !important;
+    box-sizing: content-box !important;
+    transition: transform 0.3s ease;
+  }
+
+
+  .feedback-card {
+    flex: 0 0 266px !important;
+    width: 266px !important;
+    min-width: 266px !important;
+    max-width: 266px !important;
+    height: 390px !important;
+    background: #212326 !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    box-sizing: border-box !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .feedback-quote {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #FFFFFF;
+    margin: 0;
+  }
+
+  .feedback-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .feedback-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 1000px;
+    background: #212326;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .feedback-avatar img {
+    width: 16px;
+    height: 18px;
+    object-fit: contain;
+  }
+
+  .feedback-avatar img.avatar-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .feedback-name {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #FFFFFF;
+  }
+
+  .feedbacks-footer-nav {
+    margin-top: 60px;
+  }
+
+  /* --------------------------------------------------------------------------
+     07. FUNNEL (Node 4015:916) — height: 667px
+     -------------------------------------------------------------------------- */
+  .funnel-section {
+    position: relative;
+    width: 100%;
+    height: 667px;
+    min-height: 667px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .funnel-inner {
+    position: relative;
+    width: 358px;
+    max-width: 358px;
+    height: 667px;
+    min-height: 667px;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+  }
+
+  .funnel-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 304px !important;
+    max-width: 304px !important;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.6px;
+    color: #FFFFFF;
+    margin: 0;
+  }
+
+  .funnel-left-text {
+    position: absolute;
+    top: 159px;
+    left: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #CCCCCC;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0;
+  }
+
+  .funnel-left-text p {
+    margin: 0;
+  }
+
+  .funnel-right-text {
+    position: absolute;
+    top: 595px;
+    left: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #CCCCCC;
+    margin: 0;
+  }
+
+  .funnel-diagram-group {
+    position: absolute;
+    top: 348px;
+    left: -191px;
+    width: 740px;
+    height: 340px;
+    pointer-events: none;
+  }
+
+  /* --------------------------------------------------------------------------
+     08. LESSONS MATRIX (Node 4015:935) — height: 5354px
+     -------------------------------------------------------------------------- */
+  .lessons-section {
+    position: relative;
+    width: 100%;
+    height: 5354px;
+    min-height: 5354px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .lessons-inner {
+    position: relative;
+    width: 358px;
+    max-width: 358px;
+    height: 5354px;
+    min-height: 5354px;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+  }
+
+  .lessons-header-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 358px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .lessons-header-wrap h2 {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.6px;
+    color: #FFFFFF;
+    text-align: center;
+    width: 358px !important;
+    max-width: 358px !important;
+    margin: 0;
+  }
+
+  .lessons-header-wrap p {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #CCCCCC;
+    text-align: center;
+    width: 358px !important;
+    max-width: 358px !important;
+    margin: 0;
+  }
+
+  .lesson-row-label {
+    position: absolute !important;
+    left: 0 !important;
+    width: 358px !important;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: -0.44px;
+    color: #FFFFFF;
+    margin: 0;
+  }
+
+  .lesson-cards-pair {
+    position: absolute !important;
+    left: 0 !important;
+    width: 358px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Exact top coordinates for all 6 lessons */
+  .lessons-inner > :nth-child(2) { top: 214px !important; }
+  .lessons-inner > :nth-child(3) { top: 260px !important; }
+
+  .lessons-inner > :nth-child(4) { top: 1080px !important; }
+  .lessons-inner > :nth-child(5) { top: 1126px !important; }
+
+  .lessons-inner > :nth-child(6) { top: 1946px !important; }
+  .lessons-inner > :nth-child(7) { top: 1992px !important; }
+
+  .lessons-inner > :nth-child(8) { top: 2812px !important; }
+  .lessons-inner > :nth-child(9) { top: 2858px !important; }
+
+  .lessons-inner > :nth-child(10) { top: 3678px !important; }
+  .lessons-inner > :nth-child(11) { top: 3724px !important; }
+
+  .lessons-inner > :nth-child(12) { top: 4544px !important; }
+  .lessons-inner > :nth-child(13) { top: 4590px !important; }
+
+  .lesson-card {
+    width: 358px !important;
+    height: 358px !important;
+    min-height: 358px !important;
+    box-sizing: border-box !important;
+    padding: 24px !important;
+    background: #16181A !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+  }
+
+  .lesson-card-tag {
+    font-family: 'Wremena', serif;
+    font-size: 14px;
+    line-height: 1;
+    color: #6CD9D9;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .lesson-card-title {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: -0.36px;
+    color: #FFFFFF;
+    margin: 0;
+  }
+
+  .lesson-card-desc {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #CCCCCC;
+    margin: 0;
+  }
+
+  .lesson-card-takeaway {
+    background: #212326 !important;
+    border-radius: 8px !important;
+    padding: 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #CCCCCC;
+  }
+
+  /* --------------------------------------------------------------------------
+     09. ECOSYSTEM (Node 4015:1046) — height: 764px
+     -------------------------------------------------------------------------- */
+  .ecosystem-section {
+    position: relative;
+    width: 100%;
+    height: 764px;
+    min-height: 764px;
+    padding: 60px 0 30px 0;
+    background: #16181A;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .ecosystem-header {
+    width: 358px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .ecosystem-header-title {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.6px;
+    color: #FFFFFF;
+    text-align: center;
+    width: 358px !important;
+    max-width: 358px !important;
+    margin: 0;
+  }
+
+  .ecosystem-header-desc p {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #CCCCCC;
+    text-align: center;
+    width: 358px !important;
+    max-width: 358px !important;
+    margin: 0;
+  }
+
+  .ecosystem-box {
+    width: 358px;
+    height: 470px;
+    margin: 0 auto;
+    background: #212326;
+    border-radius: 12px;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px;
+    justify-content: center;
+  }
+
+  .ecosystem-tabs {
+    order: 1 !important;
+    width: 100% !important;
+  }
+
+  .ecosystem-tab-item {
+    display: none !important;
+    font-family: 'Wremena', serif;
+    font-size: 24px;
+    line-height: 1;
+    color: #FFFFFF;
+  }
+
+  .ecosystem-tab-item.active {
+    display: block !important;
+  }
+
+  .ecosystem-tab-desc {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #CCCCCC;
+  }
+
+  .ecosystem-image {
+    order: 2 !important;
+    width: 100% !important;
+    height: 310px !important;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #16181A;
+  }
+
+  /* --------------------------------------------------------------------------
+     10. MOBILE APP IDM (Node 4015:1062) — height: 2622px
+     -------------------------------------------------------------------------- */
+  .app-section {
+    position: relative;
+    width: 100%;
+    height: 2622px;
+    min-height: 2622px;
+    padding: 30px 0 60px 0;
+    background: #16181A;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .app-container {
+    width: 358px;
+    max-width: 358px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app-title-wrap {
+    width: 358px;
+    text-align: center;
+    margin-bottom: 3.75rem;
+  }
+
+  .app-title {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.6px;
+    color: #FFFFFF;
+    text-align: center;
+    width: 260px !important;
+    max-width: 260px !important;
+    margin: 0 auto;
+  }
+
+  .app-phones-stage {
+    position: relative;
+    width: 358px;
+    height: 860px;
+    margin: 0 auto;
+  }
+
+  .app-phone-item {
+    position: absolute !important;
+    width: 160px !important;
+    height: 380px !important;
+    transform: none !important;
+  }
+
+  .app-phone-item.phone-1 {
+    left: 198px !important;
+    top: 0 !important;
+  }
+
+  .app-phone-item.phone-2 {
+    left: 0 !important;
+    top: 240px !important;
+  }
+
+  .app-phone-item.phone-3 {
+    left: 198px !important;
+    top: 480px !important;
+  }
+
+  .app-phone-frame {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 160px !important;
+    height: 380px !important;
+    object-fit: contain !important;
+    z-index: 2 !important;
+    display: block !important;
+    pointer-events: none !important;
+  }
+
+  .app-phone-screen {
+    /* The Figma 360px state shows the light IDM screen inside each frame.
+       Keep it above the black frame interior; hiding it leaves a visibly
+       incorrect black phone body in the mobile composition. */
+    display: block !important;
+    left: 50% !important;
+    top: 5px !important;
+    transform: translateX(-50%) !important;
+    width: 142px !important;
+    height: 370px !important;
+    object-fit: cover !important;
+    border-radius: 24px !important;
+    z-index: 3 !important;
+  }
+
+  .app-quote-callout {
+    width: 294px !important;
+    max-width: 294px !important;
+    margin: 60px auto !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .app-quote-callout p {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+  }
+
+  .app-features-row {
+    width: 358px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 auto;
+  }
+
+  .app-feature-card {
+    width: 358px !important;
+    max-width: 358px !important;
+    background: #212326;
+    border-radius: 16px;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .app-feature-card .app-feature-graphic {
+    width: 100%;
+    height: 200px;
+    min-height: 200px;
+    aspect-ratio: 1 / 1;
+    flex: 0 0 200px;
+  }
+
+  .app-feature-card .app-feature-graphic img {
+    width: 200px;
+    height: 200px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+  }
+
+  .app-feature-title {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: -0.36px;
+    color: #FFFFFF;
+    margin: 0;
+  }
+
+  .app-feature-desc {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #CCCCCC;
+    margin: 0;
+  }
+
+  /* --------------------------------------------------------------------------
+     11. VIDEO TRAILER (Node 4015:1108) — height: 483px
+     -------------------------------------------------------------------------- */
+  .trailer-section {
+    position: relative;
+    width: 100%;
+    height: 483px;
+    min-height: 483px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .trailer-container {
+    width: 358px;
+    max-width: 358px;
+    height: 483px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trailer-title-wrap {
+    width: 358px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .trailer-title {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.6px;
+    color: #FFFFFF;
+    text-align: center;
+    width: 358px !important;
+    max-width: 358px !important;
+    margin: 0;
+  }
+
+  .trailer-video-box {
+    width: 390px;
+    height: 390px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 -16px;
+  }
+
+  .trailer-video-box .trailer-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .trailer-play-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 198px;
+    box-sizing: border-box;
+    padding: 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  /* --------------------------------------------------------------------------
+     12. PRICING & TARIFFS (Node 4015:1124) — height: 1570px
+     -------------------------------------------------------------------------- */
+  .tariffs-section {
+    position: relative;
+    width: 100%;
+    height: 1570px;
+    min-height: 1570px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .tariffs-container {
+    width: 358px;
+    max-width: 358px;
+    height: 1570px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tariffs-header-wrap {
+    width: 358px;
+    margin-bottom: 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tariffs-header-wrap h2 {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.6px;
+    color: #FFFFFF;
+    text-align: center;
+    width: 358px !important;
+    max-width: 358px !important;
+    margin: 0;
+  }
+
+  .tariffs-header-wrap p {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #CCCCCC;
+    text-align: center;
+    width: 358px !important;
+    max-width: 358px !important;
+    margin: 0;
+  }
+
+  .tariffs-grid {
+    width: 358px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    align-items: center !important;
+  }
+
+  .tariff-card {
+    width: 358px !important;
+    max-width: 358px !important;
+    height: 409px !important;
+    min-height: 409px !important;
+    background: #16181A !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    gap: 0 !important;
+    row-gap: 0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+  }
+
+  .tariff-card:last-child {
+    height: 409px !important;
+    min-height: 409px !important;
+  }
+
+  .tariff-card-featured-wrap {
+  
+  
+    width: 362px !important;
+    max-width: 362px !important;
+    height: 519px !important;
+    min-height: 519px !important;
+    background: #8AE5E5 !important;
+    border-radius: 14px !important;
+    padding: 2px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    position: relative !important;
+  
+  position: relative !important;
+
+  padding: 0 !important;
+}
+
+  .tariff-card-featured-inner {
+  position: absolute !important;
+  left: 2px !important;
+  right: 2px !important;
+  bottom: 2px !important;
+  top: 48px !important;
+  width: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  background: #16181A !important;
+  border-radius: 12px !important;
+  padding: 0 24px 24px !important;
+}
+
+  .tariff-badge-recommended {
+    position: absolute !important;
+    top: 10px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    background: transparent !important;
+    color: #212326 !important;
+    font-family: 'Gilroy', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+  }
+
+  .tariff-tag {
+    font-family: 'Wremena', serif !important;
+    font-size: 14px !important;
+    line-height: 1 !important;
+    color: #6CD9D9 !important;
+  }
+
+  .tariff-content {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .tariff-name {
+    font-family: 'Gilroy', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.36px !important;
+    color: #FFFFFF !important;
+    margin: 6px 0 !important;
+  }
+
+  .tariff-features-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    margin: 0 !important;
+  }
+
+  .tariff-feature-item {
+    font-family: 'Gilroy', sans-serif !important;
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.26px !important;
+    color: #CCCCCC !important;
+    gap: 8px !important;
+  }
+
+  .tariff-price-wrap {
+    margin: 0 !important;
+  }
+
+  .tariff-price {
+    font-family: 'Gilroy', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 26px !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.52px !important;
+    color: #FFFFFF !important;
+  }
+
+  .tariff-price-old {
+    font-family: 'Gilroy', sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+    color: #999999 !important;
+  }
+
+  .tariff-btn {
+    width: 100% !important;
+    height: 52px !important;
+    box-sizing: border-box !important;
+    border-radius: 1000px !important;
+    background: #8AE5E5 !important;
+    border: 1px solid #6CD9D9 !important;
+    font-family: 'Gilroy', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #212326 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    margin: 0 !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     13. CHAT SCREENSHOTS (Node 4015:1213) — height: 984px
+     -------------------------------------------------------------------------- */
+  .screenshots-section {
+    position: relative;
+    width: 100%;
+    height: 984px;
+    min-height: 984px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .screenshots-inner {
+    position: relative;
+    width: 358px;
+    max-width: 358px;
+    height: 984px;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+  }
+
+  .screenshots-header-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 358px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .screenshots-header-wrap h2 {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.6px;
+    color: #FFFFFF;
+    text-align: center;
+    width: 300px !important;
+    max-width: 300px !important;
+    margin: 0 auto;
+  }
+
+  .screenshots-grid-cols {
+    position: absolute;
+    top: 164px;
+    left: 0;
+    width: calc(100vw - 16px);
+    max-width: none;
+    height: 812px;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: none;
+    grid-template-columns: none !important;
+    align-items: flex-start;
+  }
+
+  .screenshots-grid-cols::-webkit-scrollbar {
+    display: none;
+  }
+
+  .screenshots-col {
+    width: 266px !important;
+    min-width: 266px !important;
+    max-width: 266px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    flex: 0 0 266px !important;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    align-self: flex-start !important;
+    margin: 0 !important;
+  }
+
+  .screenshot-item img {
+    width: 266px !important;
+    max-width: 266px !important;
+    border-radius: 12px !important;
+    display: block !important;
+  }
+
+  /* --------------------------------------------------------------------------
+     14. BONUS GUIDES (Node 4015:1244) — height: 780px
+     -------------------------------------------------------------------------- */
+  .guides-section {
+    position: relative;
+    width: 100%;
+    height: 780px;
+    min-height: 780px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .guides-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .guides-header-wrap {
+    width: calc(100vw - 32px);
+    max-width: 358px;
+    margin: 0 auto 60px auto !important;
+    text-align: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .guides-header-wrap h2 {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.6px;
+    color: #FFFFFF;
+    text-align: center;
+    width: 100% !important;
+    max-width: 358px !important;
+    margin: 0 auto;
+  }
+
+  .guides-header-wrap p {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #CCCCCC;
+    text-align: center;
+    width: 100% !important;
+    max-width: 358px !important;
+    margin: 0 auto;
+  }
+
+  .guides-carousel-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden;
+  }
+
+  .guides-track {
+    display: flex;
+    gap: 24px;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    width: max-content !important;
+    box-sizing: border-box !important;
+    transition: transform 0.3s ease;
+  }
+
+
+  .guide-card {
+    width: 266px !important;
+    min-width: 266px !important;
+    height: 610px !important;
+    background: #16181A;
+    border-radius: 12px;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .guide-card-title {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: -0.36px;
+    color: #FFFFFF;
+    margin: 0 0 12px 0;
+  }
+
+  .guide-card-desc {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #CCCCCC;
+    margin: 0;
+  }
+
+  /* --------------------------------------------------------------------------
+     15. FAQ ACCORDION (Node 4015:1300) — height: 1105px
+     -------------------------------------------------------------------------- */
+  .faq-section {
+  
+    position: relative;
+    width: 100%;
+    height: 1105px;
+    min-height: 1105px;
+    padding: 0;
+    margin: 0;
+  
+  height: auto !important;
+  min-height: 1105px !important;
+}
+
+  .faq-inner {
+  
+    position: relative;
+    width: 358px;
+    max-width: 358px;
+    height: 1105px;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+  
+  height: auto !important;
+  min-height: 1105px !important;
+}
+
+  .faq-container {
+  
+    display: flex !important;
+    flex-direction: column !important;
+    width: 358px !important;
+    max-width: 358px !important;
+    grid-template-columns: none !important;
+    gap: 0 !important;
+    margin: 0 auto !important;
+  
+  min-height: 1105px !important;
+  height: auto !important;
+}
+
+  .faq-left-col {
+    display: contents !important;
+  }
+
+  .faq-title {
+    order: 1 !important;
+    width: 358px !important;
+    max-width: 358px !important;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.6px;
+    color: #FFFFFF;
+    margin: 0 0 3.75rem 0;
+    text-align: center;
+  }
+
+  .faq-title br {
+    display: none;
+  }
+
+  .faq-right-col {
+    order: 2 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+    width: 358px !important;
+    max-width: 358px !important;
+  }
+
+  .faq-accordion {
+    width: 358px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .faq-item-group {
+    width: 100%;
+  }
+
+  .faq-question-box {
+    width: 100%;
+    min-height: 56px;
+    border-radius: 12px;
+    background: #16181A;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 12px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .faq-num {
+    font-family: 'Wremena', serif;
+    font-size: 14px;
+    line-height: 1;
+    color: #6CD9D9;
+    margin-right: 12px;
+  }
+
+  .faq-question-title {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #FFFFFF;
+  }
+
+  .faq-toggle-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .faq-answer-inner {
+    padding: 24px 0 0 0;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #CCCCCC;
+  }
+
+  .faq-item-group.active .faq-answer-collapse,
+  .faq-item-group.active .faq-answer-inner,
+  .faq-item-group.active .faq-answer-box {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .faq-support-card {
+    order: 3 !important;
+    width: 262px !important;
+    max-width: 262px !important;
+    height: 176px !important;
+    margin: 60px auto 0 auto !important;
+    background: #16181A;
+    border-radius: 12px;
+    padding: 24px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+  }
+
+  .faq-support-card p {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #CCCCCC;
+    margin: 0;
+  }
+
+  .faq-support-btn {
+    width: 100%;
+    height: 48px;
+    border-radius: 1000px;
+    background: #8AE5E5;
+    color: #212326;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  /* --------------------------------------------------------------------------
+     16. FINAL CTA & FOOTER (Node 4015:1382) — height: 605px
+     -------------------------------------------------------------------------- */
+  .footer-cta-section {
+    position: relative;
+    width: 100%;
+    height: 605px;
+    min-height: 605px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .footer-cta-inner {
+    position: relative;
+    width: 358px;
+    max-width: 358px;
+    height: 605px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-cta-content {
+    width: 358px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 1.13rem;
+    box-sizing: border-box;
+  }
+
+  .footer-cta-title {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.1;
+    letter-spacing: -0.52px;
+    color: #FFFFFF;
+    text-align: center;
+    width: 358px !important;
+    max-width: 358px !important;
+    margin: 0 0 16px 0;
+  }
+
+  .footer-cta-desc {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #CCCCCC;
+    text-align: center;
+    width: 358px !important;
+    max-width: 358px !important;
+    margin: 0 0 3rem 0;
+  }
+
+  .footer-cta-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footer-btn-secondary {
+    width: 205px;
+    height: 56px;
+    box-sizing: border-box;
+    border-radius: 1000px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .footer-or-label {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    color: #CCCCCC;
+    margin: 4px 0;
+  }
+
+  .footer-btn-primary {
+    width: 198px;
+    height: 57px;
+    box-sizing: border-box;
+    border-radius: 1000px;
+    background: #8AE5E5;
+    border: 1px solid #6CD9D9;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #212326;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+
+  .footer-items-row {
+    width: 358px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .footer-item {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 12px;
+    line-height: 1.3;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .video-section {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .trailer-video-box {
+    margin: 0 auto !important;
+  }
+  .video-preview-card {
+    margin: 0 auto !important;
+  }
+
+  .slider-title-desktop {
+    display: none !important;
+  }
+
+  .slider-title-mobile {
+    display: inline !important;
+  }
+
+  .system-slider-header h2 br {
+    display: inline !important;
+  }
+
+  .ecosystem-tabs { display: contents !important; }
+  .ecosystem-tab-bottom { display: contents !important; }
+  .ecosystem-box {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .ecosystem-progress-track { order: 1 !important; width: 100% !important; }
+  .ecosystem-tabs-list { order: 2 !important; width: 100% !important; margin-top: 16px !important; }
+  .ecosystem-tab-desc { order: 3 !important; width: 100% !important; margin-top: 12px !important; }
+  .ecosystem-image { order: 4 !important; width: 100% !important; margin-top: 24px !important; }
+
+  .tariff-card-featured-wrap { padding: 0 !important; border: 0 !important; }
+  .tariff-card-featured-inner {
+    margin: 0 !important;
+    border: 0 !important;
+  }
+}
+
+/* ==========================================================================
+   390px Figma parity fixes (frame 4045:7983)
+   Use the same audited geometry across the regular mobile range; otherwise
+   400–430px devices fall back to the looser generic mobile cascade.
+   ========================================================================== */
+@media (max-width: 640px) {
+  /* The Windows scrollbar leaves a 382px layout viewport. Keep the Figma
+     canvas width for full-bleed sections while body still clips overflow. */
+  .site-header,
+  main,
+  .hero-section,
+  .scenarios-section,
+  .video-section,
+  .system-slider-section,
+  .observation-section,
+  .feedbacks-section,
+  .funnel-section,
+  .lessons-section,
+  .ecosystem-section,
+  .app-section,
+  .trailer-section,
+  .tariffs-section,
+  .screenshots-section,
+  .guides-section,
+  .faq-section,
+  .footer-cta-section {
+    width: 100vw !important;
+  }
+
+  /* The current 390px Figma frame has no divider between the ecosystem and
+     IDM blocks; the next block starts exactly where the previous one ends. */
+  .ecosystem-section + .app-section {
+    margin-top: -120px !important;
+  }
+
+  /* Figma text nodes use the 30px / 33px mobile heading scale. */
+  .scenarios-left-title,
+  .scenarios-right-title,
+  .video-card-title,
+  .system-slider-header h2,
+  .observation-title,
+  .feedbacks-header-wrap h2,
+  .funnel-title,
+  .lessons-header-wrap h2,
+  .ecosystem-header-title,
+  .app-title,
+  .trailer-title,
+  .tariffs-header-wrap h2,
+  .screenshots-header-wrap h2,
+  .guides-header-wrap h2,
+  .faq-title,
+  .footer-cta-title {
+    font-size: 30px !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.6px !important;
+  }
+
+  /* Hero: 4015:734 is 186px high, which places the CTA at y=378. */
+  .hero-main-title {
+    line-height: 31px !important;
+  }
+
+  .hero-float-left {
+    top: 430.89px !important;
+    left: -46.07px !important;
+  }
+
+  .hero-float-right {
+    top: 450.89px !important;
+    right: -106.53px !important;
+  }
+
+  .hero-vector-tagline {
+    bottom: 0 !important;
+    line-height: 22px !important;
+  }
+
+
+  /* Video image is 4015:780 at y=192, while the play card stays at y=332. */
+  .video-preview-card {
+    width: 100vw !important;
+  }
+
+  .video-preview-card img.video-bg {
+    top: 192px !important;
+    left: 0 !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100vw !important;
+    height: 100vw !important;
+  }
+
+  /* System slider: match 310px progress/pagination and text stage offsets. */
+  .system-slider-content {
+    position: relative !important;
+  }
+
+  .system-bars-wrap {
+    width: calc(100vw - 80px) !important;
+    max-width: 310px !important;
+    flex: 0 0 min(310px, calc(100vw - 80px)) !important;
+    gap: 12px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .system-bar-item {
+    width: calc((min(310px, calc(100vw - 80px)) - 12px) / 2) !important;
+    min-width: 0 !important;
+    flex: 1 1 0 !important;
+  }
+
+  .system-slider-pagination {
+    width: min(310px, calc(100vw - 80px)) !important;
+    height: 64px !important;
+    margin-top: 0 !important;
+    gap: 0 !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    transform: none;
+  }
+
+  .system-slider-num {
+    width: calc(100% - 35px) !important;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+  }
+
+  .system-slider-total {
+    width: 15px !important;
+    min-width: 15px !important;
+    flex: 0 0 15px !important;
+    margin-top: 0 !important;
+  }
+
+  .system-text-stage {
+    position: absolute !important;
+    top: 258px !important;
+    left: 24px !important;
+    width: min(310px, calc(100vw - 80px)) !important;
+    height: 180px !important;
+    min-height: 180px !important;
+  }
+
+  /* Scenarios: remove the inherited 40px flex gap. */
+  .scenarios-inner {
+    gap: 0 !important;
+  }
+
+  .scenario-card {
+    border: 0 !important;
+  }
+
+  .scenarios-right-bottom {
+    gap: 16px !important;
+  }
+
+  .scenarios-right-bottom .scenarios-cta-btn {
+    margin-top: 16px !important;
+  }
+
+  /* Feedbacks: Figma has 60px between the 33px title and carousel. */
+  .feedbacks-header-wrap {
+    margin: 0 auto 60px !important;
+    padding: 0 !important;
+  }
+
+  .feedbacks-carousel-track-wrap {
+    margin: 0 !important;
+  }
+
+
+  .observation-stat-num-wrap {
+    position: relative !important;
+  }
+
+  .observation-stat-73 {
+    display: block !important;
+    width: 96px !important;
+  }
+
+  .observation-stat-percent {
+    position: absolute !important;
+    left: 112px !important;
+    top: 0 !important;
+    width: 32px !important;
+    height: 40px !important;
+    margin: 0 !important;
+    line-height: 40px !important;
+  }
+
+  /* Funnel 4045:8183 is positioned against the section canvas. In the DOM it
+     lives inside the 16px content rail, so compensate that rail exactly. */
+  .funnel-diagram-group {
+    left: -207px !important;
+  }
+
+  /* Ecosystem 4045:8313: progress → 24px → title → 12px → copy → 32px →
+     blank 310px visual stage. */
+  .ecosystem-box {
+    gap: 0 !important;
+    justify-content: flex-start !important;
+  }
+
+  .ecosystem-progress-track {
+    margin: 0 !important;
+  }
+
+  .ecosystem-tabs-list {
+    margin-top: 24px !important;
+  }
+
+  .ecosystem-tab-desc {
+    margin-top: 12px !important;
+  }
+
+  .ecosystem-image {
+    margin-top: 32px !important;
+  }
+
+  .ecosystem-image > * {
+    display: none !important;
+  }
+
+  .feedback-avatar {
+    border-color: transparent !important;
+  }
+
+  /* System slider 4045:8058 uses a neutral image stage in the current mobile
+     frame; retain the interactive layers for larger breakpoints only. */
+  .system-slider-image .system-slide-img-layer {
+    display: none !important;
+  }
+
+  /* IDM 4045:8329: every direct child is separated by one 60px container
+     gap. Remove legacy child margins that doubled that spacing. */
+  .app-container {
+    gap: 60px !important;
+  }
+
+  .app-title-wrap,
+  .app-quote-callout,
+  .app-features-row,
+  .app-cta-btn {
+    margin: 0 !important;
+  }
+
+  .app-cta-btn {
+    width: 198px !important;
+    height: 57px !important;
+    padding: 0 32px !important;
+    box-sizing: border-box !important;
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+    flex: 0 0 57px !important;
+  }
+
+  /* Tariffs 4045:8391: 125px heading, 60px gap, then 409/519/409px cards. */
+  .tariffs-container {
+    gap: 60px !important;
+  }
+
+  .tariffs-header-wrap {
+    margin: 0 !important;
+  }
+
+  .tariff-card-featured-wrap {
+    width: min(362px, calc(100vw - 28px)) !important;
+    min-width: min(362px, calc(100vw - 28px)) !important;
+    max-width: min(362px, calc(100vw - 28px)) !important;
+    height: 519px !important;
+    min-height: 519px !important;
+    max-height: 519px !important;
+    flex: 0 0 519px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* FAQ 4045:8567: title 33px, 60px gap, 776px accordion, 60px gap,
+     176px support card. */
+  .faq-section,
+  .faq-container {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+
+  .faq-title {
+    margin: 0 0 60px !important;
+  }
+
+  .faq-right-col {
+    height: auto !important;
+    min-height: 0 !important;
+    gap: 12px !important;
+  }
+
+  .faq-item-group {
+    flex: 0 0 auto !important;
+  }
+
+  .faq-item-group:not(.active) .faq-answer-collapse,
+  .faq-item-group:not(.active) .faq-answer-inner {
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .faq-item-group.active {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: 0 !important;
+    gap: 4px !important;
+  }
+
+  .faq-question-box {
+    height: 56px !important;
+    min-height: 56px !important;
+    flex: 0 0 56px !important;
+  }
+
+  .faq-right-col > .faq-item-group:nth-child(3) .faq-question-box {
+    height: 60px !important;
+    min-height: 60px !important;
+    flex-basis: 60px !important;
+  }
+
+  .faq-item-group.active .faq-answer-collapse,
+  .faq-item-group.active .faq-answer-inner,
+  .faq-item-group.active .faq-answer-box {
+    width: calc(100vw - 32px) !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .faq-item-group.active .faq-answer-inner {
+    padding: 0 !important;
+  }
+
+  .faq-item-group.active .faq-answer-box {
+    padding: 24px !important;
+    overflow: visible !important;
+  }
+
+  .faq-support-card {
+    margin: 60px auto 0 !important;
+  }
+
+  /* Trailer 4045:8375: title (33px), 60px gap, then a full-bleed 390px
+     square. The base container gap and max-width were shrinking and pushing
+     the video down on regular phones. */
+  .trailer-container {
+    width: 100vw !important;
+    max-width: none !important;
+    gap: 0 !important;
+  }
+
+  .trailer-title-wrap {
+    width: calc(100vw - 32px) !important;
+    flex: 0 0 auto !important;
+    margin-bottom: 60px !important;
+  }
+
+  .trailer-video-box {
+    width: 100vw !important;
+    max-width: none !important;
+    height: 100vw !important;
+    flex: 0 0 100vw !important;
+    margin: 0 !important;
+    border: 0 !important;
+    outline: 0 !important;
+  }
+
+  .video-section,
+  .video-preview-card {
+    height: calc(192px + 100vw) !important;
+    min-height: calc(192px + 100vw) !important;
+  }
+
+  .trailer-section,
+  .trailer-container {
+    height: calc(93px + 100vw) !important;
+    min-height: calc(93px + 100vw) !important;
+  }
+
+  /* Guides 4045:8511: 140px header + 60px gap + 480px cards +
+     60px gap + 40px carousel controls = the 780px section frame. */
+  .guides-container {
+    height: 780px !important;
+    gap: 60px !important;
+  }
+
+  .guides-header-wrap {
+    gap: 20px !important;
+    margin: 0 !important;
+  }
+
+  .guides-carousel-wrap,
+  .guides-track,
+  .guide-card {
+    height: 480px !important;
+  }
+
+  .guides-nav-pill {
+    width: 90px !important;
+    height: 40px !important;
+    margin: 0 auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    align-self: center !important;
+  }
+
+  .guide-card {
+    min-height: 480px !important;
+    flex-basis: 266px !important;
+    width: 266px !important;
+  }
+
+  /* Footer line breaks: move 'и' to next line on mobile */
+  .footer-desc-br {
+    display: inline !important;
+  }
+
+
+
+
+  .guide-text-wrap {
+    gap: 16px !important;
+  }
+
+  .guide-title {
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.36px !important;
+  }
+
+  .guide-desc {
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.28px !important;
+  }
+
+  /* Footer 4045:8649: preserve the exact vertical rhythm and restore the
+     left-aligned legal links shown in the mobile frame. */
+  .footer-cta-inner {
+    display: block !important;
+  }
+
+  .footer-cta-content {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: calc(100vw - 32px) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+    transform: none !important;
+  }
+
+  .footer-cta-title {
+    margin: 0 0 18px !important;
+  }
+
+  .footer-cta-desc {
+    margin: 0 0 48px !important;
+  }
+
+  .footer-cta-buttons {
+    width: 205px !important;
+    height: 167px !important;
+    gap: 18px !important;
+    margin: 0 !important;
+  }
+
+  .footer-or-label {
+    height: 18px !important;
+    line-height: 18px !important;
+    margin: 0 !important;
+    flex: 0 0 18px !important;
+  }
+
+  .footer-items-row {
+    position: absolute !important;
+    top: 489px !important;
+    bottom: auto !important;
+    left: 0 !important;
+    width: calc(100vw - 32px) !important;
+    height: 100px !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    margin: 0 !important;
+  }
+
+  .footer-item {
+    width: 100% !important;
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .observation-inner {
+    width: calc(100vw - 32px) !important;
+    max-width: calc(100vw - 32px) !important;
+  }
+  .observation-title,
+  .observation-left-text,
+  .observation-right-text {
+    width: calc(100vw - 32px) !important;
+    max-width: calc(100vw - 32px) !important;
+  }
+  .observation-stat-box {
+    left: auto !important;
+    right: 0 !important;
+  }
+}

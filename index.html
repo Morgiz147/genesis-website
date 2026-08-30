@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>GENESĪS — Переход от мыслей к действиям</title>
+  <meta name="description" content="GENESĪS — система, которая учит знакомиться так, чтобы знакомство вело дальше. На улице, в онлайне или везде.">
+  <meta name="theme-color" content="#0C0D0E">
+  <link rel="icon" href="assets/icons/845799d11f4dc45f8d05605190346147d438e769.svg" type="image/svg+xml">
+
+  <!-- Preconnect & DNS-prefetch for zero-latency Kinescope video loading -->
+  <link rel="preconnect" href="https://kinescope.io" crossorigin>
+  <link rel="preconnect" href="https://kinescope.video" crossorigin>
+  <link rel="dns-prefetch" href="https://kinescope.io">
+  <link rel="dns-prefetch" href="https://kinescope.video">
+  
+  <!-- Single CSS entry point: the complete responsive system is composed here. -->
+  <link rel="stylesheet" href="css/main.css?v=20260829-43">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Перейти к содержимому</a>
+  <div class="site-wrapper">
+
+    <!-- ====================================================================
+         0. FIXED NAVBAR
+         ==================================================================== -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#" class="header-logo" aria-label="GENESĪS Home">
+          <img src="assets/icons/845799d11f4dc45f8d05605190346147d438e769.svg" alt="GENESĪS Logo" width="38" height="28">
+        </a>
+
+        <nav class="header-nav" id="header-nav">
+          <a href="#about" class="nav-link">О продукте</a>
+          <a href="#feedbacks" class="nav-link">Результаты</a>
+          <a href="#pricing" class="nav-link">Тарифы</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+        </nav>
+
+        <div class="header-cta">
+          <a href="#pricing" class="header-btn">
+            <span>Забрать GENESĪS</span>
+            <div class="header-btn-light">
+              <img src="assets/icons/2d5b0b86258e208370a59c5aae23b23a2fc8e683.svg" alt="">
+            </div>
+          </a>
+        </div>
+
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" type="button" aria-label="Открыть меню" aria-controls="header-nav" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+    <!-- ====================================================================
+         1. HERO SECTION (Figma Node 1:35)
+         ==================================================================== -->
+    <section class="hero-section" id="hero">
+      <!-- Background Graphic Layers -->
+      <div class="hero-bg-layer" aria-hidden="true">
+        <img class="hero-bg-img-1" src="assets/images/11061d69a8d4c85c0ed2466dc6738c9ee3f29dfd.png" alt="">
+        <img class="hero-bg-img-2" src="assets/images/559d9ffddd11475d419833b70e47539af6f7ac57.png" alt="">
+      </div>
+
+      <!-- Top Block: 1440x810 -->
+      <div class="hero-top-block">
+        <!-- Floating Rotated Left Graphic -->
+        <div class="hero-float-left">
+          <img src="assets/images/hand1.png" alt="">
+        </div>
+
+        <!-- Floating Rotated Right Graphic -->
+        <div class="hero-float-right">
+          <img src="assets/images/hand2.png" alt="">
+        </div>
+
+        <!-- Center Text + Button -->
+        <div class="hero-center-box">
+          <h1 class="hero-main-title">
+            Хватит смотреть, как жизнь,<br class="hero-br-1920"> возможности и девушки проходят<br class="hero-br-1920"> мимо, <span class="dim">пока ты плывёшь по течению<br>в надежде, что всё исправится само</span>
+          </h1>
+
+          <a href="#pricing" class="hero-cta-btn">
+            <span>Забрать GENESĪS</span>
+            <img src="assets/icons/618496dd0a976bac5108d14334ba425f90227f21.svg" alt="" width="16" height="16">
+          </a>
+        </div>
+
+        <!-- Vector Graphic & Tagline at bottom of Top Block -->
+        <div class="hero-vector-wrap">
+          <img src="assets/icons/d46b8e5d633bcbd0286b2ef1564d6a57469c49b7.svg" alt="">
+          <p class="hero-vector-tagline">переход от мыслей к действиям</p>
+        </div>
+      </div>
+
+      <!-- Bottom Block: 1440x810 (top 810px) -->
+      <div class="hero-bottom-block">
+        <div class="hero-def-box">
+          <div>
+            <div class="hero-def-term">genesis</div>
+            <div class="hero-def-origin">(лат.) — «начало, зарождение,<br>происхождение». из греч. γένεσις<br>— «рождение».</div>
+          </div>
+          <div class="hero-def-desc">
+            <span class="dim">Название выбрано буквально:</span><br>это точка, с которой<br>начинается твоя история.
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         2. SCENARIOS SECTION ("Узнаешь себя?", Figma Node 1:60)
+         ==================================================================== -->
+    <section class="scenarios-section" id="about">
+      <div class="scenarios-inner">
+        <!-- Left Title -->
+        <h2 class="scenarios-left-title"><span class="scenarios-title-desktop">Узнаешь<br>себя?</span><span class="scenarios-title-mobile">Узнаешь<br>себя сценарии,<br>которые регулярно<br>повторяются?</span></h2>
+
+        <!-- Center 5 Cards Column (left: 445px, top: 0) -->
+        <div class="scenarios-cards-column">
+          <div class="scenario-card">
+            <div class="scenario-card-num">01</div>
+            <p class="scenario-card-text">Видишь её — и тело сковывает. Ноги будто приклеены к полу, в голове хаос</p>
+          </div>
+
+          <div class="scenario-card">
+            <div class="scenario-card-num">02</div>
+            <p class="scenario-card-text">Если разговор всё-таки начался, он превращается в допрос — и умирает через минуту.</p>
+          </div>
+
+          <div class="scenario-card">
+            <div class="scenario-card-num">03</div>
+            <p class="scenario-card-text">В онлайне та же история: написал — тишина. Игнор, переносы встреч, ноль вовлечения.</p>
+          </div>
+
+          <div class="scenario-card">
+            <div class="scenario-card-num">04</div>
+            <p class="scenario-card-text">Ты «классный парень», с которым дружат. Но как мужчину — не выбирают.</p>
+          </div>
+
+          <div class="scenario-card">
+            <div class="scenario-card-num">05</div>
+            <p class="scenario-card-text">Проще вообще не пробовать, чем принять отказ. И ты не пробуешь.</p>
+          </div>
+        </div>
+
+        <!-- Right Column Top Title (left: 920px, top: 0) -->
+        <div class="scenarios-right-title-wrap">
+          <h3 class="scenarios-right-title">Cценарии,<br>которые<br>регулярно повторяются</h3>
+        </div>
+
+        <!-- Right Column Bottom Content (left: 920px, top: 1600px) -->
+        <div class="scenarios-right-bottom">
+          <p class="scenarios-right-text-1">Если знакомо — с тобой всё нормально. Через это проходил каждый, кто не родился притягательным от природы.</p>
+          <p class="scenarios-right-text-2">Вопрос один: когда ты начнёшь — сегодня или когда цикл повторится ещё раз.</p>
+          <a href="#pricing" class="scenarios-cta-btn">
+            <span>Забрать GENESĪS</span>
+            <img src="assets/icons/618496dd0a976bac5108d14334ba425f90227f21.svg" alt="" width="16" height="16">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. VIDEO INTRO SECTION (Figma Node 1:95)
+         ==================================================================== -->
+    <section class="video-section">
+      <div class="video-preview-card" role="button" tabindex="0" aria-label="Открыть видео о программе" data-video-src="https://kinescope.io/embed/qnkaYphFo5uZ7E4rgvUBkc">
+        <div class="video-bg-media">
+          <iframe class="video-bg-iframe lazy-kinescope" data-src="https://kinescope.io/embed/qnkaYphFo5uZ7E4rgvUBkc?autoplay=1&muted=1&controls=0&loop=1&playsinline=1&ui=0&header=0&watermark=0&background=1" allow="autoplay; fullscreen" title="Background Video Preview"></iframe>
+        </div>
+        <div class="video-card-overlay"></div>
+        
+        <div class="video-card-title-wrap">
+          <h2 class="video-card-title">Посмотри это видео,<br>чтобы понять, почему<br>ты обязан иметь<br>изобилие выбора</h2>
+        </div>
+        
+        <div class="video-play-box">
+          <div class="video-play-header">
+            <span class="video-play-label">Смотреть<br>видео</span>
+            <div class="video-play-icon">
+              <img src="assets/icons/6dd67f9e42bd33cc56743420457cb1a97d27d700.svg" alt="Play Icon">
+            </div>
+          </div>
+          <div class="video-play-duration">21:18</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         4. SYSTEM SLIDER ("GENESĪS — система...", Figma Node 1:111)
+         ==================================================================== -->
+    <section class="system-slider-section" id="system-slider-section">
+      <div class="system-slider-scroll-track" id="system-slider-scroll-track">
+        <div class="system-slider-sticky-stage">
+          <div class="system-slider-header">
+            <h2><span class="slider-title-desktop">GENESĪS — система, которая<br>учит одному навыку, но до<br>конца: знакомиться так, чтобы<br>знакомство вело дальше.</span><span class="slider-title-mobile">GENESĪS — система,<br>которая учит одному<br>навыку, но до конца:<br>знакомиться так, чтобы<br>знакомство вело дальше.</span></h2>
+            <p>Ты выбираешь, где играть <span class="white">— на улице, в онлайне или везде.</span></p>
+          </div>
+
+          <div class="system-slider-box" id="system-slider-box">
+
+
+            <!-- Left Side: Image Layer Stack -->
+            <div class="system-slider-image">
+              <div class="system-slide-img-layer active" id="system-img-layer-1" data-media-slot="system-offline">
+                <img class="shared-media-asset" src="assets/media/system/offline.webp?v=17879587" alt="OFFline Живые знакомства" loading="lazy" decoding="async">
+              </div>
+              <div class="system-slide-img-layer" id="system-img-layer-2" data-media-slot="system-online">
+                <img class="shared-media-asset" src="assets/media/system/online.webp?v=17879587" alt="ONline Знакомства в онлайне" loading="lazy" decoding="async">
+              </div>
+            </div>
+            
+            <!-- Right Side: Content Box with Progress Bars & Text Layer Stack -->
+            <div class="system-slider-content">
+              <div>
+                <div class="system-bars-wrap">
+                  <button class="system-bar-item" type="button" data-index="0" aria-label="Показать модуль OFFline" aria-current="true">
+                    <div class="system-bar-fill" id="system-bar-fill-1"></div>
+                  </button>
+                  <button class="system-bar-item" type="button" data-index="1" aria-label="Показать модуль ONline" aria-current="false">
+                    <div class="system-bar-fill" id="system-bar-fill-2"></div>
+                  </button>
+                </div>
+                <div class="system-slider-pagination">
+                  <span class="system-slider-num" id="system-slide-num">1</span>
+                  <span class="system-slider-total">2</span>
+                </div>
+              </div>
+
+              <div class="system-text-stage">
+                <div class="system-slide-text-layer active" id="system-text-layer-1">
+                  <span class="system-slide-tag">OFFline</span>
+                  <h3 class="system-slide-title">Живые<br>знакомства</h3>
+                  <p class="system-slide-desc">
+                    Улица, кафе, спортзал, мероприятия. Структура подхода от первого шага до контакта, работа со страхом — и формула, которая учит мозг заводить разговор естественно, без заготовок.
+                  </p>
+                </div>
+                <div class="system-slide-text-layer" id="system-text-layer-2">
+                  <span class="system-slide-tag">ONline</span>
+                  <h3 class="system-slide-title">Знакомства<br>в онлайне</h3>
+                  <p class="system-slide-desc">
+                    Тиндероподобные приложения, Instagram, Telegram. Упаковка профиля, алгоритм первого сообщения, ведение переписки и быстрый перевод диалога на свидание в реальной жизни.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         5. OBSERVATION & STATS SECTION (Figma Node 1:137)
+         ==================================================================== -->
+    <section class="observation-section">
+      <div class="observation-inner">
+        <!-- Left Column Title -->
+        <h2 class="observation-title">Продукт, который<br>родился из<br class="br-desktop"> наблюдения</h2>
+
+        <!-- Left Column Body Text -->
+        <p class="observation-left-text">
+          <span class="text-1920">У меня есть флагман — IMAGO,<br>трансформа-ционный тренинг на<br>полгода. Он идёт потоками, и за годы я<br>заметил: лучшие результаты получают<br>те, кто меньше саботирует переход к<br>действиям в начале.</span>
+          <span class="text-1600">У меня есть флагман — IMAGO,<br>трансформа-ционный тренинг на<br>полгода. Он идёт потоками, и за<br>годы я заметил: лучшие результаты<br>получают те, кто меньше<br>саботирует переход к действиям в<br>начале.</span>
+          <span class="text-default">У меня есть флагман — IMAGO, трансформа-ционный тренинг на полгода. Он идёт потоками, и за годы я заметил: лучшие результаты получают те, кто меньше саботирует переход к действиям в начале.</span>
+        </p>
+
+        <!-- Right Column Text (top: 357px) -->
+        <div class="observation-right-text">
+          <p>
+            <span class="text-1920">Так родился GENESĪS — продукт, который можно<br>взять в любой момент, не дожидаясь потока. Ты<br>захотел — и уже сегодня начал действовать. Это и<br>есть привилегия: ты входишь в игру сейчас, а не<br>когда объявят набор.</span>
+            <span class="text-1600">Так родился GENESĪS — продукт, который можно<br>взять в любой момент, не дожидаясь потока. Ты<br>захотел — и уже сегодня начал действовать.<br>Это и есть привилегия: ты входишь в игру<br>сейчас, а не когда объявят набор.</span>
+            <span class="text-default">Так родился GENESĪS — продукт, который можно взять в любой момент, не дожидаясь потока. Ты захотел — и уже сегодня начал действовать. Это и есть привилегия: ты входишь в игру сейчас, а не когда объявят набор.</span>
+          </p>
+          <p>А когда придёт время IMAGO — ты придёшь<br class="br-desktop">туда подготовленным и возьмёшь от тренинга<br class="br-desktop">в разы больше.</p>
+        </div>
+
+        <!-- Right Column Stat 73% (top: 625px) -->
+        <div class="observation-stat-box">
+          <div class="observation-stat-num-wrap">
+            <span class="observation-stat-73" data-count-to="73" aria-label="73">1</span>
+            <span class="observation-stat-percent">%</span>
+          </div>
+          <p class="observation-stat-caption">
+            доходимость тренинга IMAGO —<br class="br-desktop">при том, что там нужно реально<br class="br-desktop">выходить и знакомиться, а не<br class="br-desktop">сидеть дома с теорией
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         6. REVIEWS / FEEDBACKS CAROUSEL (Figma Node 1:151)
+         ==================================================================== -->
+    <section class="feedbacks-section" id="feedbacks">
+      <div class="feedbacks-header-wrap">
+        <h2>960+ мужчин<br class="feedback-title-break-360"> уже начали</h2>
+      </div>
+
+      <div class="feedbacks-carousel-track-wrap" id="feedbacks-carousel" data-center-last-page="true">
+        <div class="feedbacks-track" id="feedbacks-track">
+          
+          <div class="feedback-card">
+            <p class="feedback-quote">
+              Лично я получил то, зачем купил курс. Все понравилось) Некоторые знания просто освежил, но и было много инсайдов. Пока все понятно, практикуюсь. Да, друзьям порекомендовал бы
+            </p>
+            <div class="feedback-author">
+              <div class="feedback-avatar">
+                <img src="assets/icons/6f8a304d8d64dd89ea37e5e6a36d9dbcbadf35a9.svg" alt="" width="16" height="18">
+              </div>
+              <div class="feedback-name">Roman Khlan</div>
+            </div>
+          </div>
+
+          <div class="feedback-card">
+            <p class="feedback-quote">
+              Уроки кайф. Все емко, без лишних пафосных речей на 10тыс часов. Смотрелось легко. Настрой — завтра пробовать, а то че я десятку заплатил, чтобы видосы посмотреть и продолжить жить обычную жизнь. Тема с разборами подходов — это разъеб.
+            </p>
+            <div class="feedback-author">
+              <div class="feedback-avatar">
+                <img src="assets/icons/6f8a304d8d64dd89ea37e5e6a36d9dbcbadf35a9.svg" alt="" width="16" height="18">
+              </div>
+              <div class="feedback-name">KUZM111N</div>
+            </div>
+          </div>
+
+          <div class="feedback-card">
+            <p class="feedback-quote">
+              Формат супер, записанные уроки можно спокойно несколько раз пересматривать и повторять материал. Однозначно поучил что хотел, досконально человек понимающий в теме пояснил за все тонкости, рассказал как я себя должен ощущать и что делать, дал тонну мотивации.
+            </p>
+            <div class="feedback-author">
+              <div class="feedback-avatar">
+                <img class="avatar-photo" src="assets/images/dba981c8d988137fb6387d1a32f581423a34038d.png" alt="Κύριллос">
+              </div>
+              <div class="feedback-name">Κύριллос</div>
+            </div>
+          </div>
+
+          <div class="feedback-card">
+            <p class="feedback-quote">
+              Страшно капец первые 2-3 подхода, даже не страшно, а стремно. А потом разгоняешься и все, состояние ебейшее. И самое главное, что я понял — не надо какого-то результата ждать, просто подходишь попиздэт и а там все понятно будет)
+            </p>
+            <div class="feedback-author">
+              <div class="feedback-avatar">
+                <img src="assets/icons/6f8a304d8d64dd89ea37e5e6a36d9dbcbadf35a9.svg" alt="" width="16" height="18">
+              </div>
+              <div class="feedback-name">Juri</div>
+            </div>
+          </div>
+
+          <div class="feedback-card">
+            <p class="feedback-quote">
+              Посмотрел все уроки. Хочется сказать только одно: Ахуенно и ГАЗ ГАЗ ГАЗ. Все четко, а самое главное ловишь инсайт на каждую тему урока, после которого, твое мировоззрение реально начинает меняться (Я даже уроки пересматриваю по 2 раза). Осталось дело за практикой. Дэнни и команда, вы крутые. Благодарен Вам. Газуем мужики!
+            </p>
+            <div class="feedback-author">
+              <div class="feedback-avatar">
+                <img src="assets/icons/6f8a304d8d64dd89ea37e5e6a36d9dbcbadf35a9.svg" alt="" width="16" height="18">
+              </div>
+              <div class="feedback-name">Sergey</div>
+            </div>
+          </div>
+
+          <div class="feedback-card">
+            <p class="feedback-quote">
+              Отсмотрел все уроки. Как уже сказали выше — без воды и все по факту. Я ни разу ни к кому сам вот так вот не подходил. буду ковать железо, пока горячо, пойду сегодня же вечером, Даниэль умеет ментально дать пиздюлей и заставить делать. потом отпишусь по эмоциям. Честно, страшно пиздец, но тем прикольнее.
+            </p>
+            <div class="feedback-author">
+              <div class="feedback-avatar">
+                <img src="assets/icons/6f8a304d8d64dd89ea37e5e6a36d9dbcbadf35a9.svg" alt="" width="16" height="18">
+              </div>
+              <div class="feedback-name">Dan</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="feedbacks-footer-nav">
+        <div class="feedbacks-carousel-controls">
+          <button class="feedbacks-nav-btn" id="feedbacks-prev" type="button" aria-label="Предыдущий отзыв">
+            <img src="assets/icons/635079fbf193f0ed82a6718b99cdbc1a267c434b.svg" alt="" aria-hidden="true">
+          </button>
+          <button class="feedbacks-nav-btn next-btn" id="feedbacks-next" type="button" aria-label="Следующий отзыв">
+            <img src="assets/icons/7b96c4a93bb88575a52f91118ee109bb499292b7.svg" alt="" aria-hidden="true">
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         7. FUNNEL MECHANICS SECTION (Figma Node 1:235)
+         ==================================================================== -->
+    <section class="funnel-section">
+      <div class="funnel-inner">
+        <!-- Title -->
+        <h2 class="funnel-title">Знакомство<br>определяет всё<br class="br-desktop"> дальнейшее</h2>
+
+        <!-- Left Text -->
+        <div class="funnel-left-text">
+          <p>
+            <span class="text-1920">Знакомство — вход в воронку. Как ты<br>познакомился — так пойдёт и всё<br>остальное: переписка, свидание,<br>динамика между вами. Просто «взял<br>номер» — и свидание проходит хуже,<br>чем если бы ты потратил три минуты на<br>грамотное знакомство.</span>
+            <span class="text-1600">Знакомство — вход в воронку. Как<br>ты познакомился — так пойдёт и<br>всё остальное: переписка,<br>свидание, динамика между вами.<br>Просто «взял номер» — и свидание<br>проходит хуже, чем если бы ты<br>потратил три минуты на грамотное<br>знакомство.</span>
+            <span class="text-default">Знакомство — вход в воронку. Как ты познакомился — так пойдёт и всё остальное: переписка, свидание, динамика между вами. Просто «взял номер» — и свидание проходит хуже, чем если бы ты потратил три минуты на грамотное знакомство.</span>
+          </p>
+          <p>
+            <span class="text-1920">Поэтому я взял 10+ лет преподавания,<br>включил инженерный мозг и<br>отобрал только рычаговые<br>механизмы — те несколько вещей,<br>которые дают эффект уже сегодня. Без<br>воды. Быстро посмотрел — пошёл<br>сделал.</span>
+            <span class="text-1600">Поэтому я взял 10+ лет<br>преподавания, включил<br>инженерный мозг и отобрал только<br>рычаговые механизмы — те<br>несколько вещей, которые дают<br>эффект уже сегодня. Без воды.<br>Быстро посмотрел — пошёл<br>сделал.</span>
+            <span class="text-default">Поэтому я взял 10+ лет преподавания, включил инженерный мозг и отобрал только рычаговые механизмы — те несколько вещей, которые дают эффект уже сегодня. Без воды. Быстро посмотрел — пошёл сделал.</span>
+          </p>
+        </div>
+
+        <!-- Right Text -->
+        <div class="funnel-right-text">
+          <p>Неважно, опытный ты или нет: тебе<br class="br-desktop">понятно, зачем знакомиться, как<br class="br-desktop">преодолеть страх и какие есть<br class="br-desktop">варианты — офлайн, онлайн, день,<br class="br-desktop">ночь. Один навык, доведённый до<br class="br-desktop">конца.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         8. LESSONS MATRIX SECTION (Figma Node 1:254)
+         ==================================================================== -->
+    <section class="lessons-section">
+      <div class="lessons-inner">
+        <!-- Title Header -->
+        <div class="lessons-header-wrap">
+          <h2>Урок 10–20 минут<br>— и ты идёшь делать.</h2>
+          <p>Я взял 10 лет преподавания и отобрал несколько рычаговых механизмов — тех, что дают максимум результата на единицу усилия. Один урок = один рычаг = одно действие сегодня.</p>
+        </div>
+
+        <!-- Row 1 (top: 251px) -->
+        <div class="lesson-row-label" style="top: 251px;">Урок 1</div>
+        <div class="lesson-cards-pair" style="top: 251px;">
+          <div class="lesson-card">
+            <div>
+              <span class="lesson-card-tag">OFFline</span>
+              <h3 class="lesson-card-title">Философия GENESĪS</h3>
+            </div>
+            <p class="lesson-card-desc">Зачем вообще знакомиться вживую и почему мы делаем это так, а не иначе. Рамка, в которой знакомство — не «пикап», а навык, который прокачивает всю твою жизнь.</p>
+            <div class="lesson-card-takeaway">понимаешь, зачем выходишь — и мотивация перестаёт сдуваться через три дня</div>
+          </div>
+          <div class="lesson-card">
+            <div>
+              <span class="lesson-card-tag">ONline</span>
+              <h3 class="lesson-card-title">Онлайн-дейтинг изменил мир</h3>
+            </div>
+            <p class="lesson-card-desc">Максимум знакомств при минимуме усилий — и доступ к девушкам, до которых в обычной жизни ты бы не дотянулся. И это не только про сайты знакомств, но и про соцсети.</p>
+            <div class="lesson-card-takeaway">видишь онлайн как систему с воронкой, а не лотерею со свайпами</div>
+          </div>
+        </div>
+
+        <!-- Row 2 (top: 786px) -->
+        <div class="lesson-row-label" style="top: 786px;">Урок 2</div>
+        <div class="lesson-cards-pair" style="top: 786px;">
+          <div class="lesson-card">
+            <div>
+              <span class="lesson-card-tag">OFFline</span>
+              <h3 class="lesson-card-title">Философия уличных знакомств</h3>
+            </div>
+            <p class="lesson-card-desc">Почему именно улица — самый эффективный полигон: каждый подход меняет тебя. Дневная игра, ночная, все варианты — и где играть именно тебе.</p>
+            <div class="lesson-card-takeaway">офлайн перестаёт быть «страшным экстримом» — это просто среда с правилами</div>
+          </div>
+          <div class="lesson-card">
+            <div>
+              <span class="lesson-card-tag">ONline</span>
+              <h3 class="lesson-card-title">Философия знакомств в онлайне</h3>
+            </div>
+            <p class="lesson-card-desc">Та же структура, что в офлайне, — перенесённая на экран. Что общего, что отличается и почему навык один.</p>
+            <div class="lesson-card-takeaway">не учишь «отдельный онлайн-пикап» — используешь одну систему везде</div>
+          </div>
+        </div>
+
+        <!-- Row 3 (top: 1321px) -->
+        <div class="lesson-row-label" style="top: 1321px;">Урок 3</div>
+        <div class="lesson-cards-pair" style="top: 1321px;">
+          <div class="lesson-card">
+            <div>
+              <span class="lesson-card-tag">OFFline</span>
+              <h3 class="lesson-card-title">Структура знакомства</h3>
+            </div>
+            <p class="lesson-card-desc">Полная карта: от самого первого момента до взятия контакта и расхода. Что происходит на каждом этапе и что делать именно сейчас.</p>
+            <div class="lesson-card-takeaway">исчезает главный источник ступора — «а что дальше говорить?»</div>
+          </div>
+          <div class="lesson-card">
+            <div>
+              <span class="lesson-card-tag">ONline</span>
+              <h3 class="lesson-card-title">Структура онлайн-знакомств</h3>
+            </div>
+            <p class="lesson-card-desc">Воронка дейтинг-приложений по шагам: от матча до живого диалога. Что делать на каждом этапе, чтобы диалог не умирал.</p>
+            <div class="lesson-card-takeaway">перестаёшь терять девушек между «матчем» и «встречей»</div>
+          </div>
+        </div>
+
+        <!-- Row 4 (top: 1856px) -->
+        <div class="lesson-row-label" style="top: 1856px;">Урок 4</div>
+        <div class="lesson-cards-pair" style="top: 1856px;">
+          <div class="lesson-card">
+            <div>
+              <span class="lesson-card-tag">OFFline</span>
+              <h3 class="lesson-card-title">Формула подхода</h3>
+            </div>
+            <p class="lesson-card-desc">Не заготовки и «открывашки», а формула-промпт, которая тренирует мозг заводить разговор естественно — в любом месте, из любой ситуации. Плюс работа со страхом подхода на уровне механики.</p>
+            <div class="lesson-card-takeaway">подходишь в течение трёх секунд, пока момент не умер</div>
+          </div>
+          <div class="lesson-card">
+            <div>
+              <span class="lesson-card-tag">ONline</span>
+              <h3 class="lesson-card-title">Как оформить профиль<br>и что писать</h3>
+            </div>
+            <p class="lesson-card-desc">Вход в воронку онлайна — твоя анкета. Как сделать фото (и преодолеть страх фотографии), что писать о себе, чтобы внимание приходило само.</p>
+            <div class="lesson-card-takeaway">анкета начинает работать на тебя 24/7 — ещё до первого сообщения</div>
+          </div>
+        </div>
+
+        <!-- Row 5 (top: 2391px) -->
+        <div class="lesson-row-label" style="top: 2391px;">Урок 5</div>
+        <div class="lesson-cards-pair" style="top: 2391px;">
+          <div class="lesson-card">
+            <div>
+              <span class="lesson-card-tag">OFFline</span>
+              <h3 class="lesson-card-title">Как правильно брать контакты</h3>
+            </div>
+            <p class="lesson-card-desc">Отдельный фокусный урок: ладно, познакомился — теперь как взять контакт так, чтобы он был живым, а не «мёртвым номером», на который никто не отвечает.</p>
+            <div class="lesson-card-takeaway">каждое знакомство превращается в результат, а не в цифру в записной книжке</div>
+          </div>
+          <div class="lesson-card">
+            <div>
+              <span class="lesson-card-tag">ONline</span>
+              <h3 class="lesson-card-title">Тонкости соцсетей</h3>
+            </div>
+            <p class="lesson-card-desc">Знакомства через соцсети — отдельная механика: сторис, директ, взаимность. Как выйти на тех, кого нет в дейтингах.</p>
+            <div class="lesson-card-takeaway">дотягиваешься до девушек «вне рынка знакомств»</div>
+          </div>
+        </div>
+
+        <!-- Row 6 (top: 2926px) -->
+        <div class="lesson-row-label" style="top: 2926px;">Урок 6</div>
+        <div class="lesson-cards-pair" style="top: 2926px;">
+          <div class="lesson-card">
+            <div>
+              <span class="lesson-card-tag">OFFline</span>
+              <h3 class="lesson-card-title">Вызвон и переписка</h3>
+            </div>
+            <p class="lesson-card-desc">Экстраполяция знакомства до встречи: почему звонок работает лучше переписки, как переписываться грамотно и какие ошибки убивают договорённость.</p>
+            <div class="lesson-card-takeaway">знакомство доходит до свидания, а не растворяется в «привет, как дела»</div>
+          </div>
+          <div class="lesson-card">
+            <div>
+              <span class="lesson-card-tag">ONline</span>
+              <h3 class="lesson-card-title">Переписка для встречи</h3>
+            </div>
+            <p class="lesson-card-desc">Как переписываться, чтобы встретиться, а не стать «другом по переписке»: когда писать, что писать, как закрывать на встречу.</p>
+            <div class="lesson-card-takeaway">переписка заканчивается свиданием, а не архивом диалогов</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         9. ECOSYSTEM SECTION (Figma Node 1:357)
+         ==================================================================== -->
+    <section class="ecosystem-section">
+      <div class="ecosystem-header">
+        <h2 class="ecosystem-header-title">Экосистема,<span class="eco-br-1600"><br></span> которая<span class="eco-br-1920"><br></span> не даёт остановиться</h2>
+        <div class="ecosystem-header-desc">
+          <p>Уроки — только ядро. Вокруг него — среда: люди, которые делают то же самое, разборы твоих реальных ситуаций и инструменты, которые убирают рутину.</p>
+        </div>
+      </div>
+
+      <div class="ecosystem-box" id="ecosystem-box">
+        <!-- Left Side: reusable media slots. Each state accepts one responsive image. -->
+        <div class="ecosystem-image" id="ecosystem-stage">
+          <div class="ecosystem-visual-layer active" data-visual="chat">
+            <div class="ecosystem-media-slot" data-media-slot="ecosystem-chat-image">
+              <img src="assets/media/ecosystem/chat.webp" alt="Общий чат участников GENESĪS" loading="lazy" decoding="async">
+            </div>
+          </div>
+
+          <div class="ecosystem-visual-layer" data-visual="streams">
+            <div class="ecosystem-media-slot" data-media-slot="ecosystem-streams-image">
+              <img src="assets/media/ecosystem/streams.webp" alt="Прямой эфир GENESĪS" loading="lazy" decoding="async">
+            </div>
+          </div>
+
+          <div class="ecosystem-visual-layer" data-visual="platform">
+            <div class="ecosystem-media-slot" data-media-slot="ecosystem-platform-image">
+              <img src="assets/media/ecosystem/platform.webp" alt="Образовательная платформа GENESĪS" loading="lazy" decoding="async">
+            </div>
+          </div>
+
+          <div class="ecosystem-visual-layer" data-visual="ai">
+            <div class="ecosystem-media-slot" data-media-slot="ecosystem-vibe-ai-image">
+              <img src="assets/media/ecosystem/vibe-ai.webp" alt="Персональный ассистент Vibe AI" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Interactive Tabs & Animated Progress -->
+        <div class="ecosystem-tabs">
+          <div class="ecosystem-tabs-list">
+            <div class="ecosystem-tab-item active" data-tab="chat">Общий чат</div>
+            <div class="ecosystem-tab-item" data-tab="streams">52 стрима в год</div>
+            <div class="ecosystem-tab-item" data-tab="platform">Платформа</div>
+            <div class="ecosystem-tab-item" data-tab="ai">Vibe AI</div>
+          </div>
+
+          <div class="ecosystem-tab-bottom">
+            <div class="ecosystem-tab-desc" id="ecosystem-desc">
+              Обмен опытом и обратная связь каждый день
+            </div>
+            <div class="ecosystem-progress-track">
+              <div class="ecosystem-progress-fill" id="ecosystem-progress"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         10. MOBILE APP IDM SECTION (Figma Node 1:377)
+         ==================================================================== -->
+    <section class="app-section">
+      <div class="app-container">
+        <!-- Title -->
+        <div class="app-title-wrap">
+          <h2 class="app-title">Мобильное приложение IDM</h2>
+        </div>
+
+        <!-- 3 Phone Mockups Display -->
+        <div class="app-phones-stage">
+          <!-- Phone 1 (Left: top 69.7px) -->
+          <div class="app-phone-item phone-1" data-media-slot="idm-phone-left">
+            <img class="app-phone-mockup shared-media-asset" src="assets/media/idm/phone-left.webp" alt="Стартовый экран приложения IDM" loading="lazy" decoding="async">
+          </div>
+
+          <!-- Phone 2 (Center: top 120px) -->
+          <div class="app-phone-item phone-2" data-media-slot="idm-phone-center">
+            <img class="app-phone-mockup shared-media-asset" src="assets/media/idm/phone-center.webp" alt="Создание карточки знакомства в IDM" loading="lazy" decoding="async">
+          </div>
+
+          <!-- Phone 3 (Right: top 0px) -->
+          <div class="app-phone-item phone-3" data-media-slot="idm-phone-right">
+            <img class="app-phone-mockup shared-media-asset" src="assets/media/idm/phone-right.webp" alt="Карточка знакомства с заметками в IDM" loading="lazy" decoding="async">
+          </div>
+        </div>
+
+        <!-- Quote / Text Callout (pl: 570px) -->
+        <div class="app-quote-callout">
+          <p class="text-1920">
+            <span class="app-quote-accent">3 знакомства в день — это 90 контактов в<br>месяц.</span>
+            <span class="app-quote-muted">Ими нужно управлять: помнить<br>детали, договариваться о встречах, видеть<br>свой прогресс. Мы разработали для этого<br>закрытое приложение IDM.</span>
+          </p>
+          <p class="text-1600">
+            <span class="app-quote-accent">3 знакомства в день — это 90 контактов<br>в месяц.</span>
+            <span class="app-quote-muted">Ими нужно управлять: помнить<br>детали, договариваться о встречах,<br>видеть свой прогресс. Мы разработали<br>для этого закрытое приложение IDM.</span>
+          </p>
+          <p class="text-default">
+            <span class="app-quote-accent">3 знакомства в день — это 90 контактов в месяц.</span>
+            <span class="app-quote-muted">Ими нужно управлять: помнить детали, договариваться о встречах, видеть свой прогресс. Мы разработали для этого закрытое приложение IDM.</span>
+          </p>
+        </div>
+
+        <!-- 3 Feature Cards Row -->
+        <div class="app-features-row">
+          <div class="app-feature-card">
+            <div class="app-feature-copy">
+              <h3 class="app-feature-title">Записная книжка знакомств</h3>
+              <p class="app-feature-desc">Фиксируй информацию о каждом знакомстве и убирай рутину — ни один контакт не потеряется и не станет «мёртвым номером».</p>
+            </div>
+            <div class="app-feature-graphic" data-media-slot="idm-feature-notebook">
+              <div class="app-feature-device">
+                <div class="app-feature-screen">
+                  <img src="assets/media/idm/features/screens/notebook.webp" alt="Экран записной книжки знакомств IDM" loading="lazy" decoding="async">
+                  <span class="app-feature-dynamic-island" aria-hidden="true"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-feature-card">
+            <div class="app-feature-copy">
+              <h3 class="app-feature-title">Аналитика навыков</h3>
+              <p class="app-feature-desc">Подходы, контакты, встречи — видишь свою динамику в цифрах. Сегодня план выполнен: ты двигаешься, а не застрял.</p>
+            </div>
+            <div class="app-feature-graphic" data-media-slot="idm-feature-analytics">
+              <div class="app-feature-device">
+                <div class="app-feature-screen">
+                  <img src="assets/media/idm/features/screens/analytics.webp" alt="Экран аналитики навыков IDM" loading="lazy" decoding="async">
+                  <span class="app-feature-dynamic-island" aria-hidden="true"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-feature-card">
+            <div class="app-feature-copy">
+              <h3 class="app-feature-title">Напарники на карте мира</h3>
+              <p class="app-feature-desc">Найди напарника в любых городах и странах среди всех учеников, включая флагманский тренинг.</p>
+            </div>
+            <div class="app-feature-graphic" data-media-slot="idm-feature-partners-map">
+              <div class="app-feature-device">
+                <div class="app-feature-screen">
+                  <img src="assets/media/idm/features/screens/partners-map.webp" alt="Экран карты напарников IDM" loading="lazy" decoding="async">
+                  <span class="app-feature-dynamic-island" aria-hidden="true"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="#pricing" class="app-cta-btn">
+          <span>Забрать GENESĪS</span>
+          <img src="assets/icons/618496dd0a976bac5108d14334ba425f90227f21.svg" alt="" width="16" height="16">
+        </a>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         11. VIDEO TRAILER SECTION (Figma Node 1:434)
+         ==================================================================== -->
+    <section class="trailer-section">
+      <div class="trailer-container">
+        <div class="trailer-title-wrap">
+          <h2 class="trailer-title">Трейлер GENESĪS</h2>
+        </div>
+
+        <div class="trailer-video-box" role="button" tabindex="0" aria-label="Открыть трейлер программы" data-video-src="https://kinescope.io/embed/gbCQqkmRGxbUDfxWSochFZ">
+          <div class="video-bg-media">
+            <iframe class="video-bg-iframe trailer-bg-iframe lazy-kinescope" data-src="https://kinescope.io/embed/gbCQqkmRGxbUDfxWSochFZ?autoplay=1&muted=1&controls=0&loop=1&playsinline=1&ui=0&header=0&watermark=0&background=1" allow="autoplay; fullscreen" title="Background Trailer Preview"></iframe>
+          </div>
+          <div class="video-card-overlay trailer-card-overlay"></div>
+          
+          <div class="trailer-play-center">
+            <div class="video-play-header">
+              <span class="video-play-label">Смотреть<br>видео</span>
+              <div class="video-play-icon">
+                <img src="assets/icons/6dd67f9e42bd33cc56743420457cb1a97d27d700.svg" alt="Play Icon">
+              </div>
+            </div>
+            <div class="video-play-duration">21:18</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         12. PRICING & TARIFFS SECTION (Figma Node 1:450)
+         ==================================================================== -->
+    <section class="tariffs-section" id="pricing">
+      <div class="tariffs-container">
+        <!-- Header -->
+        <div class="tariffs-header-wrap">
+          <h2>Стратегия цен простая:</h2>
+          <p>мне не нужно забирать с тебя последние деньги — мне нужно, чтобы ты получил результат и вошёл в комьюнити. Это та же база, с которой я начинаю работу на индивидуальных программах от 5 000 000 ₽.</p>
+        </div>
+
+        <!-- 3 Tariff Cards -->
+        <div class="tariffs-grid">
+          
+          <!-- Tariff 1: OFFline -->
+          <div class="tariff-card">
+            <span class="tariff-tag">OFFline</span>
+            <div class="tariff-content">
+              <h3 class="tariff-name">Живые знакомства</h3>
+              <div class="tariff-features-list">
+                <div class="tariff-feature-item">
+                  <img class="tariff-check-icon" src="assets/icons/65b358c846ace718270e024c13972113554fd1d2.svg" alt="">
+                  <span class="tariff-feature-text">6 модульных видеоуроков</span>
+                </div>
+                <div class="tariff-feature-item">
+                  <img class="tariff-check-icon" src="assets/icons/65b358c846ace718270e024c13972113554fd1d2.svg" alt="">
+                  <span class="tariff-feature-text">Общий чат и стримы c разборами знакомств</span>
+                </div>
+                <div class="tariff-feature-item">
+                  <img class="tariff-check-icon" src="assets/icons/65b358c846ace718270e024c13972113554fd1d2.svg" alt="">
+                  <span class="tariff-feature-text">Приложение IDM с напарниками</span>
+                </div>
+                <div class="tariff-feature-item">
+                  <img class="tariff-check-icon" src="assets/icons/65b358c846ace718270e024c13972113554fd1d2.svg" alt="">
+                  <span class="tariff-feature-text">5 бонусных гайдов</span>
+                </div>
+                <div class="tariff-feature-item">
+                  <img class="tariff-check-icon" src="assets/icons/65b358c846ace718270e024c13972113554fd1d2.svg" alt="">
+                  <span class="tariff-feature-text">Доступ навсегда</span>
+                </div>
+              </div>
+            </div>
+            <div class="tariff-price-wrap">
+              <span class="tariff-price">9 990 ₽</span>
+            </div>
+            <!-- TODO(integration): replace the anchor target with the payment-widget trigger; retain data-tariff="offline" for the widget mapping (GetCourse or another provider). -->
+            <a href="#cta" class="tariff-btn" data-tariff="offline" data-widget-trigger="payment">Занять место</a>
+          </div>
+
+          <!-- Tariff 2: 2 in 1 (Featured Recommended) -->
+          <div class="tariff-card-featured-wrap">
+            <div class="tariff-badge-recommended">
+              <img src="assets/icons/abeb126715a509cad1690883dff254c5622c7ed6.svg" alt="">
+              <span>Рекомендованный</span>
+            </div>
+
+            <div class="tariff-card-featured-inner">
+              <span class="tariff-tag">2 в 1</span>
+              <div class="tariff-content">
+                <h3 class="tariff-name">GENESĪS полностью × VIBE AI</h3>
+                <div class="tariff-features-list">
+                  <div class="tariff-feature-item">
+                    <img class="tariff-check-icon" src="assets/icons/65b358c846ace718270e024c13972113554fd1d2.svg" alt="">
+                    <span class="tariff-feature-text">12 уроков: офлайн + онлайн</span>
+                  </div>
+                  <div class="tariff-feature-item">
+                    <img class="tariff-check-icon" src="assets/icons/65b358c846ace718270e024c13972113554fd1d2.svg" alt="">
+                    <span class="tariff-feature-text">Общий чат и стримы с разборами</span>
+                  </div>
+                  <div class="tariff-feature-item">
+                    <img class="tariff-check-icon" src="assets/icons/65b358c846ace718270e024c13972113554fd1d2.svg" alt="">
+                    <span class="tariff-feature-text">Приложение IDM с напарниками</span>
+                  </div>
+                  <div class="tariff-feature-item">
+                    <img class="tariff-check-icon" src="assets/icons/65b358c846ace718270e024c13972113554fd1d2.svg" alt="">
+                    <span class="tariff-feature-text">5 бонусных гайдов</span>
+                  </div>
+                  <div class="tariff-feature-item">
+                    <img class="tariff-check-icon" src="assets/icons/65b358c846ace718270e024c13972113554fd1d2.svg" alt="">
+                    <span class="tariff-feature-text">VIBE AI — 1 месяц подписки</span>
+                  </div>
+                  <div class="tariff-feature-item">
+                    <img class="tariff-check-icon" src="assets/icons/65b358c846ace718270e024c13972113554fd1d2.svg" alt="">
+                    <span class="tariff-feature-text">Доступ навсегда</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tariff-price-wrap">
+                <span class="tariff-price">14 990 ₽</span>
+                <span class="tariff-price-old">Вместо 20 000 ₽ по отдельности</span>
+              </div>
+              <!-- TODO(integration): replace the anchor target with the payment-widget trigger; retain data-tariff="bundle" for the widget mapping (GetCourse or another provider). -->
+              <a href="#cta" class="tariff-btn" data-tariff="bundle" data-widget-trigger="payment">Забрать комплект</a>
+            </div>
+          </div>
+
+          <!-- Tariff 3: ONline -->
+          <div class="tariff-card">
+            <span class="tariff-tag">ONline</span>
+            <div class="tariff-content">
+              <h3 class="tariff-name">Дейтинг и соцсети × VIBE AI</h3>
+              <div class="tariff-features-list">
+                <div class="tariff-feature-item">
+                  <img class="tariff-check-icon" src="assets/icons/65b358c846ace718270e024c13972113554fd1d2.svg" alt="">
+                  <span class="tariff-feature-text">6 модульных видеоуроков</span>
+                </div>
+                <div class="tariff-feature-item">
+                  <img class="tariff-check-icon" src="assets/icons/65b358c846ace718270e024c13972113554fd1d2.svg" alt="">
+                  <span class="tariff-feature-text">Общий чат и стримы c разборами знакомств</span>
+                </div>
+                <div class="tariff-feature-item">
+                  <img class="tariff-check-icon" src="assets/icons/65b358c846ace718270e024c13972113554fd1d2.svg" alt="">
+                  <span class="tariff-feature-text">Приложение IDM с напарниками</span>
+                </div>
+                <div class="tariff-feature-item">
+                  <img class="tariff-check-icon" src="assets/icons/65b358c846ace718270e024c13972113554fd1d2.svg" alt="">
+                  <span class="tariff-feature-text">5 бонусных гайдов</span>
+                </div>
+                <div class="tariff-feature-item">
+                  <img class="tariff-check-icon" src="assets/icons/65b358c846ace718270e024c13972113554fd1d2.svg" alt="">
+                  <span class="tariff-feature-text">VIBE AI — 1 месяц подписки</span>
+                </div>
+              </div>
+            </div>
+            <div class="tariff-price-wrap">
+              <span class="tariff-price">9 990 ₽</span>
+            </div>
+            <!-- TODO(integration): replace the anchor target with the payment-widget trigger; retain data-tariff="online" for the widget mapping (GetCourse or another provider). -->
+            <a href="#cta" class="tariff-btn" data-tariff="online" data-widget-trigger="payment">Занять место</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         13. CHAT SCREENSHOTS GALLERY (Figma Node 1:539)
+         ==================================================================== -->
+    <section class="screenshots-section">
+      <div class="screenshots-inner">
+        <div class="screenshots-header-wrap">
+          <h2>Сообщения учеников из<br>закрытого чата GENESĪS.</h2>
+          <p class="screenshots-subtitle">
+            <span>Нажми, чтобы увеличить.</span>
+          </p>
+        </div>
+
+        <div class="screenshots-grid-cols">
+          <!-- Column 1 -->
+          <div class="screenshots-col">
+            <div class="screenshot-item"><img src="assets/images/7c7f83daeff4a21dd372e658d8ffa0518c3eb848.png" alt="Отзыв"></div>
+            <div class="screenshot-item"><img src="assets/images/3418337ae2e466d8e0c9e5d19a894d5052bb6952.png" alt="Отзыв"></div>
+            <div class="screenshot-item"><img src="assets/images/d57c250505c41bb65b1dfdf7dc2a6d156d07ae12.png" alt="Отзыв"></div>
+            <div class="screenshot-item"><img src="assets/images/d744a4d1ec1a7e63e6865e39c8d98e5f8228c316.png" alt="Отзыв"></div>
+            <div class="screenshot-item"><img src="assets/images/2e3b97f1800cddfbdf9903d1a5fd73a768415311.png" alt="Отзыв"></div>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="screenshots-col">
+            <div class="screenshot-item"><img src="assets/images/36fd68c403c6725b00c218bfe7ea4d9c9ba5b258.png" alt="Отзыв"></div>
+            <div class="screenshot-item"><img src="assets/images/6c9bf04e4ac6225f45f6e2bf5601ef1819cbad2c.png" alt="Отзыв"></div>
+            <div class="screenshot-item"><img src="assets/images/07f89739ec8e19b730e6155ac253405304d9593e.png" alt="Отзыв"></div>
+            <div class="screenshot-item"><img src="assets/images/432e1fa90363cc2c1e92803b9246d7c1dc67bc15.png" alt="Отзыв"></div>
+            <div class="screenshot-item"><img src="assets/images/ed6f4644b5bfb6a02df603265b339861e701bf51.png" alt="Отзыв"></div>
+            <div class="screenshot-item"><img src="assets/images/68b4c752481506ce01cb79512d5fded39199b1a9.png" alt="Отзыв"></div>
+            <div class="screenshot-item"><img src="assets/images/4701f0e14952640a8f16cbbd360e2f97bb4f2971.png" alt="Отзыв"></div>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="screenshots-col">
+            <div class="screenshot-item"><img src="assets/images/d5f5359533bb3dcad37c2d22dfc68b66c990fb59.png" alt="Отзыв"></div>
+            <div class="screenshot-item"><img src="assets/images/ad6b283099b7a580f9b7669aa8b95161a452e959.png" alt="Отзыв"></div>
+            <div class="screenshot-item"><img src="assets/images/2be0c1534baaf50cab8f835d54006103442d684c.png" alt="Отзыв"></div>
+            <div class="screenshot-item"><img src="assets/images/c668340903f05241d976986f42719498f2abc3dd.png" alt="Отзыв"></div>
+            <div class="screenshot-item"><img src="assets/images/3c70b2102aaf4e02ecd12e201971c26620f3a421.png" alt="Отзыв"></div>
+            <div class="screenshot-item"><img src="assets/images/6e24839c2d3d4e351a81d56781f2d32d5e6a9200.png" alt="Отзыв"></div>
+            <div class="screenshot-item"><img src="assets/images/3e8d580176966764af81802ec3670c2eac8022bb.png" alt="Отзыв"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         14. BONUS GUIDES SECTION (Figma Node 1:563)
+         ==================================================================== -->
+    <section class="guides-section">
+      <div class="guides-container">
+        <!-- Header -->
+        <div class="guides-header-wrap">
+          <h2>5 гайдов, закрывающих<br class="guides-br-1920"> слабые места</h2>
+          <p>Каждый гайд — отдельная мини-программа, которая по отдельности легко продаётся за 3–5 тысяч. Внутри GENESĪS они идут в комплекте — к любому модулю.</p>
+        </div>
+
+        <!-- Carousel -->
+        <div class="guides-carousel-wrap" id="guides-carousel" data-center-last-page="true">
+          <div class="guides-track" id="guides-track">
+            
+            <!-- Guide 1 (Featured) -->
+            <div class="guide-card featured">
+              <div class="guide-text-wrap">
+                <h3 class="guide-title">Гайд «Горячий контакт»</h3>
+                <p class="guide-desc">Как закрывать знакомство сразу на свидание — ещё до того, как вы разошлись, — а не собирать коллекцию «мёртвых» номеров.</p>
+              </div>
+              <div class="guide-media-slot" data-media-slot="guide-hot-contact">
+                <img class="shared-media-asset" src="assets/media/guides/hot-contact.webp" alt="Обложка гайда «Горячий контакт»" loading="lazy" decoding="async">
+              </div>
+            </div>
+
+            <!-- Guide 2 -->
+            <div class="guide-card">
+              <div class="guide-text-wrap">
+                <h3 class="guide-title">Гайд «Проверки FAQ»</h3>
+                <p class="guide-desc">Готовые ответы на самые частые женские проверки и подколы. Перестаёшь впадать в ступор — каждая проверка становится пасом, который ты забиваешь.</p>
+              </div>
+              <div class="guide-media-slot" data-media-slot="guide-faq-checks">
+                <img class="shared-media-asset" src="assets/media/guides/faq-checks.webp" alt="Обложка гайда «Проверки FAQ»" loading="lazy" decoding="async">
+              </div>
+            </div>
+
+            <!-- Guide 3 -->
+            <div class="guide-card">
+              <div class="guide-text-wrap">
+                <h3 class="guide-title">Гайд «Секс без обязательств»</h3>
+                <p class="guide-desc">5-шаговый алгоритм честного лёгкого формата — без манипуляций, вранья и «выноса мозга». Оба в игре, и обоим в кайф.</p>
+              </div>
+              <div class="guide-media-slot" data-media-slot="guide-no-commitment">
+                <img class="shared-media-asset" src="assets/media/guides/no-commitment.webp" alt="Обложка гайда «Секс без обязательств»" loading="lazy" decoding="async">
+              </div>
+            </div>
+
+            <!-- Guide 4 -->
+            <div class="guide-card">
+              <div class="guide-text-wrap">
+                <h3 class="guide-title">13 правил игры с напарником</h3>
+                <p class="guide-desc">Как работать в паре: усиливать друг друга в любой компании и превращать выходы в поле в командную игру, а не одиночную войну.</p>
+              </div>
+              <div class="guide-media-slot" data-media-slot="guide-partner-rules">
+                <img class="shared-media-asset" src="assets/media/guides/partner-rules.webp" alt="Обложка гайда «13 правил игры с напарником»" loading="lazy" decoding="async">
+              </div>
+            </div>
+
+            <!-- Guide 5 -->
+            <div class="guide-card">
+              <div class="guide-text-wrap">
+                <h3 class="guide-title">Памятка «5 критических ошибок в соблазнении»</h3>
+                <p class="guide-desc">Карта ловушек, на которых сливаются 90% мужчин — от эйфории первых успехов до ямы без структуры. Знание этих ошибок сразу поднимает результативность.</p>
+              </div>
+              <div class="guide-media-slot" data-media-slot="guide-critical-errors">
+                <img class="shared-media-asset" src="assets/media/guides/critical-errors.webp" alt="Обложка гайда «5 критических ошибок в соблазнении»" loading="lazy" decoding="async">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Navigation Pill -->
+        <div class="guides-nav-pill">
+          <button class="guides-nav-btn" id="guides-prev" type="button" aria-label="Предыдущий гайд">
+            <img src="assets/icons/635079fbf193f0ed82a6718b99cdbc1a267c434b.svg" alt="" aria-hidden="true">
+          </button>
+          <button class="guides-nav-btn active" id="guides-next" type="button" aria-label="Следующий гайд">
+            <img src="assets/icons/7b96c4a93bb88575a52f91118ee109bb499292b7.svg" alt="" aria-hidden="true">
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         15. FAQ ACCORDION SECTION (Figma Node 1:619)
+         ==================================================================== -->
+    <section class="faq-section" id="faq">
+      <div class="faq-container">
+        
+        <!-- Left Column: Title + Support -->
+        <div class="faq-left-col">
+          <h2 class="faq-title">Частые <br>вопросы</h2>
+
+          <div class="faq-support-card">
+            <div class="faq-support-text">
+              <span class="bold">Остались вопросы?</span>
+              <span class="sub">Пиши в наш отдел заботы</span>
+            </div>
+            <a href="https://t.me/" target="_blank" rel="noopener noreferrer" class="faq-support-btn">Написать</a>
+          </div>
+        </div>
+
+        <!-- Right Column: 7 Items -->
+        <div class="faq-right-col">
+          
+          <!-- Item 01 (Open by default) -->
+          <div class="faq-item-group active">
+            <button class="faq-question-box" type="button" data-faq="1" aria-expanded="true" aria-controls="faq-answer-1">
+              <div class="faq-question-content">
+                <span class="faq-num">01</span>
+                <span class="faq-question-title">Что выбрать — OFFLINE или ONLINE?</span>
+              </div>
+              <div class="faq-toggle-icon">
+                <img src="assets/icons/f862e0bf77ba9b13226c617a76e5382364a0a394.svg" alt="" aria-hidden="true">
+              </div>
+            </button>
+            <div class="faq-answer-collapse" id="faq-answer-1">
+              <div class="faq-answer-inner">
+                <div class="faq-answer-box">
+                  <p>Ориентируйся по своей задаче:</p>
+                  <ul>
+                    <li>Страшно подойти вживую — начни с OFFLINE.</li>
+                    <li>Хочешь менять поведение и растить свою привлекательность — OFFLINE.</li>
+                    <li>Постоянно в онлайне и хочешь быстро выходить на свидания через переписку — ONLINE.</li>
+                    <li>Нужен поток и доступ к тем, до кого обычно не дотянуться, — ONLINE.</li>
+                    <li>Хочешь качаться через практику и иметь свидание каждый вечер — бери комплект.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 02 -->
+          <div class="faq-item-group">
+            <button class="faq-question-box" type="button" data-faq="2" aria-expanded="false" aria-controls="faq-answer-2">
+              <div class="faq-question-content">
+                <span class="faq-num">02</span>
+                <span class="faq-question-title">Зачем GENESĪS, если есть IMAGO?</span>
+              </div>
+              <div class="faq-toggle-icon">
+                <img src="assets/icons/ac3b9c3ad30662eab01a0a1b8bae92dd0f7af7ea.svg" alt="" aria-hidden="true">
+              </div>
+            </button>
+            <div class="faq-answer-collapse" id="faq-answer-2">
+              <div class="faq-answer-inner">
+                <div class="faq-answer-box">
+                  <p>IMAGO — полугодовой флагманский тренинг с потоками по набору. GENESĪS — автономная база и старт, который можно пройти прямо сейчас, не дожидаясь набора. После GENESĪS ты приходишь в IMAGO подготовленным и забираешь от программы максимум.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 03 -->
+          <div class="faq-item-group">
+            <button class="faq-question-box" type="button" data-faq="3" aria-expanded="false" aria-controls="faq-answer-3">
+              <div class="faq-question-content">
+                <span class="faq-num">03</span>
+                <span class="faq-question-title">А если я невысокий, не модельной внешности или интроверт?</span>
+              </div>
+              <div class="faq-toggle-icon">
+                <img src="assets/icons/ac3b9c3ad30662eab01a0a1b8bae92dd0f7af7ea.svg" alt="" aria-hidden="true">
+              </div>
+            </button>
+            <div class="faq-answer-collapse" id="faq-answer-3">
+              <div class="faq-answer-inner">
+                <div class="faq-answer-box">
+                  <p>Внешность и рост вторичны, когда у тебя поставлено естественное позиционирование, уверенность и навык контекстного разговора. Программа построена на алгоритмах, которые работают независимо от типажа и темперамента.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 04 -->
+          <div class="faq-item-group">
+            <button class="faq-question-box" type="button" data-faq="4" aria-expanded="false" aria-controls="faq-answer-4">
+              <div class="faq-question-content">
+                <span class="faq-num">04</span>
+                <span class="faq-question-title">У меня нет времени — работа 5/2</span>
+              </div>
+              <div class="faq-toggle-icon">
+                <img src="assets/icons/ac3b9c3ad30662eab01a0a1b8bae92dd0f7af7ea.svg" alt="" aria-hidden="true">
+              </div>
+            </button>
+            <div class="faq-answer-collapse" id="faq-answer-4">
+              <div class="faq-answer-inner">
+                <div class="faq-answer-box">
+                  <p>Уроки длятся всего 10–20 минут, их можно смотреть в дороге или перед сном. Практику можно внедрять в повседневную жизнь: по пути на работу, в кофейне, спортзале или за 15 минут в дейтинг-приложении.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 05 -->
+          <div class="faq-item-group">
+            <button class="faq-question-box" type="button" data-faq="5" aria-expanded="false" aria-controls="faq-answer-5">
+              <div class="faq-question-content">
+                <span class="faq-num">05</span>
+                <span class="faq-question-title">А если у меня реально нет денег?</span>
+              </div>
+              <div class="faq-toggle-icon">
+                <img src="assets/icons/ac3b9c3ad30662eab01a0a1b8bae92dd0f7af7ea.svg" alt="" aria-hidden="true">
+              </div>
+            </button>
+            <div class="faq-answer-collapse" id="faq-answer-5">
+              <div class="faq-answer-inner">
+                <div class="faq-answer-box">
+                  <p>Знания и навыки из GENESĪS окупаются при первых же знакомствах и экономят годы сомнений. Если бюджет ограничен, можно выбрать один модуль (OFFLINE или ONLINE) и сразу начать практиковать.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 06 -->
+          <div class="faq-item-group">
+            <button class="faq-question-box" type="button" data-faq="6" aria-expanded="false" aria-controls="faq-answer-6">
+              <div class="faq-question-content">
+                <span class="faq-num">06</span>
+                <span class="faq-question-title">Это вообще этично?</span>
+              </div>
+              <div class="faq-toggle-icon">
+                <img src="assets/icons/ac3b9c3ad30662eab01a0a1b8bae92dd0f7af7ea.svg" alt="" aria-hidden="true">
+              </div>
+            </button>
+            <div class="faq-answer-collapse" id="faq-answer-6">
+              <div class="faq-answer-inner">
+                <div class="faq-answer-box">
+                  <p>100% этично. GENESĪS не учит манипуляциям, обману или «пикап-шаблонам». Мы учим честному, уверенному общению, интересу к человеку и искреннему контакту без страха отказа.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 07 -->
+          <div class="faq-item-group">
+            <button class="faq-question-box" type="button" data-faq="7" aria-expanded="false" aria-controls="faq-answer-7">
+              <div class="faq-question-content">
+                <span class="faq-num">07</span>
+                <span class="faq-question-title">Есть ли возврат?</span>
+              </div>
+              <div class="faq-toggle-icon">
+                <img src="assets/icons/ac3b9c3ad30662eab01a0a1b8bae92dd0f7af7ea.svg" alt="" aria-hidden="true">
+              </div>
+            </button>
+            <div class="faq-answer-collapse" id="faq-answer-7">
+              <div class="faq-answer-inner">
+                <div class="faq-answer-box">
+                  <p>Да, если материал программы тебе объективно не подойдёт, ты можешь написать в отдел заботы в течение первых 7 дней после покупки.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    </main>
+
+    <!-- ====================================================================
+         16. FINAL CTA & FOOTER SECTION (Figma Node 1:701)
+         ==================================================================== -->
+    <footer class="footer-cta-section" id="cta">
+      <!-- Background images -->
+      <div class="footer-cta-bg-wrap">
+        <img class="footer-cta-bg-1" src="assets/images/11061d69a8d4c85c0ed2466dc6738c9ee3f29dfd.png" alt="">
+        <img class="footer-cta-bg-2" src="assets/images/559d9ffddd11475d419833b70e47539af6f7ac57.png" alt="">
+      </div>
+
+      <div class="footer-cta-inner">
+        <!-- Center Content -->
+        <div class="footer-cta-content">
+          <h2 class="footer-cta-title">Ты либо наблюдаешь,<br>либо начинаешь</h2>
+          <p class="footer-cta-desc">Продолжить жить по старому сценарию, или взять<br class="footer-desc-br"> систему, которая уже сработала на сотнях мужчин,<br class="footer-desc-br"> и&nbsp;перестать быть наблюдателем.</p>
+          
+          <div class="footer-cta-buttons">
+
+
+
+            <a href="#" class="footer-btn-secondary">
+              <span>Оставить все как есть</span>
+              <div class="header-btn-light">
+                <img src="assets/icons/2d5b0b86258e208370a59c5aae23b23a2fc8e683.svg" alt="">
+              </div>
+            </a>
+            <span class="footer-or-label">или</span>
+            <a href="#pricing" class="footer-btn-primary">
+              <span>Забрать GENESĪS</span>
+              <img src="assets/icons/618496dd0a976bac5108d14334ba425f90227f21.svg" alt="" width="16" height="16">
+            </a>
+          </div>
+        </div>
+
+        <!-- Bottom Vector -->
+        <div class="footer-bottom-vector">
+          <img src="assets/icons/81ab9b048a4354fb475936b4f1080d7a85645b64.svg" alt="">
+        </div>
+
+        <!-- Footer Items Row -->
+        <div class="footer-items-row">
+          <div class="footer-item">@IMAGO Program</div>
+          <a href="/privacy-policy/" class="footer-item">Политика конфиденциальности</a>
+          <a href="/offer/" class="footer-item">Договор оферта</a>
+          <a href="https://t.me/artembabkin" target="_blank" rel="noopener noreferrer" class="footer-item">Разработка сайта</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Mobile Landscape & Tablet Portrait Orientation Lock Overlay (Figma Node 4045:8682 & 4045:7964) -->
+  <div class="orientation-rotate-overlay" id="orientation-rotate-overlay" aria-hidden="true">
+    <div class="orientation-header">
+      <div class="orientation-header-logo">
+        <img src="assets/icons/845799d11f4dc45f8d05605190346147d438e769.svg" alt="GENESĪS Logo" width="38" height="28">
+      </div>
+      <a href="#pricing" class="orientation-header-btn">
+        <span>Забрать GENESĪS</span>
+        <div class="orientation-header-btn-light">
+          <img src="assets/icons/2d5b0b86258e208370a59c5aae23b23a2fc8e683.svg" alt="">
+        </div>
+      </a>
+    </div>
+
+    <div class="orientation-rotate-bg">
+      <img src="assets/images/11061d69a8d4c85c0ed2466dc6738c9ee3f29dfd.png" alt="" class="orientation-bg-1">
+      <img src="assets/images/559d9ffddd11475d419833b70e47539af6f7ac57.png" alt="" class="orientation-bg-2">
+    </div>
+
+    <div class="orientation-rotate-center">
+      <div class="orientation-phone-group">
+        <div class="orientation-phone-h">
+          <div class="orientation-phone-h-notch"></div>
+        </div>
+        <div class="orientation-phone-arrow">
+          <img src="assets/icons/rotate-arrow.svg" alt="">
+        </div>
+        <div class="orientation-phone-v">
+          <div class="orientation-phone-v-notch"></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="orientation-rotate-text">
+      <span class="dim">Для корректной работы сайта,</span><br>
+      <span>пожалуйста, поверните экран</span>
+    </p>
+  </div>
+
+
+  <!-- JavaScript Module -->
+  <script type="module" src="js/main.js?v=20260829-8"></script>
+</body>
+</html>

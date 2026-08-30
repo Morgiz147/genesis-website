@@ -1,0 +1,729 @@
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES (1920px, 1440px, 1280px, 1024px, 768px, 480px)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Large Desktops & Widescreens (>1440px, e.g. 1920x1080)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1600px) {
+  .site-header {
+    width: 100%;
+  }
+
+  .header-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 160px;
+  }
+
+  .hero-float-left {
+    left: calc(-180px - (100vw - 1440px) / 2);
+    width: 701px;
+    height: 782px;
+  }
+
+  .hero-float-right {
+    right: calc(-161px - (100vw - 1440px) / 2);
+    width: 701px;
+    height: 782px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Laptops & Medium Desktops (1025px - 1440px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1599px) {
+  .header-inner {
+    padding: 0 var(--desktop-gutter);
+  }
+
+  .scenarios-inner,
+  .observation-inner,
+  .funnel-inner,
+  .lessons-inner,
+  .screenshots-inner,
+  .footer-cta-inner {
+    transform-origin: top center;
+    max-width: 100%;
+  }
+
+  .scenarios-section,
+  .observation-section,
+  .funnel-section,
+  .lessons-section,
+  .screenshots-section {
+    overflow-x: hidden;
+  }
+}
+
+/* Keep the 1440px Figma grid proportional on narrower desktop screens. */
+@media (min-width: 1025px) and (max-width: 1599px) {
+  :root {
+    --mid-desktop-inset: max(20px, calc((100vw - var(--container-max-width)) / 2));
+  }
+
+  .scenarios-left-title,
+  .observation-title,
+  .observation-left-text,
+  .funnel-title,
+  .funnel-left-text,
+  .lesson-row-label,
+  .screenshots-grid-cols {
+    left: var(--mid-desktop-inset);
+  }
+
+  .scenarios-cards-column {
+    left: calc(var(--mid-desktop-inset) + 285px);
+  }
+
+  .scenarios-right-title-wrap,
+  .scenarios-right-bottom,
+  .observation-right-text,
+  .observation-stat-box {
+    left: calc(var(--mid-desktop-inset) + 760px);
+  }
+
+  .funnel-right-text {
+    left: calc(var(--mid-desktop-inset) + 855px);
+  }
+
+  .lesson-cards-pair {
+    left: calc(var(--mid-desktop-inset) + 190px);
+  }
+
+  .footer-cta-content {
+    left: calc(50% - 295px);
+  }
+
+  .footer-items-row {
+    left: var(--mid-desktop-inset);
+    right: var(--mid-desktop-inset);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablets & Small Laptops (max-width: 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  :root {
+    --section-divider-height: 80px;
+  }
+
+  main {
+    gap: 80px;
+  }
+
+  main + .footer-cta-section {
+    margin-top: 80px;
+  }
+
+  /* Header */
+  .header-inner {
+    padding: 0 24px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    height: auto;
+    min-height: auto;
+    padding-bottom: 80px;
+  }
+
+  .hero-top-block {
+    position: relative;
+    left: auto;
+    transform: none;
+    width: 100%;
+    height: auto;
+    padding: 120px 24px 60px;
+    box-sizing: border-box;
+  }
+
+  .hero-center-box {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .hero-vector-wrap {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+  }
+
+  .hero-vector-wrap img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-vector-tagline {
+    position: relative;
+    bottom: auto;
+    font-size: 24px;
+    margin-top: 16px;
+  }
+
+  .hero-float-left,
+  .hero-float-right {
+    display: none;
+  }
+
+  .hero-bottom-block {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    height: auto;
+    padding: 40px 24px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-def-box {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    min-height: 300px;
+    gap: 30px;
+  }
+
+  /* Scenarios Section */
+  .scenarios-section {
+    height: auto;
+    min-height: auto;
+    padding: 60px 24px;
+  }
+
+  .scenarios-inner {
+    height: auto;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    padding: 0;
+  }
+
+  .scenarios-col-left,
+  .scenarios-col-right {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .scenarios-col-left .scenarios-sticky-wrap,
+  .scenarios-col-right .scenarios-sticky-wrap {
+    position: static;
+    width: 100%;
+  }
+
+  .scenarios-left-title,
+  .scenarios-right-title {
+    position: static;
+    text-align: center;
+    white-space: normal;
+    width: 100%;
+  }
+
+  .scenarios-cards-column {
+    position: static;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .scenario-card {
+    width: 100%;
+    height: auto;
+    min-height: 280px;
+  }
+
+  .scenarios-right-bottom {
+    position: static;
+    width: 100%;
+    max-width: 480px;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  /* Video Section */
+  .video-preview-card {
+    height: 500px;
+  }
+
+  /* System Slider */
+  .system-slider-scroll-track {
+    min-height: auto;
+    height: auto;
+  }
+
+  .system-slider-sticky-stage {
+    position: static;
+    top: auto;
+    padding: 60px 0;
+  }
+
+  .system-slider-box {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .system-slider-image {
+    width: 100%;
+    height: 380px;
+  }
+
+  .system-slider-content {
+    width: 100%;
+    height: auto;
+    min-height: 380px;
+    gap: 40px;
+  }
+
+  /* Observation Section */
+  .observation-section {
+    height: auto;
+    min-height: auto;
+    padding: 60px 24px;
+  }
+
+  .observation-inner {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .observation-title,
+  .observation-left-text,
+  .observation-right-text,
+  .observation-stat-box {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+  }
+
+  /* Feedbacks */
+  .feedbacks-section {
+    padding: 100px 24px;
+  }
+
+  .feedbacks-carousel-track-wrap {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .feedback-card {
+    flex: 0 0 320px;
+    width: 320px;
+  }
+
+  /* Funnel Section */
+  .funnel-section {
+    height: auto;
+    min-height: auto;
+    padding: 60px 24px;
+  }
+
+  .funnel-inner {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .funnel-title,
+  .funnel-left-text,
+  .funnel-right-text {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+  }
+
+  .funnel-diagram-group {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* Lessons Section */
+  .lessons-section {
+    height: auto;
+    min-height: auto;
+    padding: 60px 24px;
+  }
+
+  .lessons-inner {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .lessons-header-wrap {
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  .lesson-row-label {
+    position: relative;
+    left: auto !important;
+    top: auto !important;
+    width: 100%;
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  .lesson-cards-pair {
+    position: relative;
+    left: auto !important;
+    top: auto !important;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .lesson-card {
+    width: 100%;
+    height: auto;
+    min-height: 360px;
+  }
+
+  /* Ecosystem Section */
+  .ecosystem-section {
+    padding: 100px 24px 60px;
+  }
+
+  .ecosystem-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ecosystem-box {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .ecosystem-image {
+    width: 100%;
+    height: 340px;
+  }
+
+  .ecosystem-tabs {
+    width: 100%;
+    gap: 40px;
+  }
+
+  /* Mobile App IDM */
+  .app-section {
+    padding: 60px 24px 100px;
+  }
+
+  .app-phones-stage {
+    height: 480px;
+    overflow: hidden;
+  }
+
+  .app-quote-callout {
+    padding-left: 0;
+  }
+
+  .app-quote-callout p {
+    width: 100%;
+  }
+
+  .app-features-row {
+    flex-direction: column;
+  }
+
+  /* Video Trailer */
+  .trailer-video-box {
+    width: 100%;
+    height: 420px;
+  }
+
+  /* Tariffs Grid */
+  .tariffs-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tariff-card,
+  .tariff-card-featured-wrap {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  /* Screenshots Gallery */
+  .screenshots-section {
+    height: auto;
+    min-height: auto;
+    padding: 60px 24px;
+  }
+
+  .screenshots-inner {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .screenshots-header-wrap {
+    position: relative;
+    left: auto;
+    transform: none;
+    width: 100%;
+  }
+
+  .screenshots-grid-cols {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .screenshots-col {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .screenshot-item {
+    width: 100%;
+  }
+
+  /* Bonus Guides */
+  .guides-section {
+    padding: 60px 24px;
+  }
+
+  .guide-card {
+    flex: 0 0 320px;
+    width: 320px;
+  }
+
+  /* FAQ */
+  .faq-section {
+    padding: 60px 24px;
+  }
+
+  .faq-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .faq-left-col {
+    gap: 40px;
+    width: 100%;
+  }
+
+  .faq-support-card {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .faq-right-col {
+    width: 100%;
+  }
+
+  /* Final CTA & Footer */
+  .footer-cta-section {
+    height: auto;
+    min-height: 700px;
+    padding: 100px 24px 40px;
+    box-sizing: border-box;
+  }
+
+  .footer-cta-inner {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .footer-cta-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+  }
+
+  .footer-bottom-vector {
+    display: none;
+  }
+
+  .footer-items-row {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Devices (max-width: 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* Navigation */
+  .header-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(11, 12, 13, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    flex-direction: column;
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .header-nav.mobile-active {
+    display: flex;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  /* Typography Scale */
+  .hero-main-title {
+    font-size: 24px;
+    line-height: 1.25;
+    letter-spacing: -0.48px;
+  }
+
+  .scenarios-left-title,
+  .scenarios-right-title,
+  .video-card-title,
+  .system-slider-header h2,
+  .observation-title,
+  .feedbacks-header-wrap h2,
+  .funnel-title,
+  .lessons-header-wrap h2,
+  .ecosystem-header-title,
+  .app-title,
+  .trailer-title,
+  .tariffs-header-wrap h2,
+  .screenshots-header-wrap h2,
+  .guides-header-wrap h2,
+  .faq-title,
+  .footer-cta-title {
+    font-size: 28px !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.56px !important;
+  }
+
+  .observation-stat-73 {
+    font-size: 80px;
+  }
+
+  .system-slider-num {
+    font-size: 60px;
+  }
+
+  /* Buttons on Mobile */
+  .footer-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .footer-btn-secondary,
+  .footer-btn-primary {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .guides-header-wrap p,
+  .tariff-card,
+  .tariff-card-featured-wrap {
+    width: 100%;
+  }
+
+  .video-preview-card {
+    height: 380px;
+  }
+
+  .video-play-box,
+  .trailer-play-center {
+    width: 220px;
+    padding: 16px;
+    gap: 20px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Mobile Devices (max-width: 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .hero-main-title {
+    font-size: 20px;
+  }
+
+  .hero-cta-btn,
+  .scenarios-cta-btn,
+  .app-cta-btn,
+  .tariff-btn,
+  .footer-btn-primary,
+  .footer-btn-secondary {
+    padding: 18px 28px 16px 28px;
+    font-size: 15px;
+  }
+
+  .scenario-card,
+  .system-slider-content,
+  .feedback-card,
+  .lesson-card,
+  .ecosystem-box,
+  .app-feature-card,
+  .tariff-card,
+  .tariff-card-featured-inner,
+  .guide-card,
+  .faq-question-box,
+  .faq-answer-box {
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .hero-def-box {
+    padding: 24px;
+  }
+
+  .feedback-card,
+  .guide-card {
+    flex: 0 0 calc(100vw - 48px);
+    width: calc(100vw - 48px);
+  }
+}

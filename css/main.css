@@ -1,0 +1,12 @@
+/* GENESĪS design system entry point.
+   Import order is deliberate: tokens → reset → primitives → sections →
+   one responsive cascade. No viewport stylesheet is linked by the document. */
+@import "./abstracts/_variables.css";
+@import "./abstracts/_fluid-tokens.css";
+@import "./base/_fonts.css";
+@import "./base/_reset.css";
+@import "./layout/_container.css";
+@import "./components/_components.css";
+@import "./sections/_sections.css?v=20260827-1";
+@import "./layout/_responsive-system.css?v=20260827-10";
+@import "./layout/_special-state.css?v=20260829-35";

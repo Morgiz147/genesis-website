@@ -1,0 +1,8 @@
+/* One responsive cascade, sourced from the exact Figma-derived rules. */
+@import "../responsive.css";
+@import "../desktop-1280.css";
+@import "../desktop-1440.css";
+@import "../desktop-1600.css";
+@import "../desktop-1920.css";
+@import "../tablet-1024.css";
+@import "../mobile-390.css?v=20260827-15";

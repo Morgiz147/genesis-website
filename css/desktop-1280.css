@@ -1,0 +1,2361 @@
+/* ==========================================================================
+   GENESĪS — DESKTOP 1280px GRID & LAYOUT OVERRIDES
+   Exact implementation of Figma Frame "Desctop" (Node 4002:4355)
+   ========================================================================== */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  :root {
+    --container-max-width: 1120px;
+    --desktop-gutter: 80px;
+    --carousel-viewport-width: 1120px;
+    --section-divider-height: 200px;
+  }
+
+  /* Global Container & Flow */
+  .container {
+    width: 100%;
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  main {
+    gap: 200px;
+  }
+
+  main + .footer-cta-section {
+    margin-top: 200px;
+  }
+
+  /* ------------------------------------------------------------------------
+     00. FIXED HEADER (Node 4002:5051, height 60px, max-width: 1280px)
+     ------------------------------------------------------------------------ */
+  .site-header {
+    height: 60px;
+    background: rgba(12, 13, 14, 0.85);
+  }
+
+  .header-inner {
+    max-width: 1280px;
+    height: 60px;
+    padding: 0 80px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+  }
+
+  .header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .header-logo img {
+    width: 38px;
+    height: 28px;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .nav-link {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #FFFFFF;
+  }
+
+  .header-cta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .header-btn {
+    width: 146px;
+    min-width: 146px;
+    height: 40px;
+    padding: 11px 18px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1000px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header-btn span {
+    white-space: nowrap;
+  }
+
+  .header-btn-light {
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+    right: 0;
+    height: 18px;
+    pointer-events: none;
+  }
+
+  /* ------------------------------------------------------------------------
+     01. HERO SECTION (Node 4002:4356, height 1440px total)
+     Top block: Node 4002:4365 (720px)
+     Bottom block: Node 4002:4358 (720px)
+     ------------------------------------------------------------------------ */
+  .hero-section {
+    height: 1440px;
+    min-height: 1440px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #16181A;
+  }
+
+  .hero-top-block {
+    height: 720px;
+    width: 1280px;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero-float-left {
+    position: absolute;
+    left: -120px;
+    top: 0;
+    width: 600px;
+    height: 675px;
+    transform: none;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  .hero-float-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: rotate(5deg);
+  }
+
+  .hero-float-right {
+    position: absolute;
+    left: auto;
+    right: -150px;
+    top: 60px;
+    width: 600px;
+    height: 675px;
+    transform: none;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  .hero-float-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: rotate(5deg);
+  }
+
+  .hero-center-box {
+    position: absolute;
+    top: 144px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 550px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+  }
+
+  .hero-main-title {
+    width: 550px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.64px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .hero-main-title span.dim {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .hero-br-1920 {
+    display: none;
+  }
+
+  .hero-cta-btn {
+    width: 230px;
+    height: 67px;
+    padding: 0 20px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #212326;
+    background: #8AE5E5;
+    border: 1px solid #6CD9D9;
+    border-radius: 1000px;
+    box-shadow: 0px 24px 48px -12px rgba(82, 204, 204, 0.36);
+    gap: 8px;
+    white-space: nowrap !important;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-cta-btn span {
+    white-space: nowrap;
+  }
+
+  .hero-cta-btn img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hero-vector-wrap {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 40px;
+    right: 40px;
+    width: 1200px;
+    height: 249px;
+    transform: none;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 5;
+  }
+
+  .hero-vector-wrap img {
+    width: 1200px;
+    height: 249px;
+  }
+
+  .hero-vector-tagline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.64px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+
+  .hero-bottom-block {
+    position: absolute;
+    top: 720px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1280px;
+    max-width: 100%;
+    height: 720px;
+  }
+
+  .hero-def-box {
+    position: absolute;
+    top: 180px;
+    left: 650px;
+    right: auto;
+    width: 360px;
+    height: 360px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10;
+  }
+
+  .hero-def-term {
+    font-family: 'Wremena', serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+  }
+
+  .hero-def-origin {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: rgba(255, 255, 255, 0.8);
+    width: 240px;
+  }
+
+  .hero-def-desc {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.4px;
+    color: #FFFFFF;
+    width: 280px;
+  }
+
+  .hero-def-desc span.dim {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  /* ------------------------------------------------------------------------
+     02. SCENARIOS SECTION (Node 4002:4379, height 1960px)
+     ------------------------------------------------------------------------ */
+  .scenarios-section {
+    width: 100%;
+    background: #0B0C0D;
+    position: relative;
+  }
+
+  .scenarios-inner {
+    width: 1280px;
+    max-width: 100%;
+    height: 1960px;
+    margin: 0 auto;
+    position: relative;
+    transform: none;
+  }
+
+  .scenarios-left-title {
+    position: absolute;
+    left: 80px;
+    top: 0;
+    width: 158px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.8px;
+    color: #FFFFFF;
+  }
+
+  .scenarios-cards-column {
+    position: absolute;
+    left: 365px;
+    top: 0;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .scenario-card {
+    width: 360px;
+    height: 360px;
+    box-sizing: border-box;
+    padding: 40px;
+    background: #16181A;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .scenario-card-num {
+    font-family: 'Wremena', serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: #6CD9D9;
+    text-align: right;
+    width: 100%;
+  }
+
+  .scenario-card-text {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+  }
+
+  .scenarios-right-title-wrap {
+    position: absolute;
+    left: 840px;
+    top: 0;
+    width: 360px;
+  }
+
+  .scenarios-right-title {
+    width: 360px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.8px;
+    color: #FFFFFF;
+  }
+
+  .scenarios-right-bottom {
+    position: absolute;
+    left: 840px;
+    top: 1600px;
+    width: 360px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .scenarios-right-text-1 {
+    width: 360px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.4px;
+    color: #FFFFFF;
+  }
+
+  .scenarios-right-text-2 {
+    width: 320px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+  }
+
+  .scenarios-cta-btn {
+    width: 230px;
+    height: 67px;
+    padding: 0 20px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #212326;
+    background: #8AE5E5;
+    border: 1px solid #6CD9D9;
+    border-radius: 1000px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-sizing: border-box;
+    white-space: nowrap !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     03. VIDEO INTRO SECTION (Node 4002:4414, height 720px)
+     ------------------------------------------------------------------------ */
+  .video-section {
+    width: 100%;
+    height: 720px;
+    position: relative;
+  }
+
+  .video-preview-card {
+    width: 1280px;
+    max-width: 100%;
+    height: 720px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .video-preview-card .video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .video-card-title-wrap {
+    position: absolute;
+    left: 80px;
+    top: 40px;
+    width: 455px;
+  }
+
+  .video-card-title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.8px;
+    color: #FFFFFF;
+    width: 435px;
+  }
+
+  .video-play-box {
+    position: absolute;
+    left: auto;
+    right: 80px;
+    top: auto;
+    bottom: 40px;
+    width: 280px;
+    height: 140px;
+    padding: 20px;
+    border-radius: 14px;
+    background: rgba(18, 20, 22, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(108, 217, 217, 0.35);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 24px rgba(108, 217, 217, 0.2);
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    z-index: 5;
+  }
+
+  .video-play-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .video-play-label {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #FFFFFF;
+  }
+
+  .video-play-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .video-play-duration {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  /* ------------------------------------------------------------------------
+     04. SYSTEM SLIDER SECTION (Node 4002:4430, height 961px)
+     ------------------------------------------------------------------------ */
+  .system-slider-section {
+    position: relative;
+    width: 100%;
+  }
+
+  .system-slider-scroll-track {
+    position: relative;
+    width: 100%;
+    height: 250vh;
+  }
+
+  .system-slider-sticky-stage {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+    z-index: 10;
+  }
+
+  .system-slider-header {
+    height: auto;
+    box-sizing: border-box;
+    max-width: 550px;
+    margin: 0 auto 20px auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  .system-slider-header h2 {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.56px;
+    color: #FFFFFF;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0 auto 10px;
+  }
+
+  .system-slider-header p {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #999999;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .system-slider-header p span.white {
+    color: #FFFFFF;
+  }
+
+  .system-slider-box {
+    width: 1120px;
+    max-width: calc(100% - 40px);
+    height: min(480px, calc(100vh - 220px));
+    gap: 16px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+
+  .system-slider-image {
+    width: 645px;
+    height: 100%;
+    flex: none;
+    border-radius: 20px;
+    background: #16181A;
+    overflow: hidden;
+  }
+
+  .system-slider-content {
+    width: 455px;
+    height: 100%;
+    flex: none;
+    padding: 32px;
+    border-radius: 20px;
+    background: #212326;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .system-bars-wrap {
+    width: 375px;
+    gap: 20px;
+    display: flex;
+  }
+
+  .system-bar-item {
+    width: 177.5px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1000px;
+    padding: 0;
+    border: none;
+  }
+
+  .system-slider-pagination {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .system-slider-num {
+    font-family: 'Wremena', serif;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 1;
+    color: #6CD9D9;
+  }
+
+  .system-slider-total {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #666666;
+  }
+
+  .system-text-stage {
+    min-height: 216px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .system-slide-tag {
+    font-family: 'Wremena', serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: #6CD9D9;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  .system-slide-title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.64px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+  }
+
+  .system-slide-desc {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+    max-width: 375px;
+  }
+
+  /* ------------------------------------------------------------------------
+     05. OBSERVATION SECTION (Node 4002:4456, height 931px)
+     ------------------------------------------------------------------------ */
+  .observation-section {
+    width: 100%;
+    position: relative;
+  }
+
+  .observation-inner {
+    width: 1280px;
+    max-width: 100%;
+    height: 931px;
+    margin: 0 auto;
+    position: relative;
+    transform: none;
+  }
+
+  .observation-title {
+    position: absolute;
+    left: 80px;
+    top: 0;
+    width: 360px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.8px;
+    color: #FFFFFF;
+  }
+
+  .observation-left-text {
+    position: absolute;
+    left: 80px;
+    top: 212px;
+    width: 265px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+  }
+
+  .observation-right-text {
+    position: absolute;
+    left: 840px;
+    top: 439px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+  }
+
+  .observation-right-text p:last-child {
+    width: 320px;
+  }
+
+  .observation-stat-box {
+    position: absolute;
+    left: 840px;
+    top: 707px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Keep the authored Figma line breaks for the 1280px observation copy. */
+  .observation-section .text-1600 {
+    display: inline !important;
+  }
+
+  .observation-section .text-default,
+  .observation-section .text-1920 {
+    display: none !important;
+  }
+
+  .observation-stat-num-wrap {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .observation-stat-73 {
+    font-family: 'Wremena', serif;
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -2.4px;
+    color: #FFFFFF;
+  }
+
+  .observation-stat-percent {
+    font-family: 'Times New Roman', serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.64px;
+    color: #FFFFFF;
+    height: 40px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .observation-stat-caption {
+    width: 245px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+  }
+
+  /* ------------------------------------------------------------------------
+     06. FEEDBACKS SECTION (Node 4002:4471, height 1034px)
+     ------------------------------------------------------------------------ */
+  .feedbacks-section {
+    background: #16181A;
+    padding: 200px 0;
+    position: relative;
+  }
+
+  .feedbacks-header-wrap {
+    max-width: 550px;
+    margin: 0 auto 80px auto;
+    text-align: center;
+  }
+
+  .feedbacks-header-wrap h2 {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.8px;
+    color: #FFFFFF;
+    width: 550px;
+    margin: 0 auto;
+  }
+
+  .feedbacks-carousel-track-wrap {
+    width: 1120px;
+    max-width: 1120px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .feedbacks-track {
+    gap: 40px;
+    display: flex;
+  }
+
+  .feedback-card {
+    flex: 0 0 360px;
+    width: 360px;
+    min-height: 390px;
+    height: 390px;
+    padding: 40px;
+    border-radius: 20px;
+    background: #212326;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .feedback-quote {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #FFFFFF;
+  }
+
+  .feedback-author {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .feedback-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 1000px;
+    background: #212326;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .feedback-name {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #FFFFFF;
+  }
+
+  .feedbacks-footer-nav {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .feedbacks-carousel-controls {
+    width: 90px;
+    height: 40px;
+    padding: 2px;
+    display: flex;
+    gap: 2px;
+    box-sizing: border-box;
+  }
+
+  .feedbacks-nav-btn {
+    width: 42px;
+    height: 36px;
+  }
+
+  /* ------------------------------------------------------------------------
+     07. FUNNEL MECHANICS (Node 4002:4555, height 758px)
+     ------------------------------------------------------------------------ */
+  .funnel-section {
+    width: 100%;
+    position: relative;
+  }
+
+  .funnel-inner {
+    width: 1280px;
+    max-width: 100%;
+    height: 758px;
+    margin: 0 auto;
+    position: relative;
+    transform: none;
+  }
+
+  .funnel-title {
+    position: absolute;
+    left: 80px;
+    top: 0;
+    width: 360px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.8px;
+    color: #FFFFFF;
+  }
+
+  .funnel-left-text {
+    position: absolute;
+    left: 80px;
+    top: 212px;
+    width: 265px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+  }
+
+  .funnel-right-text {
+    position: absolute;
+    left: 935px;
+    top: 212px;
+    width: 265px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+  }
+
+  .funnel-diagram-group {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1280px;
+    height: 758px;
+    pointer-events: none;
+  }
+
+  .funnel-circle-1 {
+    width: 340px;
+    height: 340px;
+    left: 460px;
+    top: 418px;
+    position: absolute;
+  }
+
+  .funnel-circle-2 {
+    width: 240px;
+    height: 240px;
+    left: 800px;
+    top: 468px;
+    position: absolute;
+  }
+
+  .funnel-circle-3 {
+    width: 160px;
+    height: 160px;
+    left: 1040px;
+    top: 508px;
+    position: absolute;
+  }
+
+  .funnel-line-1 {
+    position: absolute;
+    left: 800px;
+    top: 418px;
+    width: 340px;
+    height: 1px;
+    transform: rotate(90deg);
+    transform-origin: 0 0;
+  }
+
+  .funnel-line-2 {
+    position: absolute;
+    left: 1040px;
+    top: 418px;
+    width: 340px;
+    height: 1px;
+    transform: rotate(90deg);
+    transform-origin: 0 0;
+  }
+
+  .funnel-arrow-1 {
+    position: absolute;
+    left: 620px;
+    top: 588px;
+    width: 20px;
+  }
+
+  .funnel-arrow-2 {
+    position: absolute;
+    left: 910px;
+    top: 588px;
+    width: 20px;
+  }
+
+  .funnel-arrow-3 {
+    position: absolute;
+    left: 1100px;
+    top: 588px;
+    width: 20px;
+  }
+
+  /* ------------------------------------------------------------------------
+     08. LESSONS MATRIX SECTION (Node 4002:4574, height 3381px)
+     ------------------------------------------------------------------------ */
+  .lessons-section {
+    width: 100%;
+    position: relative;
+  }
+
+  .lessons-inner {
+    width: 1280px;
+    max-width: 100%;
+    height: 3381px;
+    margin: 0 auto;
+    position: relative;
+    transform: none;
+  }
+
+  .lessons-header-wrap {
+    max-width: 550px;
+    margin: 0 auto 80px auto;
+    text-align: center;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lessons-header-wrap h2 {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.8px;
+    color: #FFFFFF;
+    width: 550px;
+    margin: 0 auto;
+  }
+
+  .lessons-header-wrap p {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+    width: 550px;
+    margin: 0 auto;
+  }
+
+  .lesson-row-label {
+    left: 80px;
+    width: 170px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.4px;
+    color: #FFFFFF;
+    position: absolute;
+  }
+
+  .lesson-cards-pair {
+    left: 270px;
+    width: 930px;
+    gap: 20px;
+    display: flex;
+    position: absolute;
+  }
+
+  .lesson-card {
+    width: 455px;
+    height: 455px;
+    padding: 40px;
+    border-radius: 20px;
+    background: #16181A;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .lesson-card-tag {
+    font-family: 'Wremena', serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: #6CD9D9;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+
+  .lesson-card-title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.48px;
+    color: #FFFFFF;
+  }
+
+  .lesson-card-desc {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+  }
+
+  .lesson-card-takeaway {
+    padding: 20px;
+    border-radius: 10px;
+    background: #212326;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+  }
+
+  /* Lesson row positions */
+  .lessons-inner > :nth-child(2),
+  .lessons-inner > :nth-child(3) { top: 251px !important; }
+
+  .lessons-inner > :nth-child(4),
+  .lessons-inner > :nth-child(5) { top: 786px !important; }
+
+  .lessons-inner > :nth-child(6),
+  .lessons-inner > :nth-child(7) { top: 1321px !important; }
+
+  .lessons-inner > :nth-child(8),
+  .lessons-inner > :nth-child(9) { top: 1856px !important; }
+
+  .lessons-inner > :nth-child(10),
+  .lessons-inner > :nth-child(11) { top: 2391px !important; }
+
+  .lessons-inner > :nth-child(12),
+  .lessons-inner > :nth-child(13) { top: 2926px !important; }
+
+  /* ------------------------------------------------------------------------
+     09. ECOSYSTEM SECTION (Node 4002:4685, height 1132px)
+     ------------------------------------------------------------------------ */
+  .ecosystem-section {
+    background: #16181A;
+    padding: 200px 0 100px 0;
+    position: relative;
+  }
+
+  .ecosystem-header {
+    width: 1120px;
+    max-width: 1120px;
+    margin: 0 auto 80px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .ecosystem-header-title {
+    width: 360px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.8px;
+    color: #FFFFFF;
+  }
+
+  .ecosystem-header-desc {
+    width: 360px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .ecosystem-header-desc p {
+    width: 265px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+  }
+
+  .ecosystem-box {
+    width: 1120px;
+    height: 620px;
+    padding: 40px;
+    gap: 40px;
+    border-radius: 20px;
+    background: #212326;
+    margin: 0 auto;
+    display: flex;
+    box-sizing: border-box;
+  }
+
+  .ecosystem-image {
+    width: 500px;
+    height: 540px;
+    flex: none;
+    border-radius: 20px;
+    background: #16181A;
+    overflow: hidden;
+  }
+
+  .ecosystem-tabs {
+    width: 500px;
+    height: 540px;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .ecosystem-tab-item {
+    font-family: 'Wremena', serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+
+  .ecosystem-tab-desc {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+    margin-bottom: 30px;
+  }
+
+  .ecosystem-progress-track {
+    width: 500px;
+    height: 2px;
+  }
+
+  /* ------------------------------------------------------------------------
+     10. MOBILE APP IDM SECTION (Node 4002:4705, height 2072px)
+     ------------------------------------------------------------------------ */
+  .app-section {
+    background: #16181A;
+    padding: 100px 0 200px 0;
+    position: relative;
+  }
+
+  .app-container {
+    width: 1120px;
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .app-title-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .app-title {
+    width: 360px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.8px;
+    color: #FFFFFF;
+  }
+
+  .app-phones-stage {
+    width: 1120px;
+    height: 619px;
+    position: relative;
+  }
+
+  .app-phone-item {
+    width: 210px;
+    height: 499px;
+    position: absolute;
+  }
+
+  .app-phone-item.phone-1 {
+    left: calc(50% - 265px);
+    transform: translateX(-50%);
+    top: 70px;
+    z-index: 1;
+  }
+
+  .app-phone-item.phone-2 {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 120px;
+    z-index: 3;
+  }
+
+  .app-phone-item.phone-3 {
+    left: calc(50% + 265px);
+    transform: translateX(-50%);
+    top: 0px;
+    z-index: 2;
+  }
+
+  .app-phone-frame {
+    width: 210px;
+    height: 499px;
+  }
+
+  .app-phone-screen {
+    width: 186px;
+    height: 487px;
+    top: 6px;
+    border-radius: 28px;
+  }
+
+  .app-quote-callout {
+    padding-left: 570px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .app-quote-callout p {
+    width: 380px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.4px;
+    color: #FFFFFF;
+  }
+
+  .app-features-row {
+    width: 1120px;
+    gap: 20px;
+    display: flex;
+  }
+
+  .app-feature-card {
+    flex: 0 0 360px;
+    width: 360px;
+    height: 548px;
+    padding: 40px;
+    border-radius: 20px;
+    background: #212326;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .app-feature-title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.4px;
+    color: #FFFFFF;
+  }
+
+  .app-feature-graphic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .app-feature-graphic img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .app-feature-desc {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+  }
+
+  .app-cta-btn {
+    width: 230px;
+    height: 67px;
+    padding: 0 20px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #212326;
+    background: #8AE5E5;
+    border: 1px solid #6CD9D9;
+    border-radius: 1000px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    white-space: nowrap !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     11. VIDEO TRAILER SECTION (Node 4002:4752, height 644px)
+     ------------------------------------------------------------------------ */
+  .trailer-section {
+    padding: 0;
+    width: 100%;
+    position: relative;
+  }
+
+  .trailer-container {
+    width: 1120px;
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .trailer-title-wrap {
+    width: 100%;
+    text-align: center;
+  }
+
+  .trailer-title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.8px;
+    color: #FFFFFF;
+    width: 550px;
+    margin: 0 auto;
+  }
+
+  .trailer-video-box {
+    width: 930px;
+    height: 520px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .trailer-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .trailer-play-center {
+    width: 280px;
+    height: 140px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  /* ------------------------------------------------------------------------
+     12. TARIFFS SECTION (Node 4002:4768, height 811px)
+     ------------------------------------------------------------------------ */
+  .tariffs-section {
+    padding: 0;
+    background: #0B0C0D;
+    width: 100%;
+    position: relative;
+  }
+
+  .tariffs-container {
+    width: 1120px;
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .tariffs-header-wrap {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: center;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tariffs-header-wrap h2 {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.8px;
+    color: #FFFFFF;
+    width: 550px;
+    margin: 0 auto;
+  }
+
+  .tariffs-header-wrap p {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+    width: 550px;
+    margin: 0 auto;
+  }
+
+  .tariffs-grid {
+    width: 1120px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tariff-card {
+    flex: 0 0 360px;
+    width: 360px;
+    height: 526px;
+    padding: 40px;
+    border-radius: 20px;
+    background: #16181A;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .tariff-card-featured-wrap {
+    flex: 0 0 364px;
+    width: 364px;
+    height: 604px;
+    border-radius: 20px;
+    background: #8AE5E5;
+    padding-top: 38px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .tariff-badge-recommended {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #212326;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+  }
+
+  .tariff-card-featured-inner {
+    height: 564px;
+    padding: 40px;
+    border-radius: 20px;
+    background: #16181A;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .tariff-tag {
+    font-family: 'Wremena', serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: #6CD9D9;
+    display: block;
+  }
+
+  .tariff-name {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.4px;
+    color: #FFFFFF;
+  }
+
+  .tariff-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .tariff-feature-item {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+  }
+
+  .tariff-check-icon {
+    width: 9px;
+    height: 6px;
+    flex-shrink: 0;
+  }
+
+  .tariff-feature-text {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+  }
+
+  .tariff-price {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.64px;
+    color: #FFFFFF;
+  }
+
+  .tariff-price-old {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 8px;
+    display: block;
+  }
+
+  .tariff-btn {
+    width: 280px;
+    height: 67px;
+    padding: 24px 40px 22px 40px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #212326;
+    background: #8AE5E5;
+    border: 1px solid #6CD9D9;
+    border-radius: 1000px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* ------------------------------------------------------------------------
+     13. CHAT SCREENSHOTS GALLERY (Node 4002:4857, height 1331px)
+     ------------------------------------------------------------------------ */
+  .screenshots-section {
+    width: 100%;
+    position: relative;
+  }
+
+  .screenshots-inner {
+    width: 1280px;
+    max-width: 100%;
+    height: 1331px;
+    margin: 0 auto;
+    position: relative;
+    transform: none;
+  }
+
+  .screenshots-header-wrap {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: center;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .screenshots-header-wrap h2 {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.8px;
+    color: #FFFFFF;
+    width: 550px;
+    margin: 0 auto;
+  }
+
+  .screenshots-header-wrap p {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+    width: 550px;
+    margin: 0 auto;
+  }
+
+  .screenshots-grid-cols {
+    top: 209px;
+    left: 80px;
+    width: 1120px;
+    gap: 20px;
+    display: flex;
+    position: absolute;
+  }
+
+  .screenshots-col {
+    width: 360px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .screenshot-item {
+    width: 360px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .screenshot-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  /* ------------------------------------------------------------------------
+     14. BONUS GUIDES SECTION (Node 4002:4889, height 851px)
+     ------------------------------------------------------------------------ */
+  .guides-section {
+    padding: 0;
+    background: #0B0C0D;
+    width: 100%;
+    position: relative;
+  }
+
+  .guides-container {
+    width: 1120px;
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .guides-header-wrap {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: center;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .guides-header-wrap h2 {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.8px;
+    color: #FFFFFF;
+    width: 550px;
+    margin: 0 auto;
+  }
+
+  .guides-header-wrap p {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+    width: 550px;
+    margin: 0 auto;
+  }
+
+  .guides-carousel-wrap {
+    width: 1120px;
+    max-width: 1120px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .guides-track {
+    gap: 20px;
+    display: flex;
+  }
+
+
+  .guide-card {
+    flex: 0 0 360px;
+    width: 360px;
+    height: 480px;
+    padding: 40px;
+    border-radius: 20px;
+    background: #16181A;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .guide-card.featured {
+    background: #212326;
+  }
+
+  .guide-title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.4px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+  }
+
+  .guide-desc {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+  }
+
+  .guide-cover-1 {
+    width: 224px;
+    height: 294px;
+    left: 10px;
+    top: 230px;
+    border-radius: 15px;
+    position: absolute;
+    border: 3px solid #16181A;
+    transform: rotate(-10deg);
+    overflow: hidden;
+  }
+
+  .guide-cover-2 {
+    width: 203px;
+    height: 282px;
+    left: 160px;
+    top: 290px;
+    border-radius: 15px;
+    position: absolute;
+    border: 3px solid #16181A;
+    transform: rotate(5deg);
+    overflow: hidden;
+  }
+
+  .guides-nav-pill {
+    width: 90px;
+    height: 40px;
+    padding: 2px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2px;
+    box-sizing: border-box;
+  }
+
+  .guides-nav-btn {
+    width: 42px;
+    height: 36px;
+  }
+
+  /* ------------------------------------------------------------------------
+     15. FAQ ACCORDION SECTION (Node 4002:4945, height 969px)
+     ------------------------------------------------------------------------ */
+  .faq-section {
+    padding: 0;
+    background: #0B0C0D;
+    width: 100%;
+    position: relative;
+  }
+
+  .faq-container {
+    width: 1120px;
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .faq-left-col {
+    width: 550px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    box-sizing: border-box;
+  }
+
+  .faq-title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.8px;
+    color: #FFFFFF;
+    margin: 0;
+  }
+
+  .faq-support-card {
+    width: 228px;
+    height: 177px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #16181A;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .faq-support-text {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #FFFFFF;
+  }
+
+  .faq-support-text .sub {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .faq-support-btn {
+    width: 188px;
+    height: 55px;
+    padding: 18px 32px 16px 32px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #212326;
+    background: #8AE5E5;
+    border-radius: 1000px;
+    border: 1px solid #6CD9D9;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+  }
+
+  .faq-right-col {
+    width: 550px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+  }
+
+  .faq-item-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .faq-item-group.active {
+    gap: 8px;
+  }
+
+  .faq-question-box {
+    padding: 20px;
+    border-radius: 20px;
+    background: #16181A;
+    width: 100%;
+    min-height: 72px;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    border: none;
+  }
+
+  .faq-item-group:nth-child(3) .faq-question-box {
+    height: 82px;
+    min-height: 82px;
+  }
+
+  .faq-num {
+    font-family: 'Wremena', serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: #666666;
+    width: 18px;
+  }
+
+  .faq-question-title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #FFFFFF;
+  }
+
+  .faq-toggle-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+
+  .faq-answer-box {
+    padding: 40px;
+    border-radius: 20px;
+    background: #212326;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+    box-sizing: border-box;
+  }
+
+  .faq-answer-box p {
+    margin: 0 0 10px 0;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+  }
+
+  .faq-answer-box ul {
+    margin: 0;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .faq-answer-box li {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+  }
+
+  /* ------------------------------------------------------------------------
+     16. FINAL CTA & FOOTER SECTION (Node 4002:5027, height 640px)
+     ------------------------------------------------------------------------ */
+  .footer-cta-section {
+    height: 640px;
+    width: 100%;
+    background: #0B0C0D;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer-cta-inner {
+    width: 1280px;
+    max-width: 100%;
+    height: 640px;
+    margin: 0 auto;
+    position: relative;
+    transform: none;
+  }
+
+  .footer-cta-content {
+    width: 578px;
+    left: calc(50% - 289px);
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .footer-cta-title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.8px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 550px;
+    margin: 0 auto;
+  }
+
+  .footer-cta-desc {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    text-align: center;
+    color: #CCCCCC;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  .footer-cta-buttons {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    width: 578px;
+  }
+
+  .footer-btn-secondary {
+    width: 241px;
+    height: 67px;
+    padding: 24px 40px 22px 40px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #FFFFFF;
+    border: 1px solid #666666;
+    border-radius: 1000px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+  }
+
+  .footer-or-label {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #CCCCCC;
+    white-space: nowrap;
+  }
+
+  .footer-btn-primary {
+    width: 230px;
+    height: 67px;
+    padding: 0 20px;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.32px;
+    color: #212326;
+    background: #8AE5E5;
+    border: 1px solid #6CD9D9;
+    border-radius: 1000px;
+    box-shadow: 0px 24px 48px -12px rgba(82, 204, 204, 0.36);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-sizing: border-box;
+    white-space: nowrap !important;
+  }
+
+  .footer-btn-primary span {
+    white-space: nowrap;
+  }
+
+  .footer-btn-primary img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .footer-bottom-vector {
+    position: absolute;
+    width: 1200px;
+    height: 250px;
+    left: 40px;
+    right: 40px;
+    bottom: 0;
+    top: auto;
+    transform: none;
+    margin: 0 auto;
+  }
+
+  .footer-bottom-vector img {
+    width: 1200px;
+    height: 250px;
+  }
+
+  .footer-items-row {
+    position: absolute;
+    left: 80px;
+    right: 80px;
+    width: 1120px;
+    bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 265px);
+    gap: 20px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .footer-item {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.28px;
+    color: #FFFFFF;
+    white-space: nowrap;
+  }
+
+  .footer-item:nth-child(1),
+  .footer-item:nth-child(2) {
+    text-align: left;
+  }
+
+  .footer-item:nth-child(3),
+  .footer-item:nth-child(4) {
+    text-align: right;
+  }
+}

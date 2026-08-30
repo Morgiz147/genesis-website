@@ -1,0 +1,6 @@
+/* Container primitives remain independent from breakpoint overrides. */
+.container,
+.header-inner {
+  width: 100%;
+  margin-inline: auto;
+}

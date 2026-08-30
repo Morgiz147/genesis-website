@@ -1,0 +1,56 @@
+/* ==========================================================================
+   DESIGN TOKENS & CSS VARIABLES
+   ========================================================================== */
+
+:root {
+  /* Colors */
+  --bg-primary: #0B0C0D;
+  --bg-surface: #121316;
+  --bg-surface-elevated: #18191E;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-card-hover: rgba(255, 255, 255, 0.06);
+  --bg-glass: rgba(12, 13, 14, 0.85);
+
+  /* Accents */
+  --accent-primary: #6CD9D9;
+  --accent-cyan-glow: rgba(108, 217, 217, 0.4);
+  --accent-cyan-soft: rgba(108, 217, 217, 0.15);
+  
+  /* Borders */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-light: rgba(255, 255, 255, 0.15);
+  --border-highlight: rgba(108, 217, 217, 0.4);
+
+  /* Text Colors */
+  --text-white: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.75);
+  --text-muted: rgba(255, 255, 255, 0.45);
+  --text-disabled: rgba(255, 255, 255, 0.25);
+  --text-accent: #6CD9D9;
+
+  /* Typography */
+  --font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Spacings */
+  --container-max-width: 1120px;
+  --carousel-viewport-width: 1160px;
+  --desktop-gutter: max(20px, calc((100vw - var(--container-max-width)) / 2));
+  --section-divider-height: 140px;
+
+  /* Border Radii */
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-pill: 1000px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Shadows & Glows */
+  --glow-cyan: 0 10px 30px rgba(108, 217, 217, 0.25);
+  --shadow-card: 0 20px 40px rgba(0, 0, 0, 0.4);
+}

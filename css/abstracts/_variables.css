@@ -1,0 +1,13 @@
+@import "../variables.css";
+
+/* Shared Figma canvas metadata. Values are intentionally semantic so the
+   responsive rules can evolve without reintroducing viewport-specific entry
+   points. */
+:root {
+  --viewport-mobile: 390px;
+  --viewport-tablet: 1024px;
+  --viewport-desktop: 1440px;
+  --viewport-wide: 1600px;
+  --viewport-ultra-wide: 1920px;
+  --special-state-width: 360px;
+}

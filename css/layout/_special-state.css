@@ -1,0 +1,2473 @@
+/* Figma mobile frame family, including special frame 4015:1415 — 360px
+   canvas. These are real design states, not generic mobile approximations. */
+@media (max-width: 640px) {
+  /* Mobile hero frame: match the 376/390px reference canvas. */
+  .site-header,
+  .header-inner {
+    height: 73px !important;
+  }
+
+  .hero-center-box {
+    gap: 28px !important;
+  }
+
+  .hero-main-title {
+    width: min(328px, calc(100vw - 32px)) !important;
+    max-width: calc(100vw - 32px) !important;
+    font-size: 24px !important;
+    line-height: 29px !important;
+  }
+
+  main {
+    gap: 7.5rem !important;
+  }
+
+  main + .footer-cta-section {
+    margin-top: 7.5rem !important;
+  }
+
+  .screenshots-inner,
+  .screenshots-header-wrap {
+    width: calc(100vw - 32px) !important;
+    max-width: calc(100vw - 32px) !important;
+  }
+
+  /* Figma 4045:8099: the mobile feedback viewport starts on the same 16px
+     rail as the title; the next card remains visible after the 24px gap. */
+  .feedbacks-carousel-track-wrap {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    overflow: hidden !important;
+  }
+
+
+  /* Figma 4045:8183 is a 703px mobile frame. The previous 667px height
+     clipped the bottom of the 340px funnel circle and the final text line. */
+  .funnel-section,
+  .funnel-inner {
+    height: 703px !important;
+    min-height: 703px !important;
+  }
+
+  .screenshots-header-wrap h2 {
+    width: 100% !important;
+    max-width: none !important;
+    font-size: 1.875rem !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Pricing uses the same fluid mobile rail as the reference card. */
+  .tariffs-container,
+  .tariffs-header-wrap,
+  .tariffs-grid {
+    width: calc(100vw - 32px) !important;
+    max-width: calc(100vw - 32px) !important;
+  }
+
+  .tariff-card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .tariff-card-featured-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 572px !important;
+    min-height: 572px !important;
+    padding: 0 !important;
+  }
+
+  .tariff-card-featured-inner {
+    left: 1px !important;
+    right: 1px !important;
+    top: 55px !important;
+    bottom: 1px !important;
+    width: auto !important;
+    max-width: none !important;
+    border: 2px solid #6CD9D9 !important;
+    border-radius: 16px !important;
+    padding: 26px !important;
+    }
+
+  .tariff-badge-recommended {
+    top: 17px !important;
+  }
+
+  .tariff-card-featured-inner .tariff-btn {
+    height: 60px !important;
+    transform: none !important;
+  }
+
+  .site-header {
+    width: 100%;
+    left: 0;
+    right: 0;
+    transform: translateY(0);
+  }
+
+  .site-header.header-hidden {
+    transform: translateY(-100%);
+  }
+
+  .header-inner {
+    width: 100%;
+    max-width: 390px;
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+
+  /* One fluid 16px mobile rail for every iPhone/phone viewport. */
+  .scenarios-inner,
+  .scenarios-left-title,
+  .scenarios-right-bottom,
+  .system-slider-sticky-stage,
+  .system-slider-header,
+  .system-slider-header h2,
+  .system-slider-header p,
+  .system-slider-box,
+  .system-slider-image,
+  .system-slider-content,
+  .observation-inner,
+  .observation-title,
+  .observation-left-text,
+  .observation-right-text,
+  .feedbacks-header-wrap,
+  .funnel-inner,
+  .lessons-inner,
+  .lessons-header-wrap,
+  .lesson-row-label,
+  .lesson-cards-pair,
+  .ecosystem-container,
+  .ecosystem-header,
+  .ecosystem-box,
+  .app-container,
+  .app-title-wrap,
+  .app-phones-stage,
+  .app-features-row,
+  .screenshots-inner,
+  .screenshots-header-wrap,
+  .guides-container,
+  .guides-header-wrap,
+  .faq-container,
+  .faq-title,
+
+  .faq-right-col,
+  .footer-cta-inner,
+  .footer-cta-title,
+  .footer-cta-desc {
+    max-width: calc(100vw - 32px) !important;
+  }
+
+  .hero-center-box,
+  .hero-vector-wrap {
+    max-width: calc(100vw - 32px) !important;
+  }
+
+  /* Keep the IDM app block in normal document flow so sections never overlap. */
+  .app-section {
+    margin-top: 0 !important;
+  }
+
+  .faq-section {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+}
+
+/* Wider mobile frames keep the same 358px Figma content rail, anchored to
+   the section's 16px left inset instead of centering it in the viewport. */
+@media (min-width: 391px) and (max-width: 640px) {
+  .funnel-inner {
+    margin-right: 0 !important;
+    margin-left: 16px !important;
+  }
+}
+
+/* 390px Figma frame: keep the final mobile geometry after all responsive
+   imports, including browsers whose scrollbar reduces the CSS viewport. */
+@media (max-width: 640px) {
+  .ecosystem-section + .app-section {
+    margin-top: -120px !important;
+  }
+
+  .app-section {
+    height: 2622px !important;
+    min-height: 2622px !important;
+  }
+
+  .tariff-card-featured-wrap {
+    width: min(362px, calc(100vw - 28px)) !important;
+    min-width: min(362px, calc(100vw - 28px)) !important;
+    max-width: min(362px, calc(100vw - 28px)) !important;
+    height: 519px !important;
+    min-height: 519px !important;
+    max-height: 519px !important;
+    flex: 0 0 519px !important;
+  }
+
+  /* Mobile tariff cards, Figma 4045:8391. */
+  .tariff-card {
+    border: 0 !important;
+    padding: 24px !important;
+    justify-content: flex-start !important;
+    gap: 32px !important;
+  }
+
+  .tariff-card-featured-inner {
+    left: 2px !important;
+    right: 2px !important;
+    top: 48px !important;
+    bottom: 2px !important;
+    padding: 24px !important;
+    border: 0 !important;
+    border-radius: 12px !important;
+    gap: 32px !important;
+  }
+
+  .tariff-badge-recommended {
+    top: 12px !important;
+    gap: 5px !important;
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+  }
+
+  .tariff-badge-recommended img {
+    width: 16px !important;
+    height: 12px !important;
+  }
+
+  .tariff-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .tariff-name {
+    margin: 0 !important;
+  }
+
+  .tariff-features-list {
+    gap: 10px !important;
+  }
+
+  .tariff-feature-item {
+    gap: 10px !important;
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.28px !important;
+  }
+
+  .tariff-card .tariff-btn,
+  .tariff-card-featured-inner .tariff-btn {
+    height: auto !important;
+    min-height: 57px !important;
+    padding: 20px 32px 18px !important;
+  }
+}
+
+/* Retired legacy 360px state. The current design uses one fluid mobile
+   system at every phone width; keep this block unreachable so it cannot
+   override the audited 390px geometry on iPhones with a 375px viewport. */
+@media (max-width: 0px) {
+  /* Preserve the 360px Figma canvas when the Windows scrollbar leaves a
+     352px CSS layout viewport. */
+  .site-header,
+  main,
+  .hero-section,
+  .scenarios-section,
+  .video-section,
+  .system-slider-section,
+  .observation-section,
+  .feedbacks-section,
+  .funnel-section,
+  .lessons-section,
+  .ecosystem-section,
+  .app-section,
+  .trailer-section,
+  .tariffs-section,
+  .screenshots-section,
+  .guides-section,
+  .faq-section,
+  .footer-cta-section {
+    width: 100vw !important;
+  }
+
+  /* Figma text nodes in 4015:1415 use the 30px / 33px heading scale. */
+  .scenarios-left-title,
+  .video-card-title,
+  .system-slider-header h2,
+  .observation-title,
+  .feedbacks-header-wrap h2,
+  .funnel-title,
+  .lessons-header-wrap h2,
+  .ecosystem-header-title,
+  .app-title,
+  .trailer-title,
+  .tariffs-header-wrap h2,
+  .screenshots-header-wrap h2,
+  .guides-header-wrap h2,
+  .faq-title,
+  .footer-cta-title {
+    font-size: 30px !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.6px !important;
+  }
+
+  .hero-section {
+    height: 1299px;
+    min-height: 1299px;
+  }
+
+  .hero-top-block {
+    height: 779px;
+  }
+
+  .hero-center-box,
+  .hero-main-title {
+    width: 328px !important;
+    max-width: 328px !important;
+  }
+
+  .hero-main-title { line-height: 29px !important; }
+
+  .hero-center-box {
+    left: 16px;
+    transform: none;
+  }
+
+  .hero-vector-wrap {
+    width: 328px;
+    height: 68px;
+    left: 16px;
+    transform: none;
+  }
+
+  .hero-vector-wrap img,
+  .hero-vector-tagline {
+    width: 328px;
+  }
+
+  .hero-vector-tagline {
+    bottom: 0;
+    line-height: 22px !important;
+  }
+
+  .hero-bottom-block {
+    top: 779px;
+    height: 520px;
+  }
+
+  .hero-def-box {
+    width: 280px !important;
+    height: 280px !important;
+    min-height: 280px !important;
+  }
+
+  .scenarios-inner {
+    width: 328px !important;
+    max-width: 328px !important;
+    gap: 0 !important;
+  }
+
+  .scenarios-left-title {
+    width: 328px !important;
+    max-width: 328px !important;
+  }
+
+  .scenarios-right-bottom {
+    width: 328px !important;
+    max-width: 328px !important;
+    gap: 16px !important;
+  }
+
+  .scenarios-right-text-1,
+  .scenarios-right-text-2 {
+    width: 328px !important;
+    max-width: 328px !important;
+  }
+
+  .scenarios-right-text-1 { line-height: 21px !important; }
+  .scenarios-right-text-2 { line-height: 18px !important; }
+
+  .scenarios-right-bottom .scenarios-cta-btn {
+    margin-top: 16px !important;
+  }
+
+  /* Figma 4015:1491 / 1497 / 1499. */
+  .system-slider-sticky-stage {
+    width: 328px !important;
+    max-width: 328px !important;
+    height: 1164px !important;
+    min-height: 1164px !important;
+  }
+
+  .system-slider-header,
+  .system-slider-header h2,
+  .system-slider-header p {
+    width: 328px !important;
+    max-width: 328px !important;
+  }
+
+  .system-slider-header p { line-height: 18px !important; }
+
+  .system-slider-box {
+    top: 310px !important;
+    width: 328px !important;
+    height: 854px !important;
+  }
+
+  .system-slider-image {
+    width: 328px !important;
+  }
+
+  .system-slider-content {
+    width: 328px !important;
+    height: 480px !important;
+  }
+
+  .system-bars-wrap {
+    width: 280px !important;
+    flex: 0 0 280px !important;
+    gap: 12px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .system-bar-item {
+    width: 134px !important;
+    min-width: 134px !important;
+    flex: 0 0 134px !important;
+  }
+
+  .system-slider-pagination {
+    width: 280px !important;
+    height: 64px !important;
+    margin-top: 0 !important;
+    gap: 0 !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+  }
+
+  .system-slider-num {
+    width: 245px !important;
+    min-width: 245px !important;
+    flex: 0 0 245px !important;
+  }
+
+  .system-slider-total {
+    width: 15px !important;
+    min-width: 15px !important;
+    flex: 0 0 15px !important;
+    margin-top: 0 !important;
+  }
+
+  .system-text-stage {
+    position: absolute !important;
+    top: 258px !important;
+    left: 24px !important;
+    width: 280px !important;
+    height: 198px !important;
+    min-height: 198px !important;
+  }
+
+  /* Figma 4015:1517 and 4015:1525 (360px Observation section). */
+  .observation-section {
+    width: 100vw !important;
+    height: 600px !important;
+    min-height: 600px !important;
+  }
+
+  .observation-inner {
+    width: 328px !important;
+    max-width: 328px !important;
+    height: 630px !important;
+    min-height: 630px !important;
+    margin: 0 auto !important;
+  }
+
+  .observation-title,
+  .observation-left-text {
+    width: 328px !important;
+    max-width: 328px !important;
+  }
+
+  .observation-left-text {
+    line-height: 18px !important;
+  }
+
+  .observation-right-text {
+    width: 328px !important;
+    max-width: 328px !important;
+    top: 236px !important;
+  }
+
+  .observation-stat-box {
+    top: 420px !important;
+    left: auto !important;
+    right: 0 !important;
+    width: 173px !important;
+    max-width: 173px !important;
+  }
+
+  .observation-stat-caption { line-height: 18px !important; }
+
+  /* Figma 4015:1532 / 1536. */
+  .feedbacks-header-wrap {
+    width: 328px !important;
+    margin: 0 auto 60px !important;
+    padding: 0 !important;
+  }
+
+  .feedbacks-header-wrap h2 {
+    width: 328px !important;
+    max-width: 328px !important;
+  }
+
+  .feedbacks-carousel-track-wrap {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
+
+  /* Figma 4015:2000–2076. Keep the accordion interactive. */
+  .faq-inner {
+    width: 328px !important;
+    max-width: 328px !important;
+    height: 1145px !important;
+    min-height: 1145px !important;
+  }
+
+  .faq-container {
+    width: 328px !important;
+    max-width: 328px !important;
+    height: 1145px !important;
+    min-height: 1145px !important;
+    margin: 0 0 0 16px !important;
+  }
+
+  .faq-title {
+    width: 328px !important;
+    max-width: 328px !important;
+    height: 33px !important;
+    min-height: 33px !important;
+    white-space: nowrap !important;
+    margin: 0 0 60px 0 !important;
+  }
+
+  .faq-title br {
+    display: none !important;
+  }
+
+  .faq-right-col,
+  .faq-accordion {
+    width: 328px !important;
+    max-width: 328px !important;
+    gap: 12px !important;
+  }
+
+  .faq-item-group.active {
+    height: 386px !important;
+    min-height: 386px !important;
+  }
+
+  .faq-item-group.active .faq-question-box {
+    height: 60px !important;
+    min-height: 60px !important;
+  }
+
+  .faq-item-group:not(.active) {
+    gap: 0 !important;
+  }
+
+  .faq-item-group:not(.active) .faq-question-box {
+    height: 56px !important;
+    min-height: 56px !important;
+  }
+
+  .faq-right-col > .faq-item-group:nth-child(3) .faq-question-box {
+    height: 78px !important;
+    min-height: 78px !important;
+  }
+
+  .faq-item-group:not(.active) .faq-answer-inner {
+    padding: 0 !important;
+  }
+
+  .faq-item-group.active .faq-answer-collapse {
+    height: 322px !important;
+    min-height: 322px !important;
+  }
+
+  .faq-item-group.active .faq-answer-inner {
+    width: 328px !important;
+    height: 322px !important;
+    padding: 24px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .faq-container {
+    width: min(358px, calc(100vw - 32px)) !important;
+    max-width: calc(100vw - 32px) !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  .faq-right-col,
+  .faq-item-group,
+  .faq-question-box,
+  .faq-answer-collapse,
+  .faq-answer-inner,
+  .faq-answer-box {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .faq-item-group.active .faq-answer-box {
+    width: 328px !important;
+    height: 274px !important;
+    margin-top: 0 !important;
+    padding: 0 24px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .faq-item-group.active .faq-answer-box p {
+    margin: 0 !important;
+  }
+
+  .faq-item-group.active .faq-answer-box ul {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  .faq-item-group.active .faq-answer-box li {
+    margin: 0 !important;
+  }
+
+  /* Figma 4015:2083 / 2087 / 2096. */
+  .footer-cta-inner {
+    width: 328px !important;
+    max-width: 328px !important;
+  }
+
+  .footer-cta-content {
+    left: 0 !important;
+    width: 328px !important;
+    gap: 10px !important;
+    transform: none !important;
+  }
+
+  .footer-cta-title,
+  .footer-cta-desc {
+    width: 328px !important;
+    max-width: 328px !important;
+  }
+
+  .footer-cta-buttons {
+    width: 205px !important;
+    max-width: 205px !important;
+    height: 167px !important;
+    margin-top: -2.5625px !important;
+    gap: 14px !important;
+    align-self: center !important;
+  }
+
+  .footer-btn-secondary,
+  .footer-btn-primary,
+  .footer-or-label {
+    flex-shrink: 0 !important;
+  }
+
+  .footer-or-label {
+    height: 18px !important;
+    line-height: 18px !important;
+    flex-basis: 18px !important;
+  }
+
+  .footer-items-row {
+    top: 489px !important;
+    bottom: auto !important;
+    width: 328px !important;
+    height: 100px !important;
+    gap: 12.40625px !important;
+    margin: 0 !important;
+  }
+
+  /* Keep every mobile content rail on the same 16px / 328px grid. The
+     generic 390px rules leave several absolute-layout rails at 358px, which
+     makes them start at x=1px on a 360px canvas instead of sharing the site
+     container used by the other sections. */
+  .funnel-inner,
+  .lessons-inner,
+  .screenshots-inner,
+  .guides-container,
+  .faq-container,
+  .tariffs-container,
+  .tariffs-header-wrap,
+  .tariffs-grid {
+    width: 328px !important;
+    max-width: 328px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .lessons-header-wrap,
+  .lessons-header-wrap h2,
+  .lessons-header-wrap p,
+  .lesson-row-label,
+  .lesson-cards-pair,
+  .lesson-card,
+  .screenshots-header-wrap,
+  .screenshots-header-wrap h2,
+  .screenshots-header-wrap p,
+  .screenshots-grid-cols,
+  .guides-header-wrap,
+  .guides-header-wrap h2,
+  .guides-header-wrap p,
+  .faq-title,
+  .faq-right-col,
+  .faq-accordion {
+    width: 328px !important;
+    max-width: 328px !important;
+  }
+
+
+  .lesson-card {
+    min-width: 328px !important;
+  }
+
+  .tariff-card {
+    width: 328px !important;
+    max-width: 328px !important;
+  }
+
+  .tariff-card-featured-wrap {
+    width: 328px !important;
+    max-width: 328px !important;
+    padding: 0 !important;
+    border-radius: 14px !important;
+  }
+
+  .tariff-card-featured-inner {
+    left: 2px !important;
+    right: 2px !important;
+    top: 55px !important;
+    bottom: 2px !important;
+    width: auto !important;
+    max-width: none !important;
+    border: 2px solid #6CD9D9 !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+  }
+
+  .tariff-badge-recommended {
+    top: 17px !important;
+  }
+
+  /* Exact block heights from the 360px Figma state 4015:1415. */
+  .system-slider-section { height: 1164px; min-height: 1164px; }
+  .feedbacks-section { height: 736px; min-height: 736px; }
+  .ecosystem-section { height: 800px; min-height: 800px; }
+  .app-section { height: 2640px; min-height: 2640px; }
+  /* The 360px Figma layout uses the component-owned spacing below. The
+     generic mobile container gap would compound with those margins and push
+     the phones, quote, cards, and CTA progressively downward. */
+  .app-container {
+    width: 328px !important;
+    max-width: 328px !important;
+    gap: 0 !important;
+  }
+  .app-title-wrap,
+  .app-phones-stage,
+  .app-features-row,
+  .app-feature-card {
+    width: 328px !important;
+    max-width: 328px !important;
+  }
+  .tariffs-section { height: 1624px; min-height: 1624px; }
+  .guides-section { height: 930px; min-height: 930px; }
+  .faq-section { height: 999px !important; min-height: 999px !important; }
+
+  /* Expanded FAQ answers size to their content on touch layouts; fixed
+     desktop-state heights caused large empty areas and misaligned cards. */
+  .faq-item-group.active,
+  .faq-item-group.active .faq-answer-collapse,
+  .faq-item-group.active .faq-answer-inner,
+  .faq-item-group.active .faq-answer-box {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+}
+
+/* Intermediate tablet widths should use the same centered content rail as
+   the rest of the site instead of inheriting the 944px desktop canvas. */
+@media (min-width: 641px) and (max-width: 1023px) {
+  main {
+    gap: 12.5rem !important;
+  }
+
+  main + .footer-cta-section {
+    margin-top: 12.5rem !important;
+  }
+
+  .scenarios-inner,
+  .funnel-inner,
+  .lessons-inner,
+  .screenshots-inner,
+  .guides-container,
+  .faq-container {
+    width: min(944px, calc(100vw - 40px)) !important;
+    max-width: calc(100vw - 40px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* 1920px Figma state: preserve the left rail and reveal the fourth guide. */
+@media (min-width: 1600px) {
+  .feedbacks-section {
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+  }
+
+  .guides-section {
+    padding-top: 24px;
+    box-sizing: border-box;
+  }
+
+  .guides-carousel-wrap {
+    overflow: visible;
+  }
+
+  .guides-carousel-wrap.carousel-has-offset,
+  .feedbacks-carousel-track-wrap.carousel-has-offset {
+    overflow: hidden;
+  }
+
+  .guides-carousel-wrap.carousel-at-end {
+    overflow: hidden;
+    width: 1512px;
+    max-width: 1512px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .guides-carousel-wrap.carousel-at-end .guides-track {
+    gap: 48px;
+  }
+
+  .feedbacks-carousel-track-wrap {
+    overflow: visible;
+  }
+
+  .feedbacks-carousel-track-wrap.carousel-at-end {
+    overflow: hidden;
+    width: calc(100% - var(--desktop-gutter));
+    max-width: none;
+    margin-left: var(--desktop-gutter);
+    margin-right: 0;
+  }
+
+  .feedbacks-carousel-track-wrap.carousel-at-end .feedbacks-track {
+    gap: 24px;
+  }
+
+  /* Once moved, clip only against the left content rail. The viewport keeps
+     running to the right edge so the active card is never cut on the right. */
+  .guides-carousel-wrap.carousel-has-offset {
+    width: calc(100vw - var(--desktop-gutter));
+    max-width: none;
+    align-self: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Funnel mechanics — exact 1600px Figma geometry (4045:5307). */
+@media (min-width: 1600px) and (max-width: 1600px) {
+  .funnel-line-1 {
+    left: 873.36px;
+    top: 424px;
+    height: 413.36px;
+  }
+
+  .funnel-line-2 {
+    left: 1165.14px;
+    top: 424px;
+    height: 413.36px;
+  }
+
+  .funnel-arrow-1 {
+    left: 654.52px;
+    top: 625.76px;
+    width: 24.315px;
+    height: 10px;
+  }
+
+  .funnel-arrow-2 {
+    left: 1007.09px;
+    top: 625.76px;
+    width: 24.315px;
+    height: 10px;
+  }
+
+  .funnel-arrow-3 {
+    left: 1238.09px;
+    top: 625.76px;
+    width: 24.315px;
+    height: 10px;
+  }
+}
+
+/* Keep the section rhythm explicit at every non-wide desktop width. */
+@media (min-width: 1024px) and (max-width: 1919px) {
+  main {
+    gap: 12.5rem !important;
+  }
+
+  main + .footer-cta-section {
+    margin-top: 12.5rem !important;
+  }
+
+  .ecosystem-section {
+    margin-bottom: 0 !important;
+  }
+
+  .app-section {
+    margin-top: 0 !important;
+  }
+
+  /* Ecosystem and IDM share one continuous dark surface. Cancel the
+     document-level section rhythm only at this seam. */
+  .ecosystem-section + .app-section {
+    margin-top: -12.5rem !important;
+  }
+}
+
+/* Tablet pricing: keep cards from flex-shrinking into unusable columns. */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .tariffs-grid {
+    flex-wrap: wrap !important;
+  }
+
+  .tariff-card-featured-inner {
+    border: 2px solid #6CD9D9 !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 800px) {
+  .tariffs-grid {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .tariff-card,
+  .tariff-card-featured-wrap {
+    width: min(464px, calc(100vw - 40px)) !important;
+    max-width: min(464px, calc(100vw - 40px)) !important;
+    flex: 0 0 auto !important;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1024px) {
+  .tariff-card-featured-inner .tariff-btn {
+    position: relative !important;
+    top: -24px !important;
+  }
+}
+
+/* Feedback Carousel component from Figma (desktop through 1600px). */
+/* Pricing — exact 1280px Figma geometry (4045:6948). */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .tariffs-section {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .tariffs-container {
+    width: 1120px;
+    max-width: 1120px;
+    gap: 80px;
+    align-items: flex-start;
+  }
+
+  .tariffs-header-wrap {
+    width: 100%;
+    max-width: 1120px;
+    gap: 20px;
+  }
+
+  .tariffs-header-wrap h2,
+  .tariffs-header-wrap p {
+    width: 550px;
+    max-width: 550px;
+  }
+
+  .tariffs-grid {
+    width: 1120px;
+    max-width: 1120px;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tariff-card {
+    width: 360px;
+    min-width: 360px;
+    padding: 40px;
+    gap: 40px;
+    border-radius: 20px;
+  }
+
+  .tariff-card-featured-wrap {
+    width: 364px;
+    min-width: 364px;
+    height: 604px;
+    min-height: 604px;
+    border-radius: 22px;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .tariff-card-featured-inner {
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    top: auto;
+    width: auto;
+    height: 564px;
+    margin: 0;
+    padding: 40px;
+    border-radius: 20px;
+  }
+}
+
+/* Mobile FAQ — Figma 4059:336. Keep the accordion on the 16px content rail;
+   the broad late mobile reset otherwise stretches questions edge-to-edge. */
+@media (max-width: 640px) {
+  .faq-container,
+  .faq-title,
+  .faq-right-col,
+  .faq-item-group,
+  .faq-question-box,
+  .faq-answer-collapse,
+  .faq-answer-inner,
+  .faq-answer-box {
+    width: calc(100vw - 32px) !important;
+    max-width: calc(100vw - 32px) !important;
+  }
+
+  .faq-container {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  .faq-num {
+    color: #666666 !important;
+    margin-right: 0 !important;
+  }
+
+  .faq-question-content {
+    gap: 12px !important;
+  }
+
+  .faq-question-box {
+    border-radius: 8px !important;
+  }
+
+  .faq-item-group.active .faq-answer-box {
+    border-radius: 12px !important;
+  }
+}
+
+/* Wider mobile guides: keep the content rail at 16px while allowing the
+   second 266px card to remain visible as the right-side slide preview. */
+@media (min-width: 391px) and (max-width: 640px) {
+  .guides-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+}
+
+
+/* Exact 360px system slider — Figma 4045:8768. The old 360 state was
+   unreachable, so this viewport inherited the shorter 390px composition. */
+@media (max-width: 375px) {
+  .feedbacks-header-wrap h2 {
+    width: 328px !important;
+    max-width: 328px !important;
+    white-space: normal !important;
+  }
+
+  .system-slider-section,
+  .system-slider-sticky-stage {
+    height: 1164px !important;
+    min-height: 1164px !important;
+  }
+
+  .system-slider-sticky-stage,
+  .system-slider-header,
+  .system-slider-header h2,
+  .system-slider-header p,
+  .system-slider-box,
+  .system-slider-image,
+  .system-slider-content {
+    width: 328px !important;
+    max-width: 328px !important;
+  }
+
+  .system-slider-box {
+    top: 310px !important;
+    height: 854px !important;
+  }
+
+  .system-slider-image {
+    height: 358px !important;
+    min-height: 358px !important;
+  }
+
+  .system-slider-content {
+    height: 480px !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .feedbacks-carousel-track-wrap {
+    overflow: visible;
+  }
+
+  .feedbacks-carousel-track-wrap.carousel-has-offset {
+    overflow: hidden;
+    width: calc(100vw - var(--desktop-gutter));
+    max-width: none;
+    margin-left: var(--desktop-gutter);
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .feedbacks-carousel-track-wrap {
+    overflow: hidden !important;
+  }
+
+  .feedbacks-carousel-controls {
+    background: #1C2023 !important;
+  }
+
+  .feedbacks-nav-btn,
+  .feedbacks-nav-btn.next-btn {
+    background: transparent;
+    transition: background-color var(--transition-fast), opacity var(--transition-fast);
+  }
+
+  .feedbacks-nav-btn:disabled,
+  .feedbacks-nav-btn.next-btn:disabled {
+    background: transparent !important;
+  }
+
+  .feedbacks-nav-btn:not(:disabled):focus-visible,
+  .feedbacks-nav-btn.next-btn:not(:disabled):focus-visible {
+    background: #41474D !important;
+  }
+}
+
+/* Keep the initial desktop page open to the right; only moved carousels clip
+   their left edge to the content rail. */
+@media (min-width: 1025px) {
+  .feedbacks-carousel-track-wrap:not(.carousel-has-offset) {
+    overflow: visible !important;
+  }
+
+  .feedbacks-carousel-track-wrap.carousel-has-offset {
+    overflow: hidden !important;
+  }
+}
+
+/* At 1440px the final page keeps the regular 360px / 40px card rhythm.
+   The legacy end-state rule used a 20px gap and shifted the first card left. */
+@media (min-width: 1025px) and (max-width: 1599px) {
+  .feedbacks-carousel-track-wrap.carousel-has-offset.carousel-at-end .feedbacks-track {
+    gap: 40px !important;
+  }
+}
+
+/* Guides — exact 1440px Figma state (4045:6354). */
+@media (min-width: 1281px) and (max-width: 1599px) {
+  .guides-carousel-wrap {
+    overflow: visible;
+  }
+
+  .guides-carousel-wrap.carousel-has-offset {
+    overflow: hidden;
+    width: calc(100vw - var(--desktop-gutter));
+    max-width: none;
+    align-self: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .guides-carousel-wrap.carousel-has-offset.carousel-at-end {
+    width: calc(100vw - var(--desktop-gutter));
+    max-width: none;
+  }
+
+  .guides-carousel-wrap.carousel-has-offset .guides-track,
+  .guides-carousel-wrap.carousel-has-offset.carousel-at-end .guides-track {
+    gap: 40px;
+  }
+
+  .guide-card .guide-cover-1,
+  .guide-card .guide-cover-2 {
+    display: none;
+  }
+
+  .guide-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: url('../../assets/images/guides-cover-composite-1440.png') 0 0 / 360px 480px no-repeat;
+  }
+
+  .guide-text-wrap {
+    z-index: 2;
+  }
+}
+
+/* Funnel mechanics — exact 1280px Figma geometry (4045:6735). */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .funnel-diagram-group {
+    left: 0;
+    top: 0;
+    width: 1280px;
+    height: 758px;
+  }
+
+  .funnel-ellipse-3 {
+    left: 460px;
+    top: 418px;
+    width: 340px;
+    height: 340px;
+  }
+
+  .funnel-ellipse-2 {
+    left: 800px;
+    top: 468px;
+    width: 240px;
+    height: 240px;
+  }
+
+  .funnel-ellipse-1 {
+    left: 1040px;
+    top: 508px;
+    width: 160px;
+    height: 160px;
+  }
+
+  .funnel-line-1 {
+    left: 800px;
+    top: 418px;
+    width: 1px;
+    height: 340px;
+    transform: none !important;
+  }
+
+  .funnel-line-2 {
+    left: 1040px;
+    top: 418px;
+    width: 1px;
+    height: 340px;
+    transform: none !important;
+  }
+
+  .funnel-arrow-1 {
+    left: 620px;
+    top: 588px;
+    width: 20px;
+    height: 14px;
+  }
+
+  .funnel-arrow-2 {
+    left: 910px;
+    top: 588px;
+    width: 20px;
+    height: 14px;
+  }
+
+  .funnel-arrow-3 {
+    left: 1100px;
+    top: 588px;
+    width: 20px;
+    height: 14px;
+  }
+}
+
+/* Funnel mechanics — exact 1440px Figma geometry (4045:6021). */
+@media (min-width: 1281px) and (max-width: 1599px) {
+  .funnel-diagram-group {
+    left: 0;
+    top: 0;
+    width: 1120px;
+    height: 758px;
+  }
+
+  .funnel-ellipse-3 {
+    left: 380px;
+    top: 418px;
+    width: 340px;
+    height: 340px;
+  }
+
+  .funnel-ellipse-2 {
+    left: 720px;
+    top: 468px;
+    width: 240px;
+    height: 240px;
+  }
+
+  .funnel-ellipse-1 {
+    left: 960px;
+    top: 508px;
+    width: 160px;
+    height: 160px;
+  }
+
+  .funnel-line-1 {
+    left: 720px;
+    top: 418px;
+    width: 1px;
+    height: 340px;
+  }
+
+  .funnel-line-2 {
+    left: 960px;
+    top: 418px;
+    width: 1px;
+    height: 340px;
+  }
+
+  .funnel-arrow-1 {
+    left: 540px;
+    top: 588px;
+    width: 30px;
+    height: 14px;
+  }
+
+  .funnel-arrow-2 {
+    left: 830px;
+    top: 588px;
+    width: 30px;
+    height: 14px;
+  }
+
+  .funnel-arrow-3 {
+    left: 1020px;
+    top: 588px;
+    width: 30px;
+    height: 14px;
+  }
+}
+
+/* On 1280–1599 layouts the accordion can be collapsed. Do not retain the
+   969px open-state frame after its content becomes shorter. */
+@media (min-width: 1280px) and (max-width: 1599px) {
+  .faq-section {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  main {
+    gap: 15rem !important;
+  }
+
+  main + .footer-cta-section {
+    margin-top: 15rem !important;
+  }
+
+  .ecosystem-section {
+    margin-bottom: 0 !important;
+  }
+
+  .app-section {
+    margin-top: 0 !important;
+  }
+
+  .ecosystem-section + .app-section {
+    margin-top: -15rem !important;
+  }
+}
+
+/* Fluid mobile tariff internals. Text can wrap on narrower iPhones without
+   pushing the CTA outside the card; every card keeps the same 24/32 rhythm. */
+@media (max-width: 640px) {
+  .tariffs-section,
+  .tariffs-container,
+  .tariffs-grid {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+
+  .tariff-card {
+    height: auto !important;
+    min-height: 409px !important;
+    max-height: none !important;
+    padding: 24px !important;
+    gap: 32px !important;
+    box-sizing: border-box !important;
+  }
+
+  .tariff-card:last-child {
+    height: auto !important;
+    min-height: 409px !important;
+    max-height: none !important;
+  }
+
+  .tariff-card-featured-wrap {
+    height: auto !important;
+    min-height: 519px !important;
+    max-height: none !important;
+    flex: 0 0 auto !important;
+    padding: 48px 2px 2px !important;
+    box-sizing: border-box !important;
+  }
+
+  .tariff-card-featured-inner {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 469px !important;
+    max-height: none !important;
+    padding: 24px !important;
+    gap: 32px !important;
+    box-sizing: border-box !important;
+  }
+
+  .tariff-content {
+    gap: 12px !important;
+  }
+
+  .tariff-features-list {
+    gap: 10px !important;
+  }
+
+  .tariff-btn,
+  .tariff-card-featured-inner .tariff-btn {
+    flex: 0 0 57px !important;
+    width: 100% !important;
+    height: 57px !important;
+    min-height: 57px !important;
+    padding: 0 32px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* FAQ stays inside its own rail at every mobile width. */
+  .faq-container,
+  .faq-right-col,
+  .faq-item-group,
+  .faq-question-box,
+  .faq-answer-collapse,
+  .faq-answer-inner,
+  .faq-answer-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .faq-container,
+  .faq-right-col,
+  .faq-item-group {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .faq-question-content {
+    display: flex !important;
+    align-items: center !important;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+  }
+
+  .faq-question-title {
+    min-width: 0 !important;
+  }
+
+  .faq-answer-box,
+  .faq-answer-box p,
+  .faq-answer-box li {
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.28px !important;
+  }
+
+  .faq-answer-box {
+    padding: 24px !important;
+  }
+
+  /* Mobile footer in normal flex flow. */
+  .footer-cta-inner {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: calc(100vw - 32px) !important;
+    max-width: calc(100vw - 32px) !important;
+    height: 605px !important;
+    min-height: 605px !important;
+    margin: 0 auto !important;
+  }
+
+  .footer-cta-content {
+    position: relative !important;
+    inset: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+    text-align: center !important;
+  }
+
+  .footer-cta-title,
+  .footer-cta-desc {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+
+  .footer-cta-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 205px !important;
+    max-width: 205px !important;
+  }
+
+  .footer-items-row {
+    position: relative !important;
+    inset: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100px !important;
+    margin: auto 0 16px !important;
+  }
+
+  .footer-item {
+    width: 100% !important;
+    text-align: left !important;
+  }
+}
+
+/* Sticky navigation fade from the updated Figma state. It is darkest at the
+   top edge and dissolves smoothly below the navigation row. */
+.site-header {
+  isolation: isolate;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.site-header::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: -32px;
+  left: 0;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 12, 13, 1) 0%,
+    rgba(11, 12, 13, 0.96) 38%,
+    rgba(11, 12, 13, 0.72) 62%,
+    rgba(11, 12, 13, 0) 100%
+  );
+}
+
+.site-header.header-hidden::before {
+  opacity: 0;
+}
+
+/* Feedbacks at the 1024px tablet canvas: the 40px Figma gutter belongs to
+   the viewport rail, not to the moving track. Keeping it on the wrapper
+   prevents the previous card from leaving an 8px sliver after a page turn. */
+@media (min-width: 1024px) and (max-width: 1024px) {
+  /* Let FAQ follow the expanded answer. The document-level 120px rhythm
+     then remains the stable 7.5rem gap below it in both states. */
+  .faq-section {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  main + .footer-cta-section {
+    margin-top: 7.5rem !important;
+  }
+
+  .tariffs-section {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .tariffs-container,
+  .tariffs-grid {
+    width: 944px;
+    max-width: 944px;
+  }
+
+  .tariffs-grid {
+    flex-wrap: nowrap !important;
+  }
+
+  .tariff-card {
+    width: 304px;
+    min-width: 304px;
+    padding: 32px;
+    gap: 32px;
+    border-radius: 16px;
+    justify-content: flex-start;
+  }
+
+  .tariff-content,
+  .tariff-card-featured-inner .tariff-content {
+    gap: 12px;
+  }
+
+  .tariff-card-featured-wrap {
+    width: 308px;
+    min-width: 308px;
+    height: 641px;
+    min-height: 641px;
+    padding: 0;
+    border-radius: 22px;
+  }
+
+  .tariff-card-featured-inner {
+    position: absolute;
+    top: auto;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    width: auto;
+    height: 585px;
+    margin: 0;
+    padding: 32px;
+    gap: 32px;
+    border-radius: 16px;
+    justify-content: flex-start;
+  }
+
+  .app-quote-callout p {
+    width: 380px;
+    margin-left: 482px;
+  }
+
+  .app-feature-card {
+    height: 500px;
+    padding: 24px;
+    border-radius: 16px;
+    gap: 60px;
+    justify-content: flex-start;
+  }
+
+  /* Keep the three IDM feature cards on one horizontal rhythm when the
+     first title wraps to two lines at the 1024px breakpoint. */
+  .app-feature-title {
+    min-height: 48px;
+  }
+
+  .ecosystem-box {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .lessons-header-wrap {
+    width: 944px;
+    max-width: 944px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .funnel-diagram-group {
+    left: 400px;
+    top: 390px;
+    width: 740px;
+    height: 340px;
+  }
+
+  .funnel-arrow-1,
+  .funnel-arrow-2,
+  .funnel-arrow-3 {
+    width: 20px !important;
+    height: 14px !important;
+  }
+
+  .feedbacks-carousel-track-wrap {
+    width: 100vw;
+    max-width: 100vw;
+    margin-right: 0;
+    margin-left: 0;
+    overflow: visible;
+  }
+
+  .feedbacks-track {
+    padding-left: 40px;
+  }
+
+  .feedbacks-carousel-track-wrap.carousel-has-offset {
+    width: calc(100vw - 40px);
+    max-width: none;
+    margin-right: auto;
+    margin-left: 40px;
+    overflow: hidden;
+  }
+
+  .feedbacks-carousel-track-wrap.carousel-has-offset .feedbacks-track {
+    padding-left: 0;
+  }
+}
+
+/* Guides carousel: keep the desktop edge-aligned behaviour at 1280px.
+   The first view may reveal the next card on the right; once the track moves,
+   only the left edge is clipped and the final page stays inside the viewport. */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .guides-carousel-wrap {
+    overflow: visible;
+  }
+
+  .guides-carousel-wrap.carousel-has-offset {
+    overflow: hidden;
+    width: calc(100vw - var(--desktop-gutter));
+    max-width: none;
+    align-self: flex-start;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .guides-carousel-wrap.carousel-has-offset.carousel-at-end {
+    width: calc(100vw - var(--desktop-gutter));
+    max-width: none;
+  }
+
+  .guides-carousel-wrap.carousel-has-offset .guides-track,
+  .guides-carousel-wrap.carousel-has-offset.carousel-at-end .guides-track {
+    gap: 40px;
+  }
+}
+
+/* The 360px feedback title has a deliberate line break after "мужчин". */
+.feedback-title-break-360 {
+  display: none;
+}
+
+/* Final mobile FAQ cascade: keep the 16px Figma rail after the legacy
+   responsive rules have been loaded. */
+@media (max-width: 640px) {
+  .faq-container,
+  .faq-title,
+  .faq-right-col,
+  .faq-item-group,
+  .faq-question-box,
+  .faq-answer-collapse,
+  .faq-answer-inner,
+  .faq-answer-box {
+    width: calc(100vw - 32px) !important;
+    max-width: calc(100vw - 32px) !important;
+  }
+
+  .faq-container {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  .faq-num {
+    color: #666666 !important;
+  }
+
+  .faq-question-box {
+    border-radius: 8px !important;
+  }
+
+  .faq-item-group.active .faq-answer-box {
+    border-radius: 12px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .feedback-title-break-360 {
+    display: block;
+  }
+}
+
+/* Lessons mobile — Figma 4045:8912. The takeaway text is the 390px body
+   style; the legacy mobile cascade leaves it at the desktop 16px size. */
+@media (max-width: 640px) {
+  .lesson-card-takeaway {
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.28px !important;
+  }
+}
+
+/* Keep the 360px lesson cards inside the 16px content rail. */
+@media (max-width: 375px) {
+  .lesson-card {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+
+/* IDM mobile — keep the feature cards on the 360px 16px content rail. */
+@media (max-width: 375px) {
+  .app-title {
+    width: 328px !important;
+    max-width: 328px !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .app-feature-card {
+    width: 328px !important;
+    max-width: 328px !important;
+  }
+
+  .app-feature-bottom {
+    width: 100% !important;
+  }
+
+  .app-feature-indicator {
+    display: none !important;
+  }
+}
+
+/* Guides mobile — keep heading and description on the same 328px rail as
+   the carousel; the 266px cards intentionally leave the next slide visible. */
+@media (max-width: 375px) {
+  .guides-header-wrap h2,
+  .guides-header-wrap p {
+    width: 328px !important;
+    max-width: 328px !important;
+  }
+
+  .guides-carousel-wrap {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow: hidden !important;
+  }
+}
+
+
+/* Pricing mobile — the header must share the same 328px / 16px rail as the
+   tariff grid; the late 390px rule otherwise leaves it at 358px starting at
+   x=1px. */
+@media (max-width: 375px) {
+  .tariffs-header-wrap h2,
+  .tariffs-header-wrap p {
+    width: 328px !important;
+    max-width: 328px !important;
+  }
+}
+
+/* IDM phones at 360px — keep every 160px mockup inside the 328px stage. */
+@media (max-width: 375px) {
+  .app-phone-item.phone-1,
+  .app-phone-item.phone-3 {
+    left: 168px !important;
+  }
+
+  .app-phone-item.phone-2 {
+    left: 0 !important;
+  }
+}
+
+/* Pricing mobile — all three tariffs inherit one width from the grid.
+   Using a viewport calculation here made the featured card diverge from
+   its siblings when browser chrome/scrollbars changed the layout viewport. */
+@media (max-width: 640px) {
+  .tariffs-grid > .tariff-card,
+  .tariffs-grid > .tariff-card-featured-wrap {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    align-self: stretch !important;
+    box-sizing: border-box !important;
+  }
+
+  .tariff-card-featured-wrap {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .tariff-card-featured-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    border: 2px solid #6CD9D9 !important;
+    border-radius: 16px !important;
+    box-sizing: border-box !important;
+    padding: 22px !important;
+  }
+}
+
+/* Ecosystem mobile — Figma 4045:9023. Use the 360px content rail instead of
+   the 390px fixed widths that make the heading and slider drift right. */
+@media (max-width: 375px) {
+  .ecosystem-section {
+    height: 800px !important;
+    min-height: 800px !important;
+    padding: 60px 0 30px !important;
+    box-sizing: border-box !important;
+  }
+
+  .ecosystem-header,
+  .ecosystem-header-title,
+  .ecosystem-header-desc p,
+  .ecosystem-box {
+    width: 328px !important;
+    max-width: 328px !important;
+  }
+
+  .ecosystem-header {
+    margin: 0 auto 60px !important;
+    gap: 24px !important;
+  }
+
+  .ecosystem-header-title,
+  .ecosystem-header-desc p {
+    text-align: center !important;
+  }
+
+  .ecosystem-box {
+    height: 488px !important;
+    margin: 0 auto !important;
+    padding: 24px !important;
+    /* The tabs are flattened with display: contents on mobile; the image's
+       own 32px top margin supplies the intended Figma gap. */
+    gap: 0 !important;
+    justify-content: flex-start !important;
+    box-sizing: border-box !important;
+  }
+
+  .ecosystem-image {
+    width: 280px !important;
+    height: 310px !important;
+    min-height: 310px !important;
+    margin-top: 24px !important;
+  }
+
+  .ecosystem-tabs,
+  .ecosystem-tabs-list,
+  .ecosystem-tab-bottom,
+  .ecosystem-tab-desc,
+  .ecosystem-progress-track {
+    width: 280px !important;
+    max-width: 280px !important;
+  }
+
+  .ecosystem-progress-track {
+    height: 2px !important;
+    min-height: 2px !important;
+  }
+}
+
+/* Final carousel and FAQ rails.
+   Desktop carousels start on the content grid and keep their viewport open
+   through the physical right edge. Mobile carousels and the FAQ share one
+   fluid 16px rail, including expanded accordion content. */
+@media (min-width: 1025px) and (max-width: 1600px) {
+  .guides-carousel-wrap {
+    width: calc(100vw - var(--desktop-gutter)) !important;
+    max-width: none !important;
+    align-self: flex-start !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    overflow: hidden !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .guides-container,
+  .faq-container,
+  .faq-title,
+  .faq-right-col,
+  .faq-accordion,
+  .faq-item-group,
+  .faq-question-box,
+  .faq-answer-collapse,
+  .faq-answer-inner,
+  .faq-answer-box {
+    width: calc(100vw - 32px) !important;
+    max-width: calc(100vw - 32px) !important;
+    box-sizing: border-box !important;
+  }
+
+  .guides-container,
+  .faq-container {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  .guides-carousel-wrap,
+  .feedbacks-carousel-track-wrap,
+  .guides-carousel-wrap.carousel-has-offset,
+  .feedbacks-carousel-track-wrap.carousel-has-offset {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    overflow: hidden !important;
+  }
+
+
+  .faq-title,
+  .faq-right-col,
+  .faq-accordion,
+  .faq-item-group,
+  .faq-question-box,
+  .faq-answer-collapse,
+  .faq-answer-inner,
+  .faq-answer-box {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* Final cascade guard for the review-round component states. */
+html,
+body,
+.site-wrapper,
+main {
+  background-color: #0B0C0D !important;
+}
+
+@media (min-width: 1025px) {
+  .hero-vector-tagline {
+    top: auto !important;
+    bottom: 0 !important;
+    transform: none !important;
+  }
+}
+
+.system-bar-fill {
+  width: 0;
+  transform-origin: left center;
+}
+
+.system-slider-pagination {
+  width: 100% !important;
+  justify-content: space-between !important;
+  gap: 0 !important;
+}
+
+.system-slider-num {
+  min-width: 0 !important;
+}
+
+.system-slider-total {
+  margin-right: 0 !important;
+  margin-left: auto !important;
+  text-align: right !important;
+}
+
+.scenarios-left-title,
+.scenarios-right-title-wrap {
+  will-change: transform;
+}
+
+.feedbacks-nav-btn,
+.feedbacks-nav-btn.next-btn,
+.guides-nav-btn,
+.guides-nav-btn.next-btn,
+.guides-nav-btn.active {
+  background: transparent !important;
+  transition: background-color var(--transition-fast), opacity var(--transition-fast) !important;
+}
+
+.feedbacks-nav-btn:disabled,
+.guides-nav-btn:disabled {
+  opacity: 0.35 !important;
+}
+
+.feedbacks-nav-btn:not(:disabled),
+.guides-nav-btn:not(:disabled) {
+  opacity: 1 !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .feedbacks-nav-btn:not(:disabled):hover,
+  .guides-nav-btn:not(:disabled):hover,
+  .feedbacks-nav-btn:not(:disabled):focus-visible,
+  .guides-nav-btn:not(:disabled):focus-visible {
+    background: #41474D !important;
+  }
+}
+
+@media (hover: none) {
+  .feedbacks-nav-btn,
+  .guides-nav-btn {
+    background: transparent !important;
+  }
+}
+
+/* Shared content-media contract.
+   Every image below has one semantic source for all breakpoints; responsive
+   styles may resize or crop the slot but never swap the underlying asset. */
+.shared-media-asset {
+  display: block;
+  max-width: 100%;
+}
+
+.app-phone-mockup {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  pointer-events: none;
+}
+
+.guide-text-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.guide-card::after {
+  content: none !important;
+}
+
+.guide-card {
+  --guide-card-padding: 40px;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.guide-text-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.guide-media-slot {
+  position: absolute;
+  z-index: 1;
+  top: 226px;
+  bottom: auto;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  overflow: visible;
+  border-radius: 0;
+  pointer-events: none;
+}
+
+.guide-media-slot .shared-media-asset {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  display: block;
+}
+
+@media (min-width: 1800px) {
+  .guide-card {
+    --guide-card-padding: 48px;
+  }
+  .guide-media-slot {
+    top: 310px;
+  }
+}
+
+@media (min-width: 1367px) and (max-width: 1799px) {
+  .guide-media-slot {
+    top: 290px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .guide-card {
+    --guide-card-padding: 32px;
+  }
+  .guide-media-slot {
+    top: 226px;
+  }
+}
+
+@media (max-width: 767px) {
+  .guide-card {
+    --guide-card-padding: 24px;
+  }
+  .guide-media-slot {
+    top: 226px;
+  }
+}
+
+  .system-slider-image .system-slide-img-layer {
+    display: block !important;
+  }
+}
+
+/* IDM feature cards — updated 4095:253 component, shared by every viewport. */
+.app-features-row {
+  gap: 20px;
+  align-items: stretch;
+}
+
+.app-feature-card {
+  container-type: inline-size;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  gap: 0 !important;
+  border: 0 !important;
+  border-radius: clamp(16px, 4.1cqw, 20px) !important;
+  overflow: hidden;
+  justify-content: flex-start !important;
+}
+
+.app-feature-copy {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(16px, 4.1cqw, 20px);
+  width: 100%;
+  box-sizing: border-box;
+  padding: clamp(24px, 9.84cqw, 48px)
+    clamp(24px, 9.84cqw, 48px)
+    clamp(60px, 19.67cqw, 96px);
+  height: 61.27cqw;
+}
+
+.app-feature-title {
+  width: 100%;
+  margin: 0;
+  font-size: clamp(18px, 4.92cqw, 24px) !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.app-feature-desc {
+  width: 100%;
+  margin: 0;
+  font-size: clamp(14px, 4.1cqw, 20px) !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.02em !important;
+  color: #cccccc !important;
+}
+
+.app-feature-card .app-feature-graphic {
+  position: relative;
+  flex: 0 0 auto;
+  width: 100%;
+  height: 68.03cqw;
+  min-height: 0;
+  aspect-ratio: auto;
+  margin: 0;
+  overflow: hidden;
+  display: block;
+}
+
+.app-feature-device {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 40.98cqw;
+  height: 86.28cqw;
+  padding: 1.16cqw;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #191919;
+  border: clamp(1px, 0.332cqw, 1.62px) solid #41474d;
+  border-radius: 6.47cqw;
+}
+
+.app-feature-screen {
+  position: relative;
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 5.31cqw;
+}
+
+.app-feature-screen > img {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none;
+  object-fit: cover !important;
+  border-radius: inherit;
+}
+
+.app-feature-dynamic-island {
+  position: absolute;
+  z-index: 2;
+  top: 1.16cqw;
+  left: 50%;
+  width: 11.12cqw;
+  height: 3.32cqw;
+  transform: translateX(-50%);
+  border-radius: 1000px;
+  background: #191919;
+}
+
+@media (max-width: 767px) {
+  .app-feature-copy {
+    padding: 24px 24px 60px;
+    height: 49.94cqw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .app-feature-copy {
+    height: 75.13cqw;
+  }
+}
+
+@media (min-width: 1500px) and (max-width: 1799px) {
+  .app-feature-copy {
+    height: 60.83cqw;
+  }
+}
+
+@media (min-width: 1800px) {
+  .app-feature-copy {
+    height: 60.82cqw;
+  }
+}
+
+/* Funnel diagram removed: release the height that was reserved for the
+   circles/arrows and keep the remaining copy compact at every breakpoint. */
+@media (max-width: 767px) {
+  .funnel-section,
+  .funnel-inner {
+    height: 530px !important;
+    min-height: 530px !important;
+  }
+
+  .funnel-right-text {
+    top: 397px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .funnel-section,
+  .funnel-inner {
+    height: 575px !important;
+    min-height: 575px !important;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1499px) {
+  .funnel-section,
+  .funnel-inner {
+    height: 643px !important;
+    min-height: 643px !important;
+  }
+}
+
+@media (min-width: 1500px) and (max-width: 1799px) {
+  .funnel-section,
+  .funnel-inner {
+    height: 795px !important;
+    min-height: 795px !important;
+  }
+}
+
+@media (min-width: 1800px) {
+  .funnel-section,
+  .funnel-inner {
+    height: 690px !important;
+    min-height: 690px !important;
+  }
+}
+
+/* Ecosystem states use one reusable image slot instead of viewport-specific
+   HTML mockups. A future asset only needs to be inserted as an <img>. */
+.ecosystem-visual-layer {
+  display: flex !important;
+  padding: 0 !important;
+}
+
+.ecosystem-media-slot {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+  background: #16181a;
+}
+
+.ecosystem-media-slot > img,
+.ecosystem-media-slot > picture,
+.ecosystem-media-slot > picture > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ecosystem-media-slot > img,
+.ecosystem-media-slot > picture > img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.ecosystem-tab-desc {
+  white-space: pre-line;
+}
+
+.ecosystem-tabs-list {
+  gap: 15px !important;
+}
+
+.ecosystem-tab-item {
+  margin-bottom: 0 !important;
+}
+
+/* At 1280px the tariff copy wraps one line earlier. Give the cards enough
+   height to preserve the intended 40px rhythm above and below every CTA. */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .tariff-card {
+    height: 542px !important;
+  }
+
+  .tariff-card-featured-wrap {
+    height: 627px !important;
+  }
+
+  .tariff-card-featured-inner {
+    height: 587px !important;
+  }
+}

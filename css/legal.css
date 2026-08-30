@@ -1,0 +1,234 @@
+/* ==========================================================================
+   GENESĪS LEGAL PAGES STYLING (Offer & Privacy Policy)
+   ========================================================================== */
+
+@import "./fonts.css";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0C0D0E;
+  color: #E6ECF2;
+  font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.legal-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(12, 13, 14, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.legal-header-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.legal-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.legal-logo:hover {
+  opacity: 0.85;
+}
+
+.legal-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.legal-back-btn svg {
+  transition: transform 0.25s ease;
+}
+
+.legal-back-btn:hover {
+  background: rgba(108, 217, 217, 0.15);
+  border-color: rgba(108, 217, 217, 0.4);
+  color: #6CD9D9;
+}
+
+.legal-back-btn:hover svg {
+  transform: translateX(-3px);
+}
+
+.legal-main {
+  flex: 1;
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+
+.legal-card {
+  background: #141618;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 24px;
+  padding: 56px 64px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.legal-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.legal-meta {
+  font-size: 14px;
+  color: #8E9299;
+  margin-bottom: 36px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.legal-content {
+  color: #D1D5DB;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.legal-heading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  letter-spacing: -0.2px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(108, 217, 217, 0.25);
+}
+
+.legal-paragraph {
+  margin-bottom: 20px;
+  color: #CCCCCC;
+  word-break: break-word;
+}
+
+.legal-paragraph a {
+  color: #6CD9D9;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.legal-paragraph a:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+.legal-content ul {
+  margin: 16px 0 24px 20px;
+  list-style: none;
+}
+
+.legal-content ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  color: #CCCCCC;
+}
+
+.legal-content ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #6CD9D9;
+  font-size: 18px;
+}
+
+.legal-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 32px 24px;
+  text-align: center;
+  background: #0C0D0E;
+  margin-top: auto;
+}
+
+.legal-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.legal-footer-links a {
+  color: #8E9299;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.legal-footer-links a:hover {
+  color: #6CD9D9;
+}
+
+.legal-footer-copy {
+  color: #55585D;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .legal-main {
+    padding: 32px 16px 60px;
+  }
+
+  .legal-card {
+    padding: 28px 20px;
+    border-radius: 16px;
+  }
+
+  .legal-title {
+    font-size: 24px;
+  }
+
+  .legal-heading {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+
+  .legal-paragraph {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .legal-footer-links {
+    gap: 16px;
+  }
+}

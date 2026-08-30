@@ -1,0 +1,8 @@
+/* Mobile-first fluid tokens derived from the Figma frame family. */
+:root {
+  --fluid-gutter: clamp(16px, 3.125vw, 60px);
+  --fluid-section-gap: clamp(80px, 10.4167vw, 200px);
+  --fluid-title: clamp(28px, 3.333vw, 64px);
+  --fluid-body: clamp(14px, 1.25vw, 24px);
+  --fluid-control-height: clamp(57px, 4.6875vw, 90px);
+}

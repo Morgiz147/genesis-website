@@ -1,0 +1,130 @@
+/* ==========================================================================
+   GILROY FONT FAMILY DEFINITIONS
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Thin_0.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-UltraLight_0.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Light_0.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Regular_0.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Medium_0.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Semibold_0.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Bold_0.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Extrabold_0.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Black_0.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   WREMENA FONT FAMILY DEFINITIONS
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Wremena';
+  src: url('../assets/fonts/Wremena Regular.woff') format('woff'),
+       url('../assets/fonts/Wremena Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Wremena';
+  src: url('../assets/fonts/Wremena Light.woff') format('woff'),
+       url('../assets/fonts/Wremena Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Wremena';
+  src: url('../assets/fonts/Wremena Bold.woff') format('woff'),
+       url('../assets/fonts/Wremena Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   WREMENA LINING NUMBERS (Figma Numbers Style -> Lining "17")
+   ========================================================================== */
+.hero-def-term,
+.system-slide-tag,
+.observation-stat-73,
+.observation-stat-percent,
+.observation-stat-box,
+.lesson-step-num,
+.lesson-step-tag,
+.eco-mod-num,
+.eco-tab-num,
+.faq-num,
+.tariff-period,
+.tariff-price,
+.guide-title,
+.guide-tag,
+[class*="wremena"],
+[style*="Wremena"] {
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
+}
+
