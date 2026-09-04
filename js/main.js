@@ -144,24 +144,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 4.5. Payment widgets: one accessible modal for the three tariff options.
   const paymentModal = document.getElementById('payment-modal');
-  const paymentCloseButton = paymentModal?.querySelector('.payment-modal__close');
-  const paymentTitle = document.getElementById('payment-modal-title');
-  const paymentDescription = document.getElementById('payment-modal-description');
+  const paymentDialog = paymentModal?.querySelector('.payment-modal__dialog');
   const paymentSlots = document.querySelectorAll('[data-payment-widget]');
   const paymentTriggers = document.querySelectorAll('[data-widget-trigger="payment"]');
-  const paymentCopy = {
-    offline: {
-      title: 'OFFline — Живые знакомства',
-      description: 'Оформите участие в программе OFFline через безопасную форму оплаты.'
-    },
-    online: {
-      title: 'ONline — Дейтинг и соцсети',
-      description: 'Оформите участие в программе ONline через безопасную форму оплаты.'
-    },
-    bundle: {
-      title: 'OFFline + ONline',
-      description: 'Оформите комплект программ через безопасную форму оплаты.'
-    }
+  const paymentLabels = {
+    offline: 'Оплата программы OFFline',
+    online: 'Оплата программы ONline',
+    bundle: 'Оплата комплекта OFFline + ONline'
   };
   let lastPaymentTrigger = null;
 
@@ -174,18 +163,17 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const openPaymentModal = (tariff, trigger) => {
-    if (!paymentModal || !paymentCopy[tariff]) return;
+    if (!paymentModal || !paymentLabels[tariff]) return;
 
     lastPaymentTrigger = trigger;
-    paymentTitle.textContent = paymentCopy[tariff].title;
-    paymentDescription.textContent = paymentCopy[tariff].description;
+    paymentDialog?.setAttribute('aria-label', paymentLabels[tariff]);
     paymentSlots.forEach(slot => {
       slot.hidden = slot.dataset.paymentWidget !== tariff;
     });
     paymentModal.hidden = false;
     paymentModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
-    paymentCloseButton?.focus();
+    paymentDialog?.focus();
   };
 
   paymentTriggers.forEach(trigger => {
@@ -195,7 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  paymentCloseButton?.addEventListener('click', closePaymentModal);
   paymentModal?.addEventListener('click', event => {
     if (event.target === paymentModal) closePaymentModal();
   });
