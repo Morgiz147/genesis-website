@@ -142,6 +142,67 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 4.5. Payment widgets: one accessible modal for the three tariff options.
+  const paymentModal = document.getElementById('payment-modal');
+  const paymentCloseButton = paymentModal?.querySelector('.payment-modal__close');
+  const paymentTitle = document.getElementById('payment-modal-title');
+  const paymentDescription = document.getElementById('payment-modal-description');
+  const paymentSlots = document.querySelectorAll('[data-payment-widget]');
+  const paymentTriggers = document.querySelectorAll('[data-widget-trigger="payment"]');
+  const paymentCopy = {
+    offline: {
+      title: 'OFFline — Живые знакомства',
+      description: 'Оформите участие в программе OFFline через безопасную форму оплаты.'
+    },
+    online: {
+      title: 'ONline — Дейтинг и соцсети',
+      description: 'Оформите участие в программе ONline через безопасную форму оплаты.'
+    },
+    bundle: {
+      title: 'OFFline + ONline',
+      description: 'Оформите комплект программ через безопасную форму оплаты.'
+    }
+  };
+  let lastPaymentTrigger = null;
+
+  const closePaymentModal = () => {
+    if (!paymentModal || paymentModal.hidden) return;
+    paymentModal.hidden = true;
+    paymentModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    lastPaymentTrigger?.focus();
+  };
+
+  const openPaymentModal = (tariff, trigger) => {
+    if (!paymentModal || !paymentCopy[tariff]) return;
+
+    lastPaymentTrigger = trigger;
+    paymentTitle.textContent = paymentCopy[tariff].title;
+    paymentDescription.textContent = paymentCopy[tariff].description;
+    paymentSlots.forEach(slot => {
+      slot.hidden = slot.dataset.paymentWidget !== tariff;
+    });
+    paymentModal.hidden = false;
+    paymentModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    paymentCloseButton?.focus();
+  };
+
+  paymentTriggers.forEach(trigger => {
+    trigger.addEventListener('click', event => {
+      event.preventDefault();
+      openPaymentModal(trigger.dataset.tariff, trigger);
+    });
+  });
+
+  paymentCloseButton?.addEventListener('click', closePaymentModal);
+  paymentModal?.addEventListener('click', event => {
+    if (event.target === paymentModal) closePaymentModal();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closePaymentModal();
+  });
+
   // 5. Intelligent Viewport-Triggered Background Video Loader & Player
   const lazyKinescopeFrames = document.querySelectorAll('.lazy-kinescope');
 

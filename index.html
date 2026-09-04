@@ -16,8 +16,32 @@
   
   <!-- Single CSS entry point: the complete responsive system is composed here. -->
   <link rel="stylesheet" href="css/main.css?v=20260829-43">
+
+  <!-- Yandex.Metrika counter -->
+  <script>
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+      k = e.createElement(t); a = e.getElementsByTagName(t)[0]; k.async = 1; k.src = r; a.parentNode.insertBefore(k, a);
+    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=112283545', 'ym');
+
+    ym(112283545, 'init', {
+      ssr: true,
+      webvisor: true,
+      clickmap: true,
+      ecommerce: 'dataLayer',
+      referrer: document.referrer,
+      url: location.href,
+      accurateTrackBounce: true,
+      trackLinks: true
+    });
+  </script>
+  <!-- /Yandex.Metrika counter -->
 </head>
 <body>
+  <!-- Yandex.Metrika noscript fallback -->
+  <noscript><div><img src="https://mc.yandex.ru/watch/112283545" style="position:absolute; left:-9999px;" alt=""></div></noscript>
   <a class="skip-link" href="#main-content">Перейти к содержимому</a>
   <div class="site-wrapper">
 
@@ -800,8 +824,7 @@
             <div class="tariff-price-wrap">
               <span class="tariff-price">9 990 ₽</span>
             </div>
-            <!-- TODO(integration): replace the anchor target with the payment-widget trigger; retain data-tariff="offline" for the widget mapping (GetCourse or another provider). -->
-            <a href="#cta" class="tariff-btn" data-tariff="offline" data-widget-trigger="payment">Занять место</a>
+            <a href="#" class="tariff-btn" data-tariff="offline" data-widget-trigger="payment" aria-haspopup="dialog">Занять место</a>
           </div>
 
           <!-- Tariff 2: 2 in 1 (Featured Recommended) -->
@@ -846,8 +869,7 @@
                 <span class="tariff-price">14 990 ₽</span>
                 <span class="tariff-price-old">Вместо 20 000 ₽ по отдельности</span>
               </div>
-              <!-- TODO(integration): replace the anchor target with the payment-widget trigger; retain data-tariff="bundle" for the widget mapping (GetCourse or another provider). -->
-              <a href="#cta" class="tariff-btn" data-tariff="bundle" data-widget-trigger="payment">Забрать комплект</a>
+              <a href="#" class="tariff-btn" data-tariff="bundle" data-widget-trigger="payment" aria-haspopup="dialog">Забрать комплект</a>
             </div>
           </div>
 
@@ -882,8 +904,7 @@
             <div class="tariff-price-wrap">
               <span class="tariff-price">9 990 ₽</span>
             </div>
-            <!-- TODO(integration): replace the anchor target with the payment-widget trigger; retain data-tariff="online" for the widget mapping (GetCourse or another provider). -->
-            <a href="#cta" class="tariff-btn" data-tariff="online" data-widget-trigger="payment">Занять место</a>
+            <a href="#" class="tariff-btn" data-tariff="online" data-widget-trigger="payment" aria-haspopup="dialog">Занять место</a>
           </div>
 
         </div>
@@ -1246,6 +1267,27 @@
       </div>
     </footer>
 
+  </div>
+
+  <div class="payment-modal" id="payment-modal" hidden aria-hidden="true">
+    <div class="payment-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="payment-modal-title" aria-describedby="payment-modal-description">
+      <button class="payment-modal__close" type="button" aria-label="Закрыть окно оплаты">×</button>
+      <div class="payment-modal__header">
+        <p class="payment-modal__eyebrow">GENESĪS</p>
+        <h2 id="payment-modal-title">Выберите способ оплаты</h2>
+        <p id="payment-modal-description">Безопасная оплата через IMAGO.</p>
+      </div>
+
+      <div class="payment-widget-slot" data-payment-widget="offline" hidden>
+        <script id="b1c591ab3f8f839544eab4e743e890b73a67440f" src="https://imago.study/pl/lite/widget/script?id=1589180"></script>
+      </div>
+      <div class="payment-widget-slot" data-payment-widget="online" hidden>
+        <script id="b62f6e998e91cf85734e4633274d6ff8eec30fbb" src="https://imago.study/pl/lite/widget/script?id=1589183"></script>
+      </div>
+      <div class="payment-widget-slot" data-payment-widget="bundle" hidden>
+        <script id="f03f98d874e2503d4e462cb0a2ce87954c481676" src="https://imago.study/pl/lite/widget/script?id=1589184"></script>
+      </div>
+    </div>
   </div>
 
   <!-- Mobile Landscape & Tablet Portrait Orientation Lock Overlay (Figma Node 4045:8682 & 4045:7964) -->
