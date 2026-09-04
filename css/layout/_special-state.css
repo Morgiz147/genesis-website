@@ -2471,3 +2471,122 @@ main {
     height: 587px !important;
   }
 }
+
+/* Mobile video and system-slider repairs. The embeds are 16:9, so a square
+   frame made Kinescope paint neutral letterbox bands above and below them.
+   Keep the controls over the media, but let the media itself retain its
+   native proportion. The following slider section is normal document flow on
+   phones: its heading can no longer climb into the preceding video. */
+@media (max-width: 640px) {
+  .video-section,
+  .video-preview-card {
+    height: calc(192px + 56.25vw) !important;
+    min-height: calc(192px + 56.25vw) !important;
+  }
+
+  .video-bg-media {
+    top: 192px !important;
+    left: 0 !important;
+    right: auto !important;
+    width: 100% !important;
+    height: 56.25vw !important;
+    aspect-ratio: 16 / 9;
+    background: #0b0c0d !important;
+  }
+
+  .video-preview-card .video-card-overlay {
+    top: 192px !important;
+    bottom: auto !important;
+    height: 56.25vw !important;
+    border-radius: 16px !important;
+  }
+
+  .video-play-box {
+    top: calc(137px + 28.125vw) !important;
+  }
+
+  .system-slider-section,
+  .system-slider-scroll-track {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .system-slider-sticky-stage {
+    position: relative !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 48px 16px 72px !important;
+    justify-content: flex-start !important;
+    box-sizing: border-box !important;
+  }
+
+  .system-slider-header {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: min(358px, calc(100vw - 32px)) !important;
+    max-width: calc(100vw - 32px) !important;
+    margin: 0 auto 40px !important;
+  }
+
+  .system-slider-header h2,
+  .system-slider-header p,
+  .system-slider-box,
+  .system-slider-image,
+  .system-slider-content {
+    width: min(358px, calc(100vw - 32px)) !important;
+    max-width: calc(100vw - 32px) !important;
+  }
+
+  .system-slider-box {
+    max-height: none !important;
+  }
+
+  .system-text-stage {
+    top: 156px !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .trailer-section,
+  .trailer-container {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .trailer-section {
+    padding: 64px 16px 72px !important;
+  }
+
+  .trailer-container {
+    width: 100% !important;
+    max-width: none !important;
+    gap: 36px !important;
+  }
+
+  .trailer-title-wrap {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .trailer-video-box {
+    width: min(100%, 393px) !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    flex: 0 0 auto !important;
+    margin: 0 auto !important;
+    border-radius: 16px !important;
+  }
+
+  .trailer-bg-iframe {
+    width: 100% !important;
+    height: 100% !important;
+    filter: none !important;
+    transform: translate(-50%, -50%) !important;
+  }
+}
