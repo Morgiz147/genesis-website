@@ -145,6 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4.5. Payment widgets: one accessible modal for the three tariff options.
   const paymentModal = document.getElementById('payment-modal');
   const paymentDialog = paymentModal?.querySelector('.payment-modal__dialog');
+  const paymentCloseButton = paymentModal?.querySelector('.payment-modal__close');
   const paymentSlots = document.querySelectorAll('[data-payment-widget]');
   const paymentTriggers = document.querySelectorAll('[data-widget-trigger="payment"]');
   const paymentLabels = {
@@ -173,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
     paymentModal.hidden = false;
     paymentModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
-    paymentDialog?.focus();
+    paymentCloseButton?.focus();
   };
 
   paymentTriggers.forEach(trigger => {
@@ -183,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  paymentCloseButton?.addEventListener('click', closePaymentModal);
   paymentModal?.addEventListener('click', event => {
     if (event.target === paymentModal) closePaymentModal();
   });
